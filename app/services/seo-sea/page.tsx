@@ -23,9 +23,11 @@ export default function SEOSEAPage() {
             côtés et qui vous aidera à atteindre vos objectifs de croissance
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 text-lg font-medium">
-              Demander un audit SEO gratuit
-            </Button>
+            <Link href="/audit-seo">
+              <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 text-lg font-medium">
+                Demander un audit SEO gratuit
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
