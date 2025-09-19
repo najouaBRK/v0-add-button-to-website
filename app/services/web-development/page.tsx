@@ -219,9 +219,11 @@ export default function WebDevelopmentPage() {
             convertissent et performent.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-medium">
-              Demander mon devis Web
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis Web
+              </Button>
+            </Link>
             <Link href="/#contact-section">
               <Button
                 variant="outline"

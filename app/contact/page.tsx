@@ -19,30 +19,34 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Discutons de votre projet</h2>
-              <form className="space-y-6">
+              <form action="https://formspree.io/f/xkgvdzkd" method="POST" className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
-                    <Input placeholder="Votre prénom" />
+                    <Input name="prenom" placeholder="Votre prénom" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
-                    <Input placeholder="Votre nom" />
+                    <Input name="nom" placeholder="Votre nom" required />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <Input type="email" placeholder="votre.email@exemple.com" />
+                  <Input type="email" name="email" placeholder="votre.email@exemple.com" required />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
-                  <Input placeholder="Nom de votre entreprise" />
+                  <Input name="entreprise" placeholder="Nom de votre entreprise" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <Textarea placeholder="Parlez-nous de votre projet..." rows={5} />
+                  <Textarea name="message" placeholder="Parlez-nous de votre projet..." rows={5} required />
                 </div>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-medium">
+                <input type="hidden" name="_subject" value="Nouveau message depuis la page Contact - NOLIA" />
+                <Button
+                  type="submit"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-medium"
+                >
                   Envoyer le message
                 </Button>
               </form>

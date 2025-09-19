@@ -29,9 +29,11 @@ export default function HomePage() {
             booster votre croissance sur l'ensemble de votre parcours de vente.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
-              Demander mon devis
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis
+              </Button>
+            </Link>
             <Button
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
@@ -291,30 +293,34 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Discutons de votre projet</h2>
-              <form className="space-y-6">
+              <form action="https://formspree.io/f/xkgvdzkd" method="POST" className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
-                    <Input placeholder="Votre prénom" />
+                    <Input name="prenom" placeholder="Votre prénom" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
-                    <Input placeholder="Votre nom" />
+                    <Input name="nom" placeholder="Votre nom" required />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <Input type="email" placeholder="votre.email@exemple.com" />
+                  <Input type="email" name="email" placeholder="votre.email@exemple.com" required />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
-                  <Input placeholder="Nom de votre entreprise" />
+                  <Input name="entreprise" placeholder="Nom de votre entreprise" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <Textarea placeholder="Parlez-nous de votre projet..." rows={5} />
+                  <Textarea name="message" placeholder="Parlez-nous de votre projet..." rows={5} required />
                 </div>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-medium">
+                <input type="hidden" name="_subject" value="Nouveau message depuis la page d'accueil - NOLIA" />
+                <Button
+                  type="submit"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-medium"
+                >
                   Envoyer le message
                 </Button>
               </form>

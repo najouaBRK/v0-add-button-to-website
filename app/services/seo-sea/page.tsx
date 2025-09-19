@@ -196,9 +196,11 @@ export default function SEOSEAPage() {
             référencement naturel, notre équipe demeure à votre écoute.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 text-lg font-medium">
-              Demander mon devis SEO
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis SEO
+              </Button>
+            </Link>
             <Link href="/#contact-section">
               <Button
                 variant="outline"

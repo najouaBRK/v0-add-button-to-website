@@ -109,9 +109,11 @@ export function Header() {
         </nav>
 
         <div className="flex items-center">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium">
-            Demander mon devis
-          </Button>
+          <Link href="/contact">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium">
+              Demander mon devis
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
