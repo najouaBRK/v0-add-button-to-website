@@ -21,21 +21,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                  <span className="text-white font-bold text-lg">N</span>
-                </div>
-              </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                NOLIA
-              </span>
-              <span className="text-xs font-medium text-gray-500 tracking-wider uppercase">Digital Solutions</span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <span className="text-2xl font-bold text-blue-900">NOLIA</span>
           </Link>
         </div>
 
