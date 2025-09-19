@@ -19,10 +19,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
-      <div className="container mx-auto px-4 flex h-16 items-center justify-between">
+      <div className="container mx-auto px-4 flex h-20 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <svg viewBox="0 0 300 120" className="h-16 w-auto">
+            <svg viewBox="0 0 300 120" className="h-32 w-auto">
               <defs>
                 <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" style={{ stopColor: "#1e40af", stopOpacity: 1 }} />
