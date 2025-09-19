@@ -8,27 +8,27 @@ export default function SEOSEAPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 px-4">
+      <section className="bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-6">
-            <span className="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <span className="inline-block bg-blue-800 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
               🔍 SEO & SEA Expert
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
-            Faites décoller votre <span className="text-orange-400">visibilité</span>
+            Faites décoller votre <span className="text-cyan-200">visibilité</span>
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
             Confiez la gestion de votre référencement naturel à une agence SEO proche de ses clients qui s'engage à vos
             côtés et qui vous aidera à atteindre vos objectifs de croissance
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
+            <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 text-lg font-medium">
               Demander un audit SEO gratuit
             </Button>
             <Button
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-medium bg-transparent"
             >
               Voir nos cas clients
             </Button>
@@ -75,8 +75,8 @@ export default function SEOSEAPage() {
 
             <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-green-600 text-2xl">📝</span>
+                <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-cyan-600 text-2xl">📝</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Content Marketing</h3>
                 <p className="text-gray-600">
@@ -88,8 +88,8 @@ export default function SEOSEAPage() {
 
             <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-purple-600 text-2xl">✍️</span>
+                <div className="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-blue-700 text-2xl">✍️</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Copywriting</h3>
                 <p className="text-gray-600">
@@ -101,8 +101,8 @@ export default function SEOSEAPage() {
 
             <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-orange-600 text-2xl">🤝</span>
+                <div className="w-16 h-16 bg-cyan-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-cyan-700 text-2xl">🤝</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Google Partner</h3>
                 <p className="text-gray-600">
@@ -162,7 +162,7 @@ export default function SEOSEAPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              <div className="w-16 h-16 bg-cyan-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
                 4
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Accompagnement et recettage</h3>
@@ -173,7 +173,7 @@ export default function SEOSEAPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              <div className="w-16 h-16 bg-cyan-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
                 5
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Définition et suivi des KPIs</h3>
@@ -187,7 +187,7 @@ export default function SEOSEAPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Une équipe réactive et à vos côtés</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
@@ -196,13 +196,13 @@ export default function SEOSEAPage() {
             référencement naturel, notre équipe demeure à votre écoute.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
+            <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 text-lg font-medium">
               Demander mon devis SEO
             </Button>
             <Link href="/#contact-section">
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-medium bg-transparent"
               >
                 Nous contacter
               </Button>
