@@ -28,18 +28,12 @@ export default function HomePage() {
             Percez à la rencontre de vos prospects et embarquez dans la galaxie de la très agence digitale capable de
             booster votre croissance sur l'ensemble de votre parcours de vente.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link href="/devis">
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
                 Demander mon devis
               </Button>
             </Link>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir notre approche
-            </Button>
           </div>
         </div>
       </section>
