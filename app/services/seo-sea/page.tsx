@@ -26,12 +26,6 @@ export default function SEOSEAPage() {
             <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 text-lg font-medium">
               Demander un audit SEO gratuit
             </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos cas clients
-            </Button>
           </div>
         </div>
       </section>
