@@ -22,7 +22,68 @@ export function Header() {
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-blue-900">NOLIA</span>
+            <svg viewBox="0 0 300 120" className="h-12 w-auto">
+              <defs>
+                <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: "#1e40af", stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: "#3b82f6", stopOpacity: 1 }} />
+                </linearGradient>
+
+                <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: "#06b6d4", stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: "#0891b2", stopOpacity: 1 }} />
+                </linearGradient>
+
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="2" dy="4" stdDeviation="3" floodOpacity="0.2" />
+                </filter>
+              </defs>
+
+              <g transform="translate(20, 20)">
+                <circle cx="40" cy="40" r="35" fill="url(#mainGradient)" filter="url(#shadow)" />
+
+                <path
+                  d="M25 25 L35 25 L50 50 L50 25 L55 25 L55 55 L45 55 L30 30 L30 55 L25 55 Z"
+                  fill="white"
+                  opacity="0.95"
+                />
+
+                <circle cx="60" cy="20" r="8" fill="url(#accentGradient)" opacity="0.8" />
+                <circle cx="65" cy="30" r="4" fill="url(#accentGradient)" opacity="0.6" />
+              </g>
+
+              <g transform="translate(100, 35)">
+                <text
+                  x="0"
+                  y="35"
+                  fontFamily="Arial, Helvetica, sans-serif"
+                  fontSize="42"
+                  fontWeight="700"
+                  fill="url(#mainGradient)"
+                  filter="url(#shadow)"
+                >
+                  NOLIA
+                </text>
+
+                <text
+                  x="2"
+                  y="55"
+                  fontFamily="Arial, Helvetica, sans-serif"
+                  fontSize="12"
+                  fontWeight="400"
+                  fill="#64748b"
+                  opacity="0.8"
+                >
+                  DIGITAL SOLUTIONS
+                </text>
+              </g>
+
+              <g transform="translate(270, 30)">
+                <rect x="0" y="0" width="3" height="25" fill="url(#accentGradient)" rx="1.5" />
+                <rect x="6" y="8" width="3" height="17" fill="url(#accentGradient)" rx="1.5" opacity="0.7" />
+                <rect x="12" y="15" width="3" height="10" fill="url(#accentGradient)" rx="1.5" opacity="0.4" />
+              </g>
+            </svg>
           </Link>
         </div>
 
