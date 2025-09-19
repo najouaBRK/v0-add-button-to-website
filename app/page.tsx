@@ -294,6 +294,11 @@ export default function HomePage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Discutons de votre projet</h2>
               <form action="https://formspree.io/f/xkgvdzkd" method="POST" className="space-y-6">
+                <input type="hidden" name="_replyto" value="najwaborak2@gmail.com" />
+                <input type="hidden" name="_next" value="https://nolia.fr/?success=true" />
+                <input type="hidden" name="_subject" value="Nouveau message depuis la page d'accueil - NOLIA" />
+                <input type="hidden" name="_cc" value="najwaborak2@gmail.com" />
+
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
@@ -316,7 +321,6 @@ export default function HomePage() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                   <Textarea name="message" placeholder="Parlez-nous de votre projet..." rows={5} required />
                 </div>
-                <input type="hidden" name="_subject" value="Nouveau message depuis la page d'accueil - NOLIA" />
                 <Button
                   type="submit"
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-medium"
