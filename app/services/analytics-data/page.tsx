@@ -22,17 +22,6 @@ export default function AnalyticsDataPage() {
             Analysez, comprenez et optimisez vos performances grâce à nos solutions d'analytics avancées. Prenez des
             décisions éclairées basées sur des données fiables et exploitables.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg font-medium">
-              Audit Analytics gratuit
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos tableaux de bord
-            </Button>
-          </div>
         </div>
       </section>
 
