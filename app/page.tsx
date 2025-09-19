@@ -42,23 +42,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Ils nous font confiance</h2>
-          <p className="text-gray-600 mb-12">
-            Plus de 200 entreprises nous font confiance pour développer leur acquisition digitale
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div key={i} className="bg-gray-300 h-16 rounded-lg flex items-center justify-center">
-                <span className="text-gray-500 font-medium">Logo {i}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Galaxy Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -267,7 +250,7 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                   <span className="text-orange-600 text-xl">⚙️</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">CRM & Automation</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">CRM & Automation</h3>
                 <p className="text-gray-600 mb-6">
                   Mise en place et optimisation de vos CRM pour automatiser vos processus de vente.
                 </p>
