@@ -29,7 +29,7 @@ export default function HomePage() {
             booster votre croissance sur l'ensemble de votre parcours de vente.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/devis">
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
                 Demander mon devis
               </Button>
