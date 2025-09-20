@@ -87,25 +87,25 @@ export default function AboutPage() {
               <div className="animate-slide-in-right">
                 <Card className="bg-card/80 backdrop-blur-sm border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift">
                   <CardContent className="p-12">
-                    <h3 className="text-4xl font-bold text-primary mb-10 text-center text-gradient-primary">
+                    <h3 className="text-3xl font-bold text-primary mb-10 text-center text-gradient-primary">
                       Nos chiffres clés
                     </h3>
                     <div className="grid grid-cols-2 gap-8">
                       <div className="text-center p-8 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-3xl hover-lift">
-                        <div className="text-5xl font-bold text-gradient-primary mb-4">500+</div>
-                        <div className="text-muted-foreground font-medium text-lg">Projets réalisés</div>
+                        <div className="text-3xl font-bold text-gradient-primary mb-4">500+</div>
+                        <div className="text-muted-foreground font-medium text-base">Projets réalisés</div>
                       </div>
                       <div className="text-center p-8 bg-gradient-to-br from-secondary/10 to-chart-2/10 rounded-3xl hover-lift">
-                        <div className="text-5xl font-bold text-gradient-secondary mb-4">98%</div>
-                        <div className="text-muted-foreground font-medium text-lg">Clients satisfaits</div>
+                        <div className="text-3xl font-bold text-gradient-secondary mb-4">98%</div>
+                        <div className="text-muted-foreground font-medium text-base">Clients satisfaits</div>
                       </div>
                       <div className="text-center p-8 bg-gradient-to-br from-chart-2/10 to-chart-3/10 rounded-3xl hover-lift">
-                        <div className="text-5xl font-bold text-gradient-primary mb-4">50+</div>
-                        <div className="text-muted-foreground font-medium text-lg">Experts</div>
+                        <div className="text-3xl font-bold text-gradient-primary mb-4">50+</div>
+                        <div className="text-muted-foreground font-medium text-base">Experts</div>
                       </div>
                       <div className="text-center p-8 bg-gradient-to-br from-chart-3/10 to-accent/10 rounded-3xl hover-lift">
-                        <div className="text-5xl font-bold text-gradient-secondary mb-4">24/7</div>
-                        <div className="text-muted-foreground font-medium text-lg">Support</div>
+                        <div className="text-3xl font-bold text-gradient-secondary mb-4">24/7</div>
+                        <div className="text-muted-foreground font-medium text-base">Support</div>
                       </div>
                     </div>
                   </CardContent>
@@ -234,9 +234,9 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-card/30 to-accent/5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-6xl font-bold text-primary mb-6 text-gradient-primary">Nos valeurs fondamentales</h2>
+            <h2 className="text-4xl font-bold text-primary mb-6 text-gradient-primary">Nos valeurs fondamentales</h2>
             <div className="w-24 h-1 bg-accent rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Chez NOLIA, nous croyons en l'innovation, l'excellence et la collaboration pour créer des solutions
               digitales exceptionnelles.
             </p>
@@ -248,10 +248,10 @@ export default function AboutPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center mx-auto mb-10 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
                   <span className="text-white text-4xl">💡</span>
                 </div>
-                <h3 className="text-3xl font-bold text-primary mb-8 group-hover:text-accent transition-colors">
+                <h3 className="text-2xl font-bold text-primary mb-8 group-hover:text-accent transition-colors">
                   Innovation
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-base">
                   Nous utilisons les dernières technologies pour créer des solutions avant-gardistes.
                 </p>
               </CardContent>
@@ -265,10 +265,10 @@ export default function AboutPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-chart-2 to-chart-3 rounded-full flex items-center justify-center mx-auto mb-10 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
                   <span className="text-white text-4xl">⭐</span>
                 </div>
-                <h3 className="text-3xl font-bold text-primary mb-8 group-hover:text-chart-2 transition-colors">
+                <h3 className="text-2xl font-bold text-primary mb-8 group-hover:text-chart-2 transition-colors">
                   Excellence
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-base">
                   Nous visons l'excellence dans chaque projet et dépassons les attentes de nos clients.
                 </p>
               </CardContent>
@@ -282,10 +282,10 @@ export default function AboutPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-secondary to-chart-5 rounded-full flex items-center justify-center mx-auto mb-10 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
                   <span className="text-white text-4xl">🤝</span>
                 </div>
-                <h3 className="text-3xl font-bold text-primary mb-8 group-hover:text-secondary transition-colors">
+                <h3 className="text-2xl font-bold text-primary mb-8 group-hover:text-secondary transition-colors">
                   Collaboration
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-base">
                   Nous travaillons en étroite collaboration avec nos clients pour atteindre leurs objectifs.
                 </p>
               </CardContent>
@@ -299,10 +299,10 @@ export default function AboutPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-chart-3 to-chart-4 rounded-full flex items-center justify-center mx-auto mb-10 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
                   <span className="text-white text-4xl">🎯</span>
                 </div>
-                <h3 className="text-3xl font-bold text-primary mb-8 group-hover:text-chart-3 transition-colors">
+                <h3 className="text-2xl font-bold text-primary mb-8 group-hover:text-chart-3 transition-colors">
                   Résultats
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-base">
                   Nous nous concentrons sur des résultats mesurables et un retour sur investissement optimal.
                 </p>
               </CardContent>
