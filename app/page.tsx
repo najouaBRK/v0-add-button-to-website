@@ -144,83 +144,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="services-section" className="py-20 md:py-32 bg-background particles-bg">
+      <section id="services-section" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="scroll-reveal text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Nos <span className="text-gradient-primary">Services</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+              Nos <span className="text-primary">Services</span>
             </h2>
-            <p className="scroll-reveal text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Découvrez notre gamme complète de services d'acquisition digitale conçus pour booster votre croissance et
               transformer votre présence en ligne.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Services cards with enhanced animations */}
             {[
               {
                 icon: "🔍",
                 title: "SEO & SEA",
                 desc: "Optimisez pour les moteurs de recherche et campagnes publicitaires pour maximiser votre visibilité.",
                 price: "1 500€/mois",
-                gradient: "from-primary to-cyan-600",
                 link: "/services/seo-sea",
-                color: "primary",
               },
               {
                 icon: "📊",
                 title: "Analytics & Data",
                 desc: "Analysez approfondie de vos données pour optimiser vos performances et prendre les bonnes décisions.",
                 price: "800€/mois",
-                gradient: "from-violet-500 to-purple-600",
                 link: "/services/analytics-data",
-                color: "violet-600",
               },
               {
                 icon: "📧",
                 title: "Email Marketing",
                 desc: "Stratégies d'email marketing personnalisées pour nourrir vos prospects et fidéliser vos clients.",
                 price: "600€/mois",
-                gradient: "from-purple-500 to-violet-600",
                 link: "/services/email-marketing",
-                color: "purple-600",
               },
               {
                 icon: "📱",
                 title: "Social Media",
                 desc: "Gestion et optimisation de votre présence sur les réseaux sociaux pour engager votre audience.",
                 price: "900€/mois",
-                gradient: "from-pink-500 to-red-600",
                 link: "/services/social-media",
-                color: "pink-600",
               },
               {
                 icon: "💻",
                 title: "Web Development",
                 desc: "Création et optimisation de sites web performants pour convertir vos visiteurs en clients.",
                 price: "2 500€",
-                gradient: "from-green-500 to-emerald-600",
                 link: "/services/web-development",
-                color: "green-600",
               },
               {
                 icon: "⚙️",
                 title: "CRM & Automation",
                 desc: "Mise en place et optimisation de vos CRM pour automatiser vos processus de vente.",
                 price: "1 200€/mois",
-                gradient: "from-orange-500 to-red-500",
                 link: "/services/crm-automation",
-                color: "orange-600",
               },
               {
                 icon: "🎓",
                 title: "Nos Formations",
                 desc: "Formations spécialisées en marketing digital pour développer vos compétences et celles de vos équipes.",
                 price: "Découvrez nos programmes",
-                gradient: "from-teal-500 to-cyan-600",
                 link: "https://noliaformation.com/",
-                color: "teal-600",
                 external: true,
               },
               {
@@ -228,42 +213,31 @@ export default function HomePage() {
                 title: "Paid",
                 desc: "Stratégies publicitaires cross-canal pour maximiser votre ROI sur tous les canaux payants.",
                 price: "1 800€/mois",
-                gradient: "from-red-500 to-pink-600",
                 link: "/services/paid",
-                color: "red-600",
               },
             ].map((service, index) => (
               <Card
                 key={index}
-                className={`scroll-reveal glass-card border-0 shadow-xl hover-lift hover-glow transition-all duration-500 group`}
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 bg-white"
               >
-                <CardContent className="p-8">
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 animate-pulse-glow`}
-                  >
-                    <span className="text-white text-2xl">{service.icon}</span>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl">{service.icon}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.desc}</p>
-                  <div className="mb-6">
-                    <div className={`text-2xl font-bold text-${service.color} mb-2`}>À partir de {service.price}</div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground mb-4 text-sm">{service.desc}</p>
+                  <div className="mb-4">
+                    <div className="text-lg font-semibold text-primary">À partir de {service.price}</div>
                   </div>
                   {service.external ? (
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <Button
-                        variant="outline"
-                        className={`w-full border-${service.color} text-${service.color} hover:bg-${service.color} hover:text-white transition-all duration-300 bg-transparent hover-lift`}
-                      >
+                      <Button variant="outline" className="w-full bg-transparent">
                         En savoir plus
                       </Button>
                     </a>
                   ) : (
                     <Link href={service.link}>
-                      <Button
-                        variant="outline"
-                        className={`w-full border-${service.color} text-${service.color} hover:bg-${service.color} hover:text-white transition-all duration-300 bg-transparent hover-lift`}
-                      >
+                      <Button variant="outline" className="w-full bg-transparent">
                         En savoir plus
                       </Button>
                     </Link>
