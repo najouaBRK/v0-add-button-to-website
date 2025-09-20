@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import FormspreeButton from "@/components/FormspreeButton"
 
 export default function EcommercePage() {
   return (
@@ -25,12 +26,6 @@ export default function EcommercePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
               Demander un devis
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-green-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos boutiques
             </Button>
           </div>
         </div>
@@ -198,7 +193,15 @@ export default function EcommercePage() {
                     <span className="text-green-500 mr-3">✓</span>6 mois de maintenance
                   </li>
                 </ul>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="E-commerce Starter"
+                  packagePrice="4,990€"
+                  packageDescription="Boutique responsive jusqu'à 50 produits avec paiements sécurisés, gestion des stocks et 6 mois de maintenance"
+                  serviceName="E-commerce"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -230,7 +233,15 @@ export default function EcommercePage() {
                     12 mois de maintenance
                   </li>
                 </ul>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="E-commerce Business"
+                  packagePrice="8,990€"
+                  packageDescription="Boutique jusqu'à 500 produits avec tout de la formule Starter, intégrations avancées, marketing automation et 12 mois de maintenance"
+                  serviceName="E-commerce"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -277,14 +288,6 @@ export default function EcommercePage() {
             <Link href="/contact">
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
                 Demander un devis gratuit
-              </Button>
-            </Link>
-            <Link href="/portfolio">
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-green-900 px-8 py-3 text-lg font-medium bg-transparent"
-              >
-                Voir nos boutiques
               </Button>
             </Link>
           </div>

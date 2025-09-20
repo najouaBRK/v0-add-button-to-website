@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import FormspreeButton from "@/components/FormspreeButton"
 
 export default function LandingPageService() {
   return (
@@ -25,12 +26,6 @@ export default function LandingPageService() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium">
               Demander un devis
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-orange-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos landing pages
             </Button>
           </div>
         </div>
@@ -253,7 +248,15 @@ export default function LandingPageService() {
                     Analytics intégrés
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Landing Simple"
+                  packagePrice="990€"
+                  packageDescription="1 landing page avec design responsive, formulaire de contact, optimisation de base et analytics intégrés"
+                  serviceName="Landing Pages"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -285,7 +288,15 @@ export default function LandingPageService() {
                     Intégrations marketing
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Landing Pro"
+                  packagePrice="1,990€"
+                  packageDescription="3 landing pages avec tout de la formule Simple, A/B Testing inclus, copywriting optimisé et intégrations marketing"
+                  serviceName="Landing Pages"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -314,7 +325,15 @@ export default function LandingPageService() {
                     Support prioritaire
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Landing Premium"
+                  packagePrice="3,990€"
+                  packageDescription="5 landing pages avec tout de la formule Pro, stratégie de conversion, optimisation continue et support prioritaire"
+                  serviceName="Landing Pages"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
           </div>
@@ -332,14 +351,6 @@ export default function LandingPageService() {
             <Link href="/contact">
               <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium">
                 Demander un devis gratuit
-              </Button>
-            </Link>
-            <Link href="/portfolio">
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-orange-900 px-8 py-3 text-lg font-medium bg-transparent"
-              >
-                Voir nos landing pages
               </Button>
             </Link>
           </div>

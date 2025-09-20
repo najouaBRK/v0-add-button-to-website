@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import FormspreeButton from "@/components/FormspreeButton"
 
 export default function BlogPage() {
   return (
@@ -25,12 +26,6 @@ export default function BlogPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
               Demander un devis
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos blogs
             </Button>
           </div>
         </div>
@@ -229,7 +224,15 @@ export default function BlogPage() {
                     Partage réseaux sociaux
                   </li>
                 </ul>
-                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Blog Simple"
+                  packagePrice="1,490€"
+                  packageDescription="Blog responsive intégré avec 4 articles par mois, optimisation SEO de base et partage réseaux sociaux (Setup + 3 mois)"
+                  serviceName="Blog & Content Marketing"
+                  className="w-full bg-purple-500 hover:bg-purple-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -260,7 +263,15 @@ export default function BlogPage() {
                     Analytics avancés
                   </li>
                 </ul>
-                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Content Marketing"
+                  packagePrice="2,990€"
+                  packageDescription="Tout de la formule Simple avec 8 articles par mois, newsletter intégrée et analytics avancés (Setup + 6 mois)"
+                  serviceName="Blog & Content Marketing"
+                  className="w-full bg-purple-500 hover:bg-purple-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -277,8 +288,7 @@ export default function BlogPage() {
                     Tout de la formule Content
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <span className="text-green-500 mr-3">✓</span>
-                    12 articles par mois
+                    <span className="text-green-500 mr-3">✓</span>12 articles par mois
                   </li>
                   <li className="flex items-center text-gray-700">
                     <span className="text-green-500 mr-3">✓</span>
@@ -289,7 +299,15 @@ export default function BlogPage() {
                     Stratégie personnalisée
                   </li>
                 </ul>
-                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Blog Premium"
+                  packagePrice="4,990€"
+                  packageDescription="Tout de la formule Content avec 12 articles par mois, contenu multimédia et stratégie personnalisée (Setup + 12 mois)"
+                  serviceName="Blog & Content Marketing"
+                  className="w-full bg-purple-500 hover:bg-purple-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
           </div>
@@ -307,14 +325,6 @@ export default function BlogPage() {
             <Link href="/contact">
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
                 Demander un devis gratuit
-              </Button>
-            </Link>
-            <Link href="/portfolio">
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 text-lg font-medium bg-transparent"
-              >
-                Voir nos blogs
               </Button>
             </Link>
           </div>

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import FormspreeButton from "@/components/FormspreeButton"
 
 export default function SiteVitrinePage() {
   return (
@@ -25,12 +26,6 @@ export default function SiteVitrinePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
               Demander un devis
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos réalisations
             </Button>
           </div>
         </div>
@@ -224,7 +219,15 @@ export default function SiteVitrinePage() {
                     <span className="text-green-500 mr-3">✓</span>3 mois de maintenance
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Site Vitrine Essentiel"
+                  packagePrice="1,990€"
+                  packageDescription="Site jusqu'à 3 pages avec design responsive, formulaire de contact, optimisation SEO de base et 3 mois de maintenance"
+                  serviceName="Site Vitrine"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -255,7 +258,15 @@ export default function SiteVitrinePage() {
                     <span className="text-green-500 mr-3">✓</span>6 mois de maintenance
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Site Vitrine Professionnel"
+                  packagePrice="2,990€"
+                  packageDescription="Site jusqu'à 7 pages avec tout de la formule Essentiel, CMS intégré, blog intégré et 6 mois de maintenance"
+                  serviceName="Site Vitrine"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -284,7 +295,15 @@ export default function SiteVitrinePage() {
                     12 mois de maintenance
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Site Vitrine Premium"
+                  packagePrice="4,990€"
+                  packageDescription="Site illimité avec tout de la formule Pro, intégrations avancées, analytics avancés et 12 mois de maintenance"
+                  serviceName="Site Vitrine"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
           </div>
@@ -302,14 +321,6 @@ export default function SiteVitrinePage() {
             <Link href="/contact">
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
                 Demander un devis gratuit
-              </Button>
-            </Link>
-            <Link href="/portfolio">
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
-              >
-                Voir nos réalisations
               </Button>
             </Link>
           </div>

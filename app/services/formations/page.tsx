@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import FormspreeButton from "@/components/FormspreeButton"
 
 export default function FormationsPage() {
   return (
@@ -58,7 +59,15 @@ export default function FormationsPage() {
                   <li>• Certificat de formation</li>
                   <li>• Suivi post-formation 30 jours</li>
                 </ul>
-                <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Formation Individuelle"
+                  packagePrice="500€"
+                  packageDescription="Formation personnalisée avec support pédagogique inclus, certificat de formation et suivi post-formation 30 jours"
+                  serviceName="Formations"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -79,7 +88,15 @@ export default function FormationsPage() {
                   <li>• Certificats individuels</li>
                   <li>• Suivi post-formation 60 jours</li>
                 </ul>
-                <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Formation Équipe"
+                  packagePrice="1 200€"
+                  packageDescription="Formation en groupe avec ateliers pratiques, support pédagogique pour tous, certificats individuels et suivi post-formation 60 jours"
+                  serviceName="Formations"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
 
@@ -98,7 +115,15 @@ export default function FormationsPage() {
                   <li>• Suivi post-formation 90 jours</li>
                   <li>• Accompagnement personnalisé</li>
                 </ul>
-                <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white">Choisir cette formule</Button>
+                <FormspreeButton
+                  packageName="Formation Entreprise"
+                  packagePrice="2 500€"
+                  packageDescription="Formation sur mesure avec contenu adapté à votre secteur, ateliers pratiques avancés, support pédagogique complet, suivi post-formation 90 jours et accompagnement personnalisé"
+                  serviceName="Formations"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white"
+                >
+                  Choisir cette formule
+                </FormspreeButton>
               </CardContent>
             </Card>
           </div>
