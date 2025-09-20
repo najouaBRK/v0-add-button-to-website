@@ -11,7 +11,7 @@ export default function AboutPage() {
         </div>
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-7xl md:text-8xl font-bold mb-8 text-gradient-secondary">
+            <h1 className="text-7xl md:text-8xl font-bold mb-8 text-white">
               À propos de <span className="text-accent">NOLIA</span>
             </h1>
             <p className="text-xl text-cyan-100 mb-12 max-w-4xl mx-auto leading-relaxed">
