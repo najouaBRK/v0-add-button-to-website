@@ -286,6 +286,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="scroll-reveal text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Nos <span className="text-gradient-primary">Partenaires</span>
+            </h2>
+            <p className="scroll-reveal text-lg text-gray-600 max-w-3xl mx-auto">
+              Nous travaillons avec les meilleures plateformes du marché pour vous offrir des solutions performantes et
+              innovantes.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <div className="scroll-reveal glass-card p-6 rounded-xl hover-lift transition-all duration-300">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
+                  <img src="/hubspot-logo-orange.png" alt="HubSpot" className="w-12 h-12 object-contain" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">HubSpot</h3>
+                  <p className="text-sm text-gray-600">Partenaire CRM & Marketing</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="scroll-reveal glass-card p-6 rounded-xl hover-lift transition-all duration-300">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <img src="/odoo-logo-purple.jpg" alt="Odoo" className="w-12 h-12 object-contain" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">Odoo</h3>
+                  <p className="text-sm text-gray-600">Partenaire ERP & CRM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact-section" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
