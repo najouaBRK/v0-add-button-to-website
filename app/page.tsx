@@ -110,16 +110,20 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-8">
             <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   <span className="text-blue-600 text-xl">🔍</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">SEO & SEA</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-4">
                   Optimisez pour les moteurs de recherche et campagnes publicitaires pour maximiser votre visibilité.
                 </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-blue-600 mb-2">À partir de 1 500€/mois</div>
+                  <div className="text-sm text-gray-500">Audit SEO offert</div>
+                </div>
                 <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li>• Audit SEO complet</li>
                   <li>• Campagnes Google Ads</li>
@@ -139,13 +143,17 @@ export default function HomePage() {
 
             <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-green-600 text-xl">📊</span>
+                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-6">
+                  <span className="text-violet-600 text-xl">📊</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Data</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-4">
                   Analysez approfondie de vos données pour optimiser vos performances et prendre les bonnes décisions.
                 </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-violet-600 mb-2">À partir de 800€/mois</div>
+                  <div className="text-sm text-gray-500">Configuration incluse</div>
+                </div>
                 <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li>• Configuration Google Analytics</li>
                   <li>• Tableaux de bord personnalisés</li>
@@ -155,7 +163,7 @@ export default function HomePage() {
                 <Link href="/services/analytics-data">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-green-50 hover:text-green-600 hover:border-green-600 transition-all"
+                    className="w-full bg-transparent hover:bg-violet-50 hover:text-violet-600 hover:border-violet-600 transition-all"
                   >
                     En savoir plus
                   </Button>
@@ -169,9 +177,13 @@ export default function HomePage() {
                   <span className="text-purple-600 text-xl">📧</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Email Marketing</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-4">
                   Stratégies d'email marketing personnalisées pour nourrir vos prospects et fidéliser vos clients.
                 </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-purple-600 mb-2">À partir de 600€/mois</div>
+                  <div className="text-sm text-gray-500">Templates inclus</div>
+                </div>
                 <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li>• Campagnes automatisées</li>
                   <li>• Segmentation avancée</li>
@@ -195,9 +207,13 @@ export default function HomePage() {
                   <span className="text-pink-600 text-xl">📱</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Social Media</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-4">
                   Gestion et optimisation de votre présence sur les réseaux sociaux pour engager votre audience.
                 </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-pink-600 mb-2">À partir de 900€/mois</div>
+                  <div className="text-sm text-gray-500">Contenu créatif inclus</div>
+                </div>
                 <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li>• Stratégie social media</li>
                   <li>• Création de contenu</li>
@@ -217,13 +233,17 @@ export default function HomePage() {
 
             <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-indigo-600 text-xl">💻</span>
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <span className="text-green-600 text-xl">💻</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-4">
                   Création et optimisation de sites web performants pour convertir vos visiteurs en clients.
                 </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-green-600 mb-2">À partir de 2 500€</div>
+                  <div className="text-sm text-gray-500">Projet sur mesure</div>
+                </div>
                 <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li>• Sites web sur mesure</li>
                   <li>• Optimisation UX/UI</li>
@@ -233,7 +253,7 @@ export default function HomePage() {
                 <Link href="/services/web-development">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-600 transition-all"
+                    className="w-full bg-transparent hover:bg-green-50 hover:text-green-600 hover:border-green-600 transition-all"
                   >
                     En savoir plus
                   </Button>
@@ -246,10 +266,14 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                   <span className="text-orange-600 text-xl">⚙️</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">CRM & Automation</h3>
-                <p className="text-gray-600 mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">CRM & Automation</h3>
+                <p className="text-gray-600 mb-4">
                   Mise en place et optimisation de vos CRM pour automatiser vos processus de vente.
                 </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-orange-600 mb-2">À partir de 1 200€/mois</div>
+                  <div className="text-sm text-gray-500">Setup inclus</div>
+                </div>
                 <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li>• Configuration CRM</li>
                   <li>• Workflows automatisés</li>
@@ -260,6 +284,66 @@ export default function HomePage() {
                   <Button
                     variant="outline"
                     className="w-full bg-transparent hover:bg-orange-50 hover:text-orange-600 hover:border-orange-600 transition-all"
+                  >
+                    En savoir plus
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="pt-0">
+                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                  <span className="text-teal-600 text-xl">🎓</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Nos Formations</h3>
+                <p className="text-gray-600 mb-4">
+                  Formations spécialisées en marketing digital pour développer vos compétences et celles de vos équipes.
+                </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-teal-600 mb-2">À partir de 500€/jour</div>
+                  <div className="text-sm text-gray-500">Certification incluse</div>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                  <li>• Formation SEO/SEA</li>
+                  <li>• Social Media Marketing</li>
+                  <li>• Analytics & Data</li>
+                  <li>• Stratégie digitale</li>
+                </ul>
+                <Link href="/services/formations">
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent hover:bg-teal-50 hover:text-teal-600 hover:border-teal-600 transition-all"
+                  >
+                    En savoir plus
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="pt-0">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <span className="text-red-600 text-xl">🎯</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Paid</h3>
+                <p className="text-gray-600 mb-4">
+                  Stratégies publicitaires cross-canal pour maximiser votre ROI sur tous les canaux payants.
+                </p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-red-600 mb-2">À partir de 1 800€/mois</div>
+                  <div className="text-sm text-gray-500">Budget pub non inclus</div>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                  <li>• Google Ads</li>
+                  <li>• Meta Ads (Facebook/Instagram)</li>
+                  <li>• LinkedIn Ads</li>
+                  <li>• Stratégie cross-canal</li>
+                </ul>
+                <Link href="/services/paid">
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent hover:bg-red-50 hover:text-red-600 hover:border-red-600 transition-all"
                   >
                     En savoir plus
                   </Button>
@@ -395,6 +479,16 @@ export default function HomePage() {
                 <li>
                   <Link href="/services/crm-automation" className="hover:text-white transition-colors">
                     CRM & Automation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/formations" className="hover:text-white transition-colors">
+                    Nos Formations
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/paid" className="hover:text-white transition-colors">
+                    Paid
                   </Link>
                 </li>
               </ul>
