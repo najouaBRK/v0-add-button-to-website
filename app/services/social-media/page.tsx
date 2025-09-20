@@ -279,9 +279,6 @@ export default function SocialMediaPage() {
             accompagnent dans votre stratégie social media.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-8 py-3 text-lg font-medium">
-              Demander mon audit Social Media
-            </Button>
             <Link href="/#contact-section">
               <Button
                 variant="outline"

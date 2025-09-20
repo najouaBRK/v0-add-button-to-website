@@ -240,9 +240,6 @@ export default function EmailMarketingPage() {
             campagnes qui génèrent des résultats.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
-              Demander mon audit Email
-            </Button>
             <Link href="/#contact-section">
               <Button
                 variant="outline"

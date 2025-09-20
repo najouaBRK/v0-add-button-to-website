@@ -238,9 +238,6 @@ export default function AnalyticsDataPage() {
             stratégie data-driven performante.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg font-medium">
-              Demander mon audit Analytics
-            </Button>
             <Link href="/#contact-section">
               <Button
                 variant="outline"
