@@ -353,7 +353,7 @@ export default function HomePage() {
             <div className="scroll-reveal glass-card p-6 rounded-xl hover-lift transition-all duration-300">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
-                  <img src="/hubspot-logo-orange.png" alt="HubSpot" className="w-12 h-12 object-contain" />
+                  <img src="/hubspot-logo.png" alt="HubSpot" className="w-12 h-12 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-900">HubSpot</h3>
@@ -365,7 +365,7 @@ export default function HomePage() {
             <div className="scroll-reveal glass-card p-6 rounded-xl hover-lift transition-all duration-300">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <img src="/odoo-logo-purple.jpg" alt="Odoo" className="w-12 h-12 object-contain" />
+                  <img src="/odoo-logo.png" alt="Odoo" className="w-12 h-12 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-900">Odoo</h3>

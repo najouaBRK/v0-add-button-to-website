@@ -291,7 +291,7 @@ export default function CRMAutomationPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <img src="/hubspot-logo-orange.png" alt="HubSpot" className="w-10 h-10" />
+                <img src="/hubspot-logo.png" alt="HubSpot" className="w-10 h-10" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">HubSpot</h3>
               <p className="text-gray-600 text-sm">CRM tout-en-un avec marketing automation</p>
@@ -299,7 +299,7 @@ export default function CRMAutomationPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <img src="/odoo-logo-purple.jpg" alt="Odoo" className="w-10 h-10" />
+                <img src="/odoo-logo.png" alt="Odoo" className="w-10 h-10" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Odoo</h3>
               <p className="text-gray-600 text-sm">Suite ERP complète avec CRM intégré</p>
