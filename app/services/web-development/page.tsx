@@ -133,6 +133,7 @@ export default function WebDevelopmentPage() {
                     }`}
                     onClick={() => {
                       setActiveButton(index)
+                      // Automatically redirect to the detailed service page
                       window.location.href = service.link
                     }}
                   >
