@@ -163,6 +163,85 @@ export default function EmailMarketingPage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Tarifs Email Marketing</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Des solutions d'email marketing adaptées à votre volume et vos besoins
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 border-2 border-gray-200 hover:border-purple-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">600€</div>
+                  <div className="text-gray-500">par mois</div>
+                </div>
+                <ul className="space-y-3 text-gray-600 mb-8">
+                  <li>• Jusqu'à 5 000 contacts</li>
+                  <li>• 3 campagnes automatisées</li>
+                  <li>• Templates de base</li>
+                  <li>• Rapports mensuels</li>
+                  <li>• Support email</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-purple-500 bg-purple-50 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">Populaire</span>
+              </div>
+              <CardContent className="pt-0">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">1 200€</div>
+                  <div className="text-gray-500">par mois</div>
+                </div>
+                <ul className="space-y-3 text-gray-600 mb-8">
+                  <li>• Jusqu'à 25 000 contacts</li>
+                  <li>• Campagnes illimitées</li>
+                  <li>• Templates personnalisés</li>
+                  <li>• A/B testing avancé</li>
+                  <li>• Support prioritaire</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-gray-200 hover:border-purple-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">2 500€</div>
+                  <div className="text-gray-500">par mois</div>
+                </div>
+                <ul className="space-y-3 text-gray-600 mb-8">
+                  <li>• Contacts illimités</li>
+                  <li>• Intégrations avancées</li>
+                  <li>• Account manager dédié</li>
+                  <li>• Formations équipe</li>
+                  <li>• Support 24/7</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-600 mb-6">
+              Si vous avez besoin d'un devis personnalisé, n'hésitez pas à nous contacter.
+            </p>
+            <Link href="/devis">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-purple-900 text-white">
         <div className="container mx-auto px-4 text-center">
