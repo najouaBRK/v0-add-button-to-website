@@ -160,6 +160,127 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos tarifs Social Media</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choisissez la formule qui correspond à vos besoins et à votre budget pour développer votre présence
+              sociale.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 border-2 border-gray-200 hover:border-fuchsia-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                  <div className="text-4xl font-bold text-fuchsia-600 mb-2">890€</div>
+                  <p className="text-gray-600">par mois</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Gestion de 2 réseaux sociaux
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    15 publications par mois
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Community management basique
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Rapport mensuel
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-fuchsia-500 bg-fuchsia-50 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-fuchsia-500 text-white px-4 py-2 rounded-full text-sm font-medium">Populaire</span>
+              </div>
+              <CardContent className="pt-0">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Professionnel</h3>
+                  <div className="text-4xl font-bold text-fuchsia-600 mb-2">1,590€</div>
+                  <p className="text-gray-600">par mois</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Gestion de 4 réseaux sociaux
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    30 publications par mois
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Community management avancé
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Campagnes publicitaires
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Analytics détaillés
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-gray-200 hover:border-fuchsia-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Expert</h3>
+                  <div className="text-4xl font-bold text-fuchsia-600 mb-2">2,890€</div>
+                  <p className="text-gray-600">par mois</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Gestion illimitée des réseaux
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    60 publications par mois
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Community management premium
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Partenariats influenceurs
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Stratégie personnalisée
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-6">
+              Si vous avez besoin d'un devis personnalisé, n'hésitez pas à nous contacter.
+            </p>
+            <Link href="/devis">
+              <Button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-fuchsia-900 text-white">
         <div className="container mx-auto px-4 text-center">

@@ -122,6 +122,17 @@ export default function PaidPage() {
               </CardContent>
             </Card>
           </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-6">
+              Si vous avez besoin d'un devis personnalisé, n'hésitez pas à nous contacter.
+            </p>
+            <Link href="/devis">
+              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

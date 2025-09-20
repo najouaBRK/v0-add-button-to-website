@@ -159,8 +159,127 @@ export default function CRMAutomationPage() {
         </div>
       </section>
 
-      {/* CRM Platforms Section */}
+      {/* Pricing Section */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos tarifs CRM & Automation</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Des solutions CRM et d'automatisation adaptées à la taille de votre entreprise et à vos besoins.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 border-2 border-gray-200 hover:border-orange-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                  <div className="text-4xl font-bold text-orange-600 mb-2">1,290€</div>
+                  <p className="text-gray-600">par mois</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Configuration CRM basique
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>5 workflows automatisés
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Formation équipe (2h)
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Support email
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-orange-500 bg-orange-50 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">Populaire</span>
+              </div>
+              <CardContent className="pt-0">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Professionnel</h3>
+                  <div className="text-4xl font-bold text-orange-600 mb-2">2,490€</div>
+                  <p className="text-gray-600">par mois</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Configuration CRM avancée
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    15 workflows automatisés
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Lead scoring personnalisé
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Intégrations tierces
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Formation équipe (4h)
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-gray-200 hover:border-orange-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Expert</h3>
+                  <div className="text-4xl font-bold text-orange-600 mb-2">4,290€</div>
+                  <p className="text-gray-600">par mois</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Configuration CRM sur mesure
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Workflows illimités
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Analytics prédictifs
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Intégrations personnalisées
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <span className="text-green-500 mr-3">✓</span>
+                    Support dédié 24/7
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-6">
+              Si vous avez besoin d'un devis personnalisé, n'hésitez pas à nous contacter.
+            </p>
+            <Link href="/devis">
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CRM Platforms Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Plateformes CRM que nous maîtrisons</h2>
