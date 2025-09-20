@@ -1,7 +1,10 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import { Bot, TrendingUp, Zap, Target } from "lucide-react"
+import QuoteButton from "@/components/QuoteButton"
 
 export default function AIPage() {
   return (
@@ -31,11 +34,14 @@ export default function AIPage() {
             coûts et accélérer leur croissance.
           </p>
 
-          <Link href="/devis">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-lg font-semibold transform hover:scale-105 transition-all duration-200">
-              Obtenir mon audit IA gratuit
-            </Button>
-          </Link>
+          <QuoteButton
+            serviceName="Intelligence Artificielle"
+            packageName="Audit IA gratuit"
+            packageDescription="Demande d'audit IA gratuit pour découvrir les opportunités d'automatisation"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-lg font-semibold transform hover:scale-105 transition-all duration-200"
+          >
+            Obtenir mon audit IA gratuit
+          </QuoteButton>
         </div>
       </section>
 
@@ -156,11 +162,14 @@ export default function AIPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/devis">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-lg font-semibold">
-                Demander un audit IA gratuit
-              </Button>
-            </Link>
+            <QuoteButton
+              serviceName="Intelligence Artificielle"
+              packageName="Audit IA gratuit CTA"
+              packageDescription="Demande d'audit IA gratuit depuis la section CTA"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-lg font-semibold"
+            >
+              Demander un audit IA gratuit
+            </QuoteButton>
             <Link href="/contact">
               <Button
                 variant="outline"

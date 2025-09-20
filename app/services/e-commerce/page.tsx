@@ -1,9 +1,7 @@
 "use client"
-
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
 import FormspreeButton from "@/components/FormspreeButton"
+import QuoteButton from "@/components/QuoteButton"
 
 export default function EcommercePage() {
   return (
@@ -24,9 +22,14 @@ export default function EcommercePage() {
             techniques les plus performants du marché.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
+            <QuoteButton
+              serviceName="E-commerce"
+              packageName="Demande de devis E-commerce"
+              packageDescription="Demande de devis pour création de boutique e-commerce performante"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium"
+            >
               Demander un devis
-            </Button>
+            </QuoteButton>
           </div>
         </div>
       </section>
@@ -270,7 +273,15 @@ export default function EcommercePage() {
                     Support prioritaire
                   </li>
                 </ul>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white">Demander un devis</Button>
+                <QuoteButton
+                  serviceName="E-commerce"
+                  packageName="E-commerce Enterprise"
+                  packagePrice="Sur devis"
+                  packageDescription="Solution e-commerce sur mesure avec marketplace multi-vendeurs, API personnalisées et support prioritaire"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white"
+                >
+                  Demander un devis
+                </QuoteButton>
               </CardContent>
             </Card>
           </div>
@@ -285,11 +296,14 @@ export default function EcommercePage() {
             Contactez-nous pour discuter de votre projet e-commerce et obtenir un devis personnalisé.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
-                Demander un devis gratuit
-              </Button>
-            </Link>
+            <QuoteButton
+              serviceName="E-commerce"
+              packageName="Devis E-commerce gratuit"
+              packageDescription="Demande de devis gratuit pour projet e-commerce personnalisé"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium"
+            >
+              Demander un devis gratuit
+            </QuoteButton>
           </div>
         </div>
       </section>

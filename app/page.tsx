@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import QuoteButton from "@/components/QuoteButton"
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -75,11 +76,14 @@ export default function HomePage() {
           <div
             className={`flex justify-center transition-all duration-1000 delay-700 ${isVisible ? "animate-scale-in" : "opacity-0"}`}
           >
-            <Link href="/devis">
-              <Button className="gradient-secondary hover:scale-105 text-white px-8 py-4 text-lg font-medium animate-pulse-glow transition-all duration-300 hover-lift">
-                Demander mon devis
-              </Button>
-            </Link>
+            <QuoteButton
+              serviceName="Accueil"
+              packageName="Demande de devis depuis l'accueil"
+              packageDescription="Demande de devis depuis la page d'accueil du site NOLIA"
+              className="gradient-secondary hover:scale-105 text-white px-8 py-4 text-lg font-medium animate-pulse-glow transition-all duration-300 hover-lift"
+            >
+              Demander mon devis
+            </QuoteButton>
           </div>
         </div>
       </section>

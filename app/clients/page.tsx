@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import QuoteButton from "@/components/QuoteButton"
 
 export default function ClientsPage() {
   return (
@@ -161,11 +162,14 @@ export default function ClientsPage() {
             Découvrez comment nous pouvons transformer votre présence digitale et booster votre croissance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/devis">
-              <Button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 text-lg font-medium">
-                Demander un devis
-              </Button>
-            </Link>
+            <QuoteButton
+              serviceName="Clients"
+              packageName="Demande de devis depuis la page clients"
+              packageDescription="Demande de devis depuis la page clients et partenaires"
+              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 text-lg font-medium"
+            >
+              Demander un devis
+            </QuoteButton>
             <Link href="/#contact-section">
               <Button
                 variant="outline"
