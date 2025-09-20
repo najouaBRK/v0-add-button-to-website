@@ -110,7 +110,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
