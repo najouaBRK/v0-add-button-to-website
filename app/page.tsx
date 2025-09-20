@@ -161,49 +161,98 @@ export default function HomePage() {
               {
                 icon: "🔍",
                 title: "SEO & SEA",
-                desc: "Optimisez pour les moteurs de recherche et campagnes publicitaires pour maximiser votre visibilité.",
+                desc: "Optimisation pour les moteurs de recherche et campagnes publicitaires Google Ads pour maximiser votre visibilité en ligne. Audit SEO complet, recherche de mots-clés, optimisation technique et création de campagnes publicitaires performantes.",
+                features: [
+                  "Audit SEO technique",
+                  "Recherche de mots-clés",
+                  "Optimisation on-page",
+                  "Campagnes Google Ads",
+                  "Reporting mensuel",
+                ],
                 price: "1 500€/mois",
                 link: "/services/seo-sea",
               },
               {
                 icon: "📊",
                 title: "Analytics & Data",
-                desc: "Analysez approfondie de vos données pour optimiser vos performances et prendre les bonnes décisions.",
+                desc: "Analyse approfondie de vos données pour optimiser vos performances et prendre les bonnes décisions stratégiques. Configuration Google Analytics, tableaux de bord personnalisés et recommandations d'optimisation.",
+                features: [
+                  "Configuration GA4",
+                  "Tableaux de bord",
+                  "Analyse comportementale",
+                  "Rapports personnalisés",
+                  "Recommandations",
+                ],
                 price: "800€/mois",
                 link: "/services/analytics-data",
               },
               {
                 icon: "📧",
                 title: "Email Marketing",
-                desc: "Stratégies d'email marketing personnalisées pour nourrir vos prospects et fidéliser vos clients.",
+                desc: "Stratégies d'email marketing personnalisées pour nourrir vos prospects et fidéliser vos clients. Création de campagnes automatisées, segmentation avancée et optimisation des taux d'ouverture.",
+                features: [
+                  "Campagnes automatisées",
+                  "Segmentation avancée",
+                  "Templates personnalisés",
+                  "A/B testing",
+                  "Analyse des performances",
+                ],
                 price: "600€/mois",
                 link: "/services/email-marketing",
               },
               {
                 icon: "📱",
                 title: "Social Media",
-                desc: "Gestion et optimisation de votre présence sur les réseaux sociaux pour engager votre audience.",
+                desc: "Gestion et optimisation de votre présence sur les réseaux sociaux pour engager votre audience. Création de contenu, planification des publications et community management professionnel.",
+                features: [
+                  "Stratégie de contenu",
+                  "Création graphique",
+                  "Planification",
+                  "Community management",
+                  "Reporting social",
+                ],
                 price: "900€/mois",
                 link: "/services/social-media",
               },
               {
                 icon: "💻",
                 title: "Web Development",
-                desc: "Création et optimisation de sites web performants pour convertir vos visiteurs en clients.",
+                desc: "Création et optimisation de sites web performants pour convertir vos visiteurs en clients. Développement sur mesure, optimisation mobile et intégration CRM pour maximiser vos conversions.",
+                features: [
+                  "Site responsive",
+                  "Optimisation SEO",
+                  "Intégration CRM",
+                  "Maintenance",
+                  "Support technique",
+                ],
                 price: "2 500€",
                 link: "/services/web-development",
               },
               {
                 icon: "⚙️",
                 title: "CRM & Automation",
-                desc: "Mise en place et optimisation de vos CRM pour automatiser vos processus de vente.",
+                desc: "Mise en place et optimisation de vos CRM pour automatiser vos processus de vente. Configuration HubSpot, workflows automatisés et formation de vos équipes commerciales.",
+                features: [
+                  "Configuration CRM",
+                  "Workflows automatisés",
+                  "Formation équipes",
+                  "Intégrations",
+                  "Support continu",
+                ],
                 price: "1 200€/mois",
                 link: "/services/crm-automation",
               },
               {
                 icon: "🎓",
                 title: "Nos Formations",
-                desc: "Formations spécialisées en marketing digital pour développer vos compétences et celles de vos équipes.",
+                desc: "Formations spécialisées en marketing digital pour développer vos compétences et celles de vos équipes. Programmes certifiants, ateliers pratiques et accompagnement personnalisé.",
+                features: [
+                  "Programmes certifiants",
+                  "Ateliers pratiques",
+                  "Support pédagogique",
+                  "Suivi personnalisé",
+                  "Ressources exclusives",
+                ],
                 price: "Découvrez nos programmes",
                 link: "https://noliaformation.com/",
                 external: true,
@@ -211,40 +260,58 @@ export default function HomePage() {
               {
                 icon: "🎯",
                 title: "Paid",
-                desc: "Stratégies publicitaires cross-canal pour maximiser votre ROI sur tous les canaux payants.",
+                desc: "Stratégies publicitaires cross-canal pour maximiser votre ROI sur tous les canaux payants. Gestion Facebook Ads, LinkedIn Ads, Google Ads et optimisation continue des performances.",
+                features: [
+                  "Multi-plateformes",
+                  "Ciblage avancé",
+                  "Optimisation ROI",
+                  "Créations publicitaires",
+                  "Reporting détaillé",
+                ],
                 price: "1 800€/mois",
                 link: "/services/paid",
               },
             ].map((service, index) => (
               <Card
                 key={index}
-                className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="bg-white border-2 border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-blue-200"
               >
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-2xl">{service.icon}</span>
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-md">
+                    <span className="text-3xl">{service.icon}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{service.desc}</p>
-                  <div className="mb-4">
-                    <div className="text-lg font-semibold text-blue-600">À partir de {service.price}</div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{service.desc}</p>
+
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-800 mb-3">Inclus dans ce service :</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
+
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                    <div className="text-sm text-gray-600 mb-1">À partir de</div>
+                    <div className="text-2xl font-bold text-blue-600">{service.price}</div>
+                  </div>
+
                   {service.external ? (
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <Button
-                        variant="outline"
-                        className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
-                      >
-                        En savoir plus
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200">
+                        En savoir plus →
                       </Button>
                     </a>
                   ) : (
                     <Link href={service.link}>
-                      <Button
-                        variant="outline"
-                        className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
-                      >
-                        En savoir plus
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200">
+                        En savoir plus →
                       </Button>
                     </Link>
                   )}
