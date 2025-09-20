@@ -22,17 +22,6 @@ export default function EmailMarketingPage() {
             Créez des campagnes d'email marketing personnalisées qui convertissent. De la stratégie à l'automatisation,
             nous vous aidons à maximiser le ROI de vos communications email.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
-              Audit Email gratuit
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos templates
-            </Button>
-          </div>
         </div>
       </section>
 

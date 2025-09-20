@@ -22,17 +22,6 @@ export default function CRMAutomationPage() {
             Optimisez vos processus de vente et marketing avec des solutions CRM et d'automatisation sur mesure.
             Transformez vos leads en clients fidèles grâce à des workflows intelligents.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium">
-              Audit CRM gratuit
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-orange-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos workflows
-            </Button>
-          </div>
         </div>
       </section>
 

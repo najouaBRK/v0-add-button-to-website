@@ -22,17 +22,6 @@ export default function SocialMediaPage() {
             Développez votre présence sur les réseaux sociaux avec des stratégies créatives et engageantes. De la
             création de contenu à la gestion de communauté, nous boostons votre visibilité sociale.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-8 py-3 text-lg font-medium">
-              Audit Social Media gratuit
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-fuchsia-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              Voir nos créations
-            </Button>
-          </div>
         </div>
       </section>
 
