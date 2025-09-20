@@ -89,11 +89,6 @@ export default function WebDevelopmentPage() {
               votre contenu d'une à travers un blog ou en maximisant vos ventes grâce à une plateforme e-commerce
               performante.
             </p>
-            <div className="mt-8">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
-                Voir notre méthodologie
-              </Button>
-            </div>
           </div>
         </div>
       </section>
