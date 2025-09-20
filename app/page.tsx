@@ -10,27 +10,27 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 px-4">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-12 md:py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-6">
-            <span className="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <span className="inline-block bg-orange-500 text-white px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium mb-6 md:mb-8">
               ⭐ Agence d'acquisition digitale #1
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight">
             <span className="text-blue-300">+</span> de visiteurs,
             <br />
             <span className="text-orange-400">+</span> de prospects,
             <br />
             <span className="text-blue-300">+</span> de clients
           </h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-blue-100 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
             Percez à la rencontre de vos prospects et embarquez dans la galaxie de la très agence digitale capable de
             booster votre croissance sur l'ensemble de votre parcours de vente.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center px-4">
             <Link href="/devis">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-medium w-full sm:w-auto">
                 Demander mon devis
               </Button>
             </Link>
@@ -39,15 +39,15 @@ export default function HomePage() {
       </section>
 
       {/* Galaxy Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Embarquez dans notre galaxie !</h2>
-          <p className="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Embarquez dans notre galaxie !</h2>
+          <p className="text-base md:text-xl text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">
             Nos experts vous accompagnent au quotidien afin de développer pour votre entreprise une stratégie
             d'acquisition digitale qui transforme vos visiteurs en prospects et vos prospects en clients.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <Card className="text-center p-6 border-0 shadow-lg">
               <CardContent className="pt-6">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -100,17 +100,17 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services-section" className="py-20 bg-gray-50">
+      <section id="services-section" className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Nos Services</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
               Découvrez notre gamme complète de services d'acquisition digitale conçus pour booster votre croissance et
               transformer votre présence en ligne.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="pt-0">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -271,10 +271,10 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-12 md:py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Prêt à décoller ?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">Prêt à décoller ?</h2>
+          <p className="text-base md:text-xl text-blue-100 mb-6 md:mb-8 max-w-2xl mx-auto">
             Contactez nos experts dès aujourd'hui pour découvrir de votre projet et découvrez comment nous pouvons
             booster votre croissance digitale.
           </p>
@@ -282,18 +282,18 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact-section" className="py-20 bg-white">
+      <section id="contact-section" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Discutons de votre projet</h2>
-              <form action="https://formspree.io/f/xkgvdzkd" method="POST" className="space-y-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8">Discutons de votre projet</h2>
+              <form action="https://formspree.io/f/xkgvdzkd" method="POST" className="space-y-4 md:space-y-6">
                 <input type="hidden" name="_replyto" value="najwaborak2@gmail.com" />
                 <input type="hidden" name="_next" value="https://nolia.fr/?success=true" />
                 <input type="hidden" name="_subject" value="Nouveau message depuis la page d'accueil - NOLIA" />
                 <input type="hidden" name="_cc" value="najwaborak2@gmail.com" />
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
                     <Input name="prenom" placeholder="Votre prénom" required />
@@ -317,14 +317,14 @@ export default function HomePage() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-medium"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 md:py-3 text-base md:text-lg font-medium"
                 >
                   Envoyer le message
                 </Button>
               </form>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Email</h3>
                 <p className="text-gray-600">contact@nolia.fr</p>
@@ -348,9 +348,9 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-900 text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-6">
                 <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
@@ -447,9 +447,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© 2024 NOLIA. Tous droits réservés.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 text-sm text-center md:text-left">© 2024 NOLIA. Tous droits réservés.</p>
+            <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
               <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Mentions légales
               </Link>
