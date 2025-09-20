@@ -218,26 +218,32 @@ export default function HomePage() {
             ].map((service, index) => (
               <Card
                 key={index}
-                className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 bg-white"
+                className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                     <span className="text-2xl">{service.icon}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground mb-4 text-sm">{service.desc}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{service.desc}</p>
                   <div className="mb-4">
-                    <div className="text-lg font-semibold text-primary">À partir de {service.price}</div>
+                    <div className="text-lg font-semibold text-blue-600">À partir de {service.price}</div>
                   </div>
                   {service.external ? (
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full bg-transparent">
+                      <Button
+                        variant="outline"
+                        className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
+                      >
                         En savoir plus
                       </Button>
                     </a>
                   ) : (
                     <Link href={service.link}>
-                      <Button variant="outline" className="w-full bg-transparent">
+                      <Button
+                        variant="outline"
+                        className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
+                      >
                         En savoir plus
                       </Button>
                     </Link>
