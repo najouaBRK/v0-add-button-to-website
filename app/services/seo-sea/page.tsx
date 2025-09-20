@@ -208,6 +208,85 @@ export default function SEOSEAPage() {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Tarifs SEO & SEA</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Des solutions adaptées à tous les budgets pour booster votre visibilité en ligne
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 border-2 border-gray-200 hover:border-blue-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">1 500€</div>
+                  <div className="text-gray-500">par mois</div>
+                </div>
+                <ul className="space-y-3 text-gray-600 mb-8">
+                  <li>• Audit SEO complet</li>
+                  <li>• Optimisation technique</li>
+                  <li>• 5 mots-clés ciblés</li>
+                  <li>• Rapport mensuel</li>
+                  <li>• Support email</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-blue-500 bg-blue-50 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">Populaire</span>
+              </div>
+              <CardContent className="pt-0">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">2 500€</div>
+                  <div className="text-gray-500">par mois</div>
+                </div>
+                <ul className="space-y-3 text-gray-600 mb-8">
+                  <li>• Tout du plan Starter</li>
+                  <li>• 15 mots-clés ciblés</li>
+                  <li>• Campagnes Google Ads</li>
+                  <li>• Content marketing</li>
+                  <li>• Support prioritaire</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 border-gray-200 hover:border-blue-500 transition-colors">
+              <CardContent className="pt-0">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">4 500€</div>
+                  <div className="text-gray-500">par mois</div>
+                </div>
+                <ul className="space-y-3 text-gray-600 mb-8">
+                  <li>• Tout du plan Professional</li>
+                  <li>• Mots-clés illimités</li>
+                  <li>• Stratégie multicanal</li>
+                  <li>• Account manager dédié</li>
+                  <li>• Rapports personnalisés</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-600 mb-6">
+              Si vous avez besoin d'un devis personnalisé, n'hésitez pas à nous contacter.
+            </p>
+            <Link href="/devis">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
+                Demander mon devis
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

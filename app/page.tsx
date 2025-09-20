@@ -301,8 +301,8 @@ export default function HomePage() {
                   Formations spécialisées en marketing digital pour développer vos compétences et celles de vos équipes.
                 </p>
                 <div className="mb-6">
-                  <div className="text-2xl font-bold text-teal-600 mb-2">À partir de 500€/jour</div>
-                  <div className="text-sm text-gray-500">Certification incluse</div>
+                  <div className="text-lg text-gray-500 mb-2">Découvrez nos programmes</div>
+                  <div className="text-sm text-gray-500">Formations certifiantes</div>
                 </div>
                 <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li>• Formation SEO/SEA</li>
@@ -310,14 +310,14 @@ export default function HomePage() {
                   <li>• Analytics & Data</li>
                   <li>• Stratégie digitale</li>
                 </ul>
-                <Link href="/services/formations">
+                <a href="https://noliaformation.com/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     className="w-full bg-transparent hover:bg-teal-50 hover:text-teal-600 hover:border-teal-600 transition-all"
                   >
                     En savoir plus
                   </Button>
-                </Link>
+                </a>
               </CardContent>
             </Card>
 
