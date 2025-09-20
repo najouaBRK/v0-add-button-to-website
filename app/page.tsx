@@ -9,88 +9,91 @@ import Link from "next/link"
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-12 md:py-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="mb-6">
-            <span className="inline-block bg-orange-500 text-white px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium mb-6 md:mb-8">
+      <section className="digital-gradient text-white py-20 md:py-32 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto text-center relative z-10">
+          <div className="mb-8">
+            <span className="inline-block bg-secondary text-white px-6 py-3 rounded-full text-sm font-medium mb-8 digital-glow">
               ⭐ Agence d'acquisition digitale #1
             </span>
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight">
-            <span className="text-blue-300">+</span> de visiteurs,
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight font-space-grotesk">
+            <span className="text-cyan-300">+</span> de visiteurs,
             <br />
-            <span className="text-orange-400">+</span> de prospects,
+            <span className="text-pink-400">+</span> de prospects,
             <br />
-            <span className="text-blue-300">+</span> de clients
+            <span className="text-cyan-300">+</span> de clients
           </h1>
-          <p className="text-base md:text-xl text-blue-100 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-            Percez à la rencontre de vos prospects et embarquez dans la galaxie de la très agence digitale capable de
-            booster votre croissance sur l'ensemble de votre parcours de vente.
+          <p className="text-lg md:text-xl text-cyan-100 mb-10 max-w-3xl mx-auto leading-relaxed font-dm-sans">
+            Percez à la rencontre de vos prospects et embarquez dans la galaxie de l'agence digitale capable de booster
+            votre croissance sur l'ensemble de votre parcours de vente.
           </p>
-          <div className="flex justify-center px-4">
+          <div className="flex justify-center">
             <Link href="/devis">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-medium w-full sm:w-auto">
+              <Button className="bg-secondary hover:bg-secondary/90 text-white px-8 py-4 text-lg font-medium digital-glow transition-all duration-300 hover:scale-105">
                 Demander mon devis
               </Button>
             </Link>
           </div>
         </div>
+        <div className="absolute top-20 left-10 w-20 h-20 border border-cyan-400/30 rounded-full"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 border border-pink-400/30 rounded-lg rotate-45"></div>
       </section>
 
-      {/* Galaxy Section */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-20 md:py-32 bg-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Embarquez dans notre galaxie !</h2>
-          <p className="text-base md:text-xl text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 font-space-grotesk">
+            Embarquez dans notre <span className="digital-text-gradient">galaxie digitale</span> !
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-4xl mx-auto font-dm-sans">
             Nos experts vous accompagnent au quotidien afin de développer pour votre entreprise une stratégie
             d'acquisition digitale qui transforme vos visiteurs en prospects et vos prospects en clients.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <Card className="text-center p-6 border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-orange-500 text-2xl">🚀</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-8 pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 digital-glow">
+                  <span className="text-white text-3xl">🚀</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-foreground mb-4 font-space-grotesk">Innovation</h3>
+                <p className="text-muted-foreground font-dm-sans">
                   Nous utilisons les dernières technologies et stratégies pour créer des solutions innovantes.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-orange-500 text-2xl">🎯</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-8 pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-secondary to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 digital-glow">
+                  <span className="text-white text-3xl">🎯</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Précision</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-foreground mb-4 font-space-grotesk">Précision</h3>
+                <p className="text-muted-foreground font-dm-sans">
                   Nos stratégies sont adaptées et focalisées sur votre audience et vos objectifs de croissance.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-orange-500 text-2xl">⚡</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-8 pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 digital-glow">
+                  <span className="text-white text-3xl">⚡</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Expertise</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-foreground mb-4 font-space-grotesk">Expertise</h3>
+                <p className="text-muted-foreground font-dm-sans">
                   Notre équipe d'experts maîtrise tous les aspects du marketing digital moderne.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 border-0 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-orange-500 text-2xl">📈</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="pt-8 pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 digital-glow">
+                  <span className="text-white text-3xl">📈</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Résultats</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-foreground mb-4 font-space-grotesk">Résultats</h3>
+                <p className="text-muted-foreground font-dm-sans">
                   Nous mesurons les performances de nos actions grâce à un suivi de données avancé.
                 </p>
               </CardContent>
@@ -99,32 +102,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services-section" className="py-12 md:py-20 bg-gray-50">
+      <section id="services-section" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Nos Services</h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 font-space-grotesk">
+              Nos <span className="digital-text-gradient">Services</span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto font-dm-sans">
               Découvrez notre gamme complète de services d'acquisition digitale conçus pour booster votre croissance et
               transformer votre présence en ligne.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-blue-600 text-xl">🔍</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">🔍</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">SEO & SEA</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">SEO & SEA</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Optimisez pour les moteurs de recherche et campagnes publicitaires pour maximiser votre visibilité.
                 </p>
                 <div className="mb-6">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">À partir de 1 500€/mois</div>
-                  <div className="text-sm text-gray-500">Audit SEO offert</div>
+                  <div className="text-2xl font-bold text-primary mb-2">À partir de 1 500€/mois</div>
+                  <div className="text-sm text-muted-foreground">Audit SEO offert</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Audit SEO complet</li>
                   <li>• Campagnes Google Ads</li>
                   <li>• Optimisation technique</li>
@@ -133,7 +137,7 @@ export default function HomePage() {
                 <Link href="/services/seo-sea">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-blue-50 hover:text-blue-600 hover:border-blue-600 transition-all"
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
@@ -141,20 +145,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-violet-600 text-xl">📊</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">📊</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Data</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">Analytics & Data</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Analysez approfondie de vos données pour optimiser vos performances et prendre les bonnes décisions.
                 </p>
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-violet-600 mb-2">À partir de 800€/mois</div>
-                  <div className="text-sm text-gray-500">Configuration incluse</div>
+                  <div className="text-sm text-muted-foreground">Configuration incluse</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Configuration Google Analytics</li>
                   <li>• Tableaux de bord personnalisés</li>
                   <li>• Analyse comportementale</li>
@@ -163,7 +167,7 @@ export default function HomePage() {
                 <Link href="/services/analytics-data">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-violet-50 hover:text-violet-600 hover:border-violet-600 transition-all"
+                    className="w-full border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
@@ -171,20 +175,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-purple-600 text-xl">📧</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">📧</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Email Marketing</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">Email Marketing</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Stratégies d'email marketing personnalisées pour nourrir vos prospects et fidéliser vos clients.
                 </p>
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-purple-600 mb-2">À partir de 600€/mois</div>
-                  <div className="text-sm text-gray-500">Templates inclus</div>
+                  <div className="text-sm text-muted-foreground">Templates inclus</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Campagnes automatisées</li>
                   <li>• Segmentation avancée</li>
                   <li>• Templates personnalisés</li>
@@ -193,7 +197,7 @@ export default function HomePage() {
                 <Link href="/services/email-marketing">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-purple-50 hover:text-purple-600 hover:border-purple-600 transition-all"
+                    className="w-full border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
@@ -201,20 +205,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-pink-600 text-xl">📱</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">📱</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Social Media</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">Social Media</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Gestion et optimisation de votre présence sur les réseaux sociaux pour engager votre audience.
                 </p>
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-pink-600 mb-2">À partir de 900€/mois</div>
-                  <div className="text-sm text-gray-500">Contenu créatif inclus</div>
+                  <div className="text-sm text-muted-foreground">Contenu créatif inclus</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Stratégie social media</li>
                   <li>• Création de contenu</li>
                   <li>• Community management</li>
@@ -223,7 +227,7 @@ export default function HomePage() {
                 <Link href="/services/social-media">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-pink-50 hover:text-pink-600 hover:border-pink-600 transition-all"
+                    className="w-full border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
@@ -231,20 +235,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-green-600 text-xl">💻</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">💻</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">Web Development</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Création et optimisation de sites web performants pour convertir vos visiteurs en clients.
                 </p>
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-green-600 mb-2">À partir de 2 500€</div>
-                  <div className="text-sm text-gray-500">Projet sur mesure</div>
+                  <div className="text-sm text-muted-foreground">Projet sur mesure</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Sites web sur mesure</li>
                   <li>• Optimisation UX/UI</li>
                   <li>• Performance web</li>
@@ -253,7 +257,7 @@ export default function HomePage() {
                 <Link href="/services/web-development">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-green-50 hover:text-green-600 hover:border-green-600 transition-all"
+                    className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
@@ -261,20 +265,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-orange-600 text-xl">⚙️</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">⚙️</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">CRM & Automation</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">CRM & Automation</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Mise en place et optimisation de vos CRM pour automatiser vos processus de vente.
                 </p>
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-orange-600 mb-2">À partir de 1 200€/mois</div>
-                  <div className="text-sm text-gray-500">Setup inclus</div>
+                  <div className="text-sm text-muted-foreground">Setup inclus</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Configuration CRM</li>
                   <li>• Workflows automatisés</li>
                   <li>• Lead scoring</li>
@@ -283,7 +287,7 @@ export default function HomePage() {
                 <Link href="/services/crm-automation">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-orange-50 hover:text-orange-600 hover:border-orange-600 transition-all"
+                    className="w-full border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
@@ -291,20 +295,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-teal-600 text-xl">🎓</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">🎓</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Nos Formations</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">Nos Formations</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Formations spécialisées en marketing digital pour développer vos compétences et celles de vos équipes.
                 </p>
                 <div className="mb-6">
-                  <div className="text-lg text-gray-500 mb-2">Découvrez nos programmes</div>
-                  <div className="text-sm text-gray-500">Formations certifiantes</div>
+                  <div className="text-lg text-muted-foreground mb-2">Découvrez nos programmes</div>
+                  <div className="text-sm text-muted-foreground">Formations certifiantes</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Formation SEO/SEA</li>
                   <li>• Social Media Marketing</li>
                   <li>• Analytics & Data</li>
@@ -313,7 +317,7 @@ export default function HomePage() {
                 <a href="https://noliaformation.com/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-teal-50 hover:text-teal-600 hover:border-teal-600 transition-all"
+                    className="w-full border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
@@ -321,20 +325,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-red-600 text-xl">🎯</span>
+            <Card className="digital-card border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl">🎯</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Paid</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-space-grotesk">Paid</h3>
+                <p className="text-muted-foreground mb-6 font-dm-sans">
                   Stratégies publicitaires cross-canal pour maximiser votre ROI sur tous les canaux payants.
                 </p>
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-red-600 mb-2">À partir de 1 800€/mois</div>
-                  <div className="text-sm text-gray-500">Budget pub non inclus</div>
+                  <div className="text-sm text-muted-foreground">Budget pub non inclus</div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6 font-dm-sans">
                   <li>• Google Ads</li>
                   <li>• Meta Ads (Facebook/Instagram)</li>
                   <li>• LinkedIn Ads</li>
@@ -343,7 +347,7 @@ export default function HomePage() {
                 <Link href="/services/paid">
                   <Button
                     variant="outline"
-                    className="w-full bg-transparent hover:bg-red-50 hover:text-red-600 hover:border-red-600 transition-all"
+                    className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300 bg-transparent"
                   >
                     En savoir plus
                   </Button>
