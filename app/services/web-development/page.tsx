@@ -22,17 +22,6 @@ export default function WebDevelopmentPage() {
             Confiez la création de votre site internet à une agence web proche de ses clients qui s'engage à vos côtés
             et qui vous aidera à viser la lune.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
-              Recevoir un devis gratuit dans l'heure
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
-            >
-              En savoir plus sur DIGITALISIM
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -304,21 +293,6 @@ export default function WebDevelopmentPage() {
             Embarquez dans la galaxie de la transformation digitale et boostez votre croissance sur l'ensemble de votre
             parcours de vente.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
-                Recevoir un devis gratuit dans l'heure
-              </Button>
-            </Link>
-            <Link href="/#contact-section">
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg font-medium bg-transparent"
-              >
-                En savoir plus sur DIGITALISIM
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
     </div>
