@@ -3,8 +3,57 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import { useState, useEffect } from "react"
 
 export default function WebDevelopmentPage() {
+  const [activeButton, setActiveButton] = useState(0)
+  const [isHovered, setIsHovered] = useState<number | null>(null)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (isHovered === null) {
+        setActiveButton((prev) => (prev + 1) % 4)
+      }
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [isHovered])
+
+  const serviceButtons = [
+    {
+      id: 0,
+      title: "Site vitrine",
+      icon: "🌐",
+      description:
+        "Idéal pour assurer sa présence sur internet et présenter son entreprise. Conçu avec les outils et techniques les plus performants du marché.",
+      link: "/services/site-vitrine",
+    },
+    {
+      id: 1,
+      title: "Site e-commerce",
+      icon: "🛒",
+      description:
+        "Le site e-commerce vous permet d'exploiter vos nouveaux canaux de vente en ligne. Conçu avec les outils et techniques les plus performants.",
+      link: "/services/e-commerce",
+    },
+    {
+      id: 2,
+      title: "Blog",
+      icon: "📝",
+      description:
+        "Décuplez l'actualité de votre société et proposez du contenu à forte valeur ajoutée pour vos prospects et clients.",
+      link: "/services/blog",
+    },
+    {
+      id: 3,
+      title: "Landing Page",
+      icon: "🚀",
+      description:
+        "En créant des landing page, boostez votre visibilité et générez plus de leads. Nous vous accompagnons pour améliorer vos objectifs.",
+      link: "/services/landing-page",
+    },
+  ]
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -57,61 +106,68 @@ export default function WebDevelopmentPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-blue-800 border-blue-700 text-white p-6">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-white text-xl">🌐</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4">Site vitrine</h3>
-                <p className="text-blue-100 mb-4 text-sm">
-                  Idéal pour assurer sa présence sur internet et présenter son entreprise. Conçu avec les outils et
-                  techniques les plus performants du marché.
-                </p>
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm">En savoir plus</Button>
-              </CardContent>
-            </Card>
+            {serviceButtons.map((service, index) => (
+              <Card
+                key={service.id}
+                className={`bg-blue-800 border-blue-700 text-white p-6 transition-all duration-500 transform ${
+                  activeButton === index ? "scale-105 bg-blue-700 shadow-2xl" : "hover:scale-102"
+                } ${isHovered === index ? "scale-105 bg-blue-700" : ""}`}
+                onMouseEnter={() => setIsHovered(index)}
+                onMouseLeave={() => setIsHovered(null)}
+              >
+                <CardContent className="pt-0">
+                  <div
+                    className={`w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${
+                      activeButton === index || isHovered === index ? "bg-orange-500 rotate-12" : ""
+                    }`}
+                  >
+                    <span className="text-white text-xl">{service.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-blue-100 mb-4 text-sm">{service.description}</p>
+                  <Button
+                    className={`transition-all duration-300 text-sm relative overflow-hidden ${
+                      activeButton === index || isHovered === index
+                        ? "bg-orange-600 hover:bg-orange-700 shadow-lg transform translate-y-0"
+                        : "bg-orange-500 hover:bg-orange-600"
+                    }`}
+                    onClick={() => {
+                      setActiveButton(index)
+                      window.location.href = service.link
+                    }}
+                  >
+                    <span
+                      className={`transition-transform duration-300 ${
+                        activeButton === index || isHovered === index ? "translate-x-1" : ""
+                      }`}
+                    >
+                      En savoir plus
+                    </span>
+                    <span
+                      className={`absolute right-2 transition-all duration-300 ${
+                        activeButton === index || isHovered === index
+                          ? "opacity-100 translate-x-0"
+                          : "opacity-0 translate-x-2"
+                      }`}
+                    >
+                      →
+                    </span>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
-            <Card className="bg-blue-800 border-blue-700 text-white p-6">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-white text-xl">🛒</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4">Site e-commerce</h3>
-                <p className="text-blue-100 mb-4 text-sm">
-                  Le site e-commerce vous permet d'exploiter vos nouveaux canaux de vente en ligne. Conçu avec les
-                  outils et techniques les plus performants.
-                </p>
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm">En savoir plus</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-blue-800 border-blue-700 text-white p-6">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-white text-xl">📝</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4">Blog</h3>
-                <p className="text-blue-100 mb-4 text-sm">
-                  Décuplez l'actualité de votre société et proposez du contenu à forte valeur ajoutée pour vos prospects
-                  et clients.
-                </p>
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm">En savoir plus</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-blue-800 border-blue-700 text-white p-6">
-              <CardContent className="pt-0">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-white text-xl">🚀</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4">Landing Page</h3>
-                <p className="text-blue-100 mb-4 text-sm">
-                  En créant des landing page, boostez votre visibilité et générez plus de leads. Nous vous accompagnons
-                  pour améliorer vos objectifs.
-                </p>
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm">En savoir plus</Button>
-              </CardContent>
-            </Card>
+          <div className="flex justify-center mt-8 space-x-2">
+            {serviceButtons.map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  activeButton === index ? "bg-orange-500 scale-125" : "bg-blue-600 hover:bg-blue-500"
+                }`}
+                onClick={() => setActiveButton(index)}
+              />
+            ))}
           </div>
         </div>
       </section>
