@@ -76,7 +76,14 @@ export default function PaidPage() {
                   <li>• Rapport de performance</li>
                   <li>• Support par email</li>
                 </ul>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">Choisir Starter</Button>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Paid Starter&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Paid Starter à 1 800€/mois + budget pub.%0D%0A%0D%0AInclus :%0D%0A- 1 canal publicitaire%0D%0A- Google Ads ou Meta Ads%0D%0A- Optimisation mensuelle%0D%0A- Rapport de performance%0D%0A- Support par email%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white">Choisir Starter</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -98,7 +105,14 @@ export default function PaidPage() {
                   <li>• Rapports détaillés</li>
                   <li>• Support téléphonique</li>
                 </ul>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">Choisir Growth</Button>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Paid Growth&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Paid Growth à 2 800€/mois + budget pub.%0D%0A%0D%0AInclus :%0D%0A- 2-3 canaux publicitaires%0D%0A- Google Ads + Meta Ads%0D%0A- Stratégie cross-canal%0D%0A- Optimisation bi-mensuelle%0D%0A- Rapports détaillés%0D%0A- Support téléphonique%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white">Choisir Growth</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -118,7 +132,14 @@ export default function PaidPage() {
                   <li>• Account manager dédié</li>
                   <li>• Formation équipe incluse</li>
                 </ul>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white">Choisir Enterprise</Button>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Paid Enterprise&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Paid Enterprise à 4 500€/mois + budget pub.%0D%0A%0D%0AInclus :%0D%0A- Tous canaux publicitaires%0D%0A- Google, Meta, LinkedIn Ads%0D%0A- Stratégie omnicanale%0D%0A- Optimisation hebdomadaire%0D%0A- Rapports en temps réel%0D%0A- Account manager dédié%0D%0A- Formation équipe incluse%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white">Choisir Enterprise</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </div>

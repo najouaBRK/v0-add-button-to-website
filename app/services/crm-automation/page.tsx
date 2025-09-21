@@ -183,6 +183,14 @@ export default function CRMAutomationPage() {
                     Support email
                   </li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack CRM & Automation Starter&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack CRM & Automation Starter à 1,290€/mois.%0D%0A%0D%0AInclus :%0D%0A- Configuration CRM basique%0D%0A- 5 workflows automatisés%0D%0A- Formation équipe (2h)%0D%0A- Support email%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">Choisir Starter</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -218,6 +226,16 @@ export default function CRMAutomationPage() {
                     Formation équipe (4h)
                   </li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack CRM & Automation Professionnel&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack CRM & Automation Professionnel à 2,490€/mois.%0D%0A%0D%0AInclus :%0D%0A- Configuration CRM avancée%0D%0A- 15 workflows automatisés%0D%0A- Lead scoring personnalisé%0D%0A- Intégrations tierces%0D%0A- Formation équipe (4h)%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                      Choisir Professionnel
+                    </Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -250,6 +268,14 @@ export default function CRMAutomationPage() {
                     Support dédié 24/7
                   </li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack CRM & Automation Expert&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack CRM & Automation Expert à 4,290€/mois.%0D%0A%0D%0AInclus :%0D%0A- Configuration CRM sur mesure%0D%0A- Workflows illimités%0D%0A- Analytics prédictifs%0D%0A- Intégrations personnalisées%0D%0A- Support dédié 24/7%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">Choisir Expert</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </div>

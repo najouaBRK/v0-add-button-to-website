@@ -177,6 +177,14 @@ export default function EmailMarketingPage() {
                   <li>• Rapports mensuels</li>
                   <li>• Support email</li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Email Marketing Starter&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Email Marketing Starter à 600€/mois.%0D%0A%0D%0AInclus :%0D%0A- Jusqu'à 5 000 contacts%0D%0A- 3 campagnes automatisées%0D%0A- Templates de base%0D%0A- Rapports mensuels%0D%0A- Support email%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">Choisir Starter</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -197,6 +205,16 @@ export default function EmailMarketingPage() {
                   <li>• A/B testing avancé</li>
                   <li>• Support prioritaire</li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Email Marketing Professional&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Email Marketing Professional à 1 200€/mois.%0D%0A%0D%0AInclus :%0D%0A- Jusqu'à 25 000 contacts%0D%0A- Campagnes illimitées%0D%0A- Templates personnalisés%0D%0A- A/B testing avancé%0D%0A- Support prioritaire%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                      Choisir Professional
+                    </Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -214,6 +232,14 @@ export default function EmailMarketingPage() {
                   <li>• Formations équipe</li>
                   <li>• Support 24/7</li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Email Marketing Enterprise&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Email Marketing Enterprise à 2 500€/mois.%0D%0A%0D%0AInclus :%0D%0A- Contacts illimités%0D%0A- Intégrations avancées%0D%0A- Account manager dédié%0D%0A- Formations équipe%0D%0A- Support 24/7%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">Choisir Enterprise</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </div>

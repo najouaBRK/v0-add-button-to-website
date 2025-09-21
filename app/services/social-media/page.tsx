@@ -186,6 +186,14 @@ export default function SocialMediaPage() {
                     Rapport mensuel
                   </li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Social Media Starter&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Social Media Starter à 890€/mois.%0D%0A%0D%0AInclus :%0D%0A- Gestion de 2 réseaux sociaux%0D%0A- 15 publications par mois%0D%0A- Community management basique%0D%0A- Rapport mensuel%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white">Choisir Starter</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -221,6 +229,16 @@ export default function SocialMediaPage() {
                     Analytics détaillés
                   </li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Social Media Professionnel&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Social Media Professionnel à 1,590€/mois.%0D%0A%0D%0AInclus :%0D%0A- Gestion de 4 réseaux sociaux%0D%0A- 30 publications par mois%0D%0A- Community management avancé%0D%0A- Campagnes publicitaires%0D%0A- Analytics détaillés%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white">
+                      Choisir Professionnel
+                    </Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -253,6 +271,14 @@ export default function SocialMediaPage() {
                     Stratégie personnalisée
                   </li>
                 </ul>
+                <div className="text-center">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack Social Media Expert&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack Social Media Expert à 2,890€/mois.%0D%0A%0D%0AInclus :%0D%0A- Gestion illimitée des réseaux%0D%0A- 60 publications par mois%0D%0A- Community management premium%0D%0A- Partenariats influenceurs%0D%0A- Stratégie personnalisée%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
+                    <Button className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white">Choisir Expert</Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </div>

@@ -235,11 +235,14 @@ export default function SEOSEAPage() {
                   <li>• Support email</li>
                 </ul>
                 <div className="text-center">
-                  <Link href="/devis">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack SEO & SEA Starter&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack SEO & SEA Starter à 1 500€/mois.%0D%0A%0D%0AInclus :%0D%0A- Audit SEO complet%0D%0A- Optimisation technique%0D%0A- 5 mots-clés ciblés%0D%0A- Rapport mensuel%0D%0A- Support email%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-medium">
                       Choisir Starter
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -262,11 +265,14 @@ export default function SEOSEAPage() {
                   <li>• Support prioritaire</li>
                 </ul>
                 <div className="text-center">
-                  <Link href="/devis">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack SEO & SEA Professional&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack SEO & SEA Professional à 2 500€/mois.%0D%0A%0D%0AInclus :%0D%0A- Tout du plan Starter%0D%0A- 15 mots-clés ciblés%0D%0A- Campagnes Google Ads%0D%0A- Content marketing%0D%0A- Support prioritaire%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-medium">
                       Choisir Professional
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -286,11 +292,14 @@ export default function SEOSEAPage() {
                   <li>• Rapports personnalisés</li>
                 </ul>
                 <div className="text-center">
-                  <Link href="/devis">
+                  <a
+                    href="mailto:contact@nolia.fr?subject=Commande Pack SEO & SEA Enterprise&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack SEO & SEA Enterprise à 4 500€/mois.%0D%0A%0D%0AInclus :%0D%0A- Tout du plan Professional%0D%0A- Mots-clés illimités%0D%0A- Stratégie multicanal%0D%0A- Account manager dédié%0D%0A- Rapports personnalisés%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+                    className="inline-block w-full"
+                  >
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-medium">
                       Choisir Enterprise
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -300,11 +309,14 @@ export default function SEOSEAPage() {
             <p className="text-lg text-gray-600 mb-6">
               Si vous avez besoin d'un devis personnalisé, n'hésitez pas à nous contacter.
             </p>
-            <Link href="/devis">
+            <a
+              href="mailto:contact@nolia.fr?subject=Commande Pack SEO & SEA Starter&body=Bonjour,%0D%0A%0D%0AJe souhaite commander le Pack SEO & SEA Starter à 1 500€/mois.%0D%0A%0D%0AInclus :%0D%0A- Audit SEO complet%0D%0A- Optimisation technique%0D%0A- 5 mots-clés ciblés%0D%0A- Rapport mensuel%0D%0A- Support email%0D%0A%0D%0AMerci de me recontacter pour finaliser la commande.%0D%0A%0D%0ACordialement"
+              className="inline-block w-full"
+            >
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-medium">
                 Demander mon devis
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
