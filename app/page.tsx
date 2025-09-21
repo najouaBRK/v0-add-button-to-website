@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <section className="bg-[#0f1729] text-white py-20 md:py-32 px-4 relative overflow-hidden">
-        {/* Animated background elements inspired by digitalisim space theme */}
+        {/* Animated background elements inspired by NOLIA space theme */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
           <div
@@ -63,14 +63,14 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto text-center relative z-10">
-          {/* Badge similar to digitalisim */}
+          {/* Badge similar to NOLIA */}
           <div className={`mb-8 transition-all duration-1000 ${isVisible ? "animate-bounce-in" : "opacity-0"}`}>
             <span className="inline-block bg-orange-500/20 border border-orange-500/30 text-orange-300 px-6 py-3 rounded-full text-sm font-medium mb-8">
               ⭐ Experts en Transformation Digitale
             </span>
           </div>
 
-          {/* Main heading matching digitalisim structure */}
+          {/* Main heading matching NOLIA structure */}
           <h1
             className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight transition-all duration-1000 delay-300 ${isVisible ? "animate-slide-in-left" : "opacity-0"}`}
           >
@@ -81,7 +81,7 @@ export default function HomePage() {
             <span className="text-orange-400">Agents IA</span>
           </h1>
 
-          {/* Subtitle matching digitalisim */}
+          {/* Subtitle matching NOLIA */}
           <p
             className={`text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
           >
@@ -89,7 +89,7 @@ export default function HomePage() {
             de votre parcours de vente.
           </p>
 
-          {/* CTA buttons matching digitalisim layout */}
+          {/* CTA buttons matching NOLIA layout */}
           <div
             className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${isVisible ? "animate-scale-in" : "opacity-0"}`}
           >
@@ -97,13 +97,13 @@ export default function HomePage() {
               onClick={() => setIsQuoteModalOpen(true)}
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105"
             >
-              Découvrir nos digitalisim 🚀
+              Découvrir nos NOLIA 🚀
             </Button>
             <Button
               variant="outline"
               className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 bg-transparent"
             >
-              En savoir plus sur DIGITALISIM
+              En savoir plus sur NOLIA
             </Button>
           </div>
 
@@ -250,7 +250,7 @@ export default function HomePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Univers CRM</h3>
                     <p className="text-gray-300 text-sm">
-                      DIGITALISIM est une Agence Partenaire HubSpot Elite. Vous serez donc accompagné sur des experts
+                      NOLIA est une Agence Partenaire HubSpot Elite. Vous serez donc accompagné sur des experts
                       certifiés qui ont déjà déployé plusieurs centaines de projets.
                     </p>
                   </div>
@@ -409,7 +409,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Apprenez à Exploiter la Puissance de Votre Data avec Digitalisim et nos agents IA
+              Apprenez à Exploiter la Puissance de Votre Data avec NOLIA et nos agents IA
             </h2>
             <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Nos experts vous accompagnent dans l'exploitation de vos données et l'intégration d'agents IA pour
@@ -896,7 +896,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <div className="text-orange-400 font-bold text-xl">DIGITALISIM</div>
+                <div className="text-orange-400 font-bold text-xl">NOLIA</div>
               </div>
               <p className="text-gray-400 mb-4">
                 Experts en Transformation Digitale, Intégration CRM HubSpot, Data et Agents IA. Nous transformons vos
@@ -969,7 +969,7 @@ export default function HomePage() {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-orange-400">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>contact@digitalisim.fr</li>
+                <li>contact@nolia.fr</li>
                 <li>+33 1 23 45 67 89</li>
                 <li>123 Avenue de l'Innovation</li>
                 <li>75000 Paris, France</li>
@@ -978,7 +978,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-700/30 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm text-center md:text-left">© 2025 DIGITALISIM. Tous droits réservés.</p>
+            <p className="text-gray-400 text-sm text-center md:text-left">© 2025 NOLIA. Tous droits réservés.</p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
               <Link href="#" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 Mentions légales

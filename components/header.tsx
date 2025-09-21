@@ -30,7 +30,7 @@ export function Header() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <div className="text-white font-bold text-xl md:text-2xl">
-              <span className="text-orange-400">DIGITALISIM</span>
+              <span className="text-orange-400">NOLIA</span>
             </div>
             <div className="ml-2 text-xs text-gray-400 hidden md:block">EXPERTS EN DIGITALE</div>
           </Link>

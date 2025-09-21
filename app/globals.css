@@ -4,14 +4,14 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette to match digitalisim.fr theme - navy blue background with orange accents */
-  --background: #0f1729; /* Dark navy blue like digitalisim */
+  /* Updated color palette to match NOLIA theme - navy blue background with orange accents */
+  --background: #0f1729; /* Dark navy blue like NOLIA */
   --foreground: #ffffff;
   --card: #1a2332;
   --card-foreground: #ffffff;
   --popover: #1a2332;
   --popover-foreground: #ffffff;
-  --primary: #ff6b35; /* Orange accent color from digitalisim */
+  --primary: #ff6b35; /* Orange accent color from NOLIA */
   --primary-foreground: #ffffff;
   --secondary: #ffa726; /* Yellow/orange secondary */
   --secondary-foreground: #0f1729;
