@@ -25,29 +25,60 @@ export function Header() {
   }
 
   const expertisesData = {
+    crm: {
+      title: "Univers CRM",
+      categories: [
+        "CRM HubSpot",
+        "Intégration CRM",
+        "Automatisation marketing",
+        "Pipeline de vente",
+        "Reporting CRM",
+        "Formation HubSpot",
+      ],
+    },
     web: {
-      title: "Web",
-      categories: ["Site vitrine", "E-commerce", "Blog", "Landing page", "Application web"],
+      title: "Univers Web",
+      categories: [
+        "Site vitrine",
+        "E-commerce",
+        "Application web",
+        "Refonte de site",
+        "Maintenance web",
+        "Optimisation performance",
+      ],
     },
-    content: {
-      title: "Content",
-      categories: ["Rédaction web", "Stratégie éditoriale", "Content marketing", "Copywriting", "Storytelling"],
-    },
-    seo: {
-      title: "SEO",
-      categories: ["Audit SEO", "Optimisation technique", "Contenu SEO", "Link building", "SEO local"],
-    },
-    paid: {
-      title: "Paid",
-      categories: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display", "Retargeting"],
+    marketing: {
+      title: "Service Marketing Externalisé",
+      categories: [
+        "Stratégie marketing",
+        "Campagnes publicitaires",
+        "Content marketing",
+        "Social media",
+        "Email marketing",
+        "Marketing automation",
+      ],
     },
     data: {
-      title: "Data",
-      categories: ["Analytics", "Tracking", "Reporting", "Data visualization", "Business Intelligence"],
+      title: "Univers Data & IA",
+      categories: [
+        "Business Intelligence",
+        "Data Analytics",
+        "Agents IA",
+        "Machine Learning",
+        "Intégration Data",
+        "Tableaux de bord",
+      ],
     },
-    hubspot: {
-      title: "HubSpot",
-      categories: ["CRM Setup", "Marketing automation", "Sales pipeline", "Reporting", "Intégrations"],
+    studio: {
+      title: "Univers Studio",
+      categories: [
+        "Création vidéo",
+        "Motion design",
+        "Identité visuelle",
+        "Photographie",
+        "Montage vidéo",
+        "Animation 3D",
+      ],
     },
   }
 
@@ -88,7 +119,7 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-0 mt-2 w-[800px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
+              className={`absolute top-full left-0 mt-2 w-[900px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
