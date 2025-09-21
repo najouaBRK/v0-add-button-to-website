@@ -63,7 +63,7 @@ export function Header() {
         <svg width="20" height="20" viewBox="0 0 24 24" className="text-orange-400">
           <path
             fill="currentColor"
-            d="M18.164 7.931V5.61c0-1.378-1.119-2.497-2.497-2.497s-2.497 1.119-2.497 2.497v2.321c-1.133.434-2.097 1.145-2.815 2.071l-3.738-2.158c.171-.427.264-.895.264-1.386 0-1.933-1.567-3.5 3.5-3.5S0 4.526 0 6.459s1.567 3.5 3.5 3.5c.605 0 1.174-.154 1.671-.425l3.738 2.158c-.171.427-.264.895-.264 1.386 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-.491-.093-.959-.264-1.386l-2.158-3.738c.497.271 1.066.425 1.671.425 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+            d="M18.164 7.931V5.61c0-1.378-1.119-2.497-2.497-2.497s-2.497 1.119-2.497 2.497v2.321c-1.133.434-2.097 1.145-2.815 2.071l-3.738-2.158c.171-.427.264-.895.264-1.386 0-1.933-1.567-3.5 3.5-3.5S0 4.526 0 6.459s1.567 3.5 3.5 3.5c.605 0 1.174-.154 1.671-.425l3.738 2.158c-.171.427-.264.895-.264 1.386 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5z"
           />
         </svg>
       ),
@@ -107,64 +107,40 @@ export function Header() {
               />
             </button>
 
-            {/* Horizontal categories layout */}
             <div
-              className={`absolute top-full left-0 mt-2 w-[1100px] bg-slate-900 border border-slate-700 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
+              className={`absolute top-full left-0 mt-2 w-[1200px] bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl p-8 transition-all duration-300 transform ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
             >
-              {/* Horizontal categories layout */}
-              <div className="mb-6">
-                <h3 className="text-white font-semibold text-lg mb-4 text-center">
-                  Partez à la découverte de nos univers
-                </h3>
-                <div className="flex justify-center space-x-4">
-                  {Object.entries(expertisesData).map(([key, expertise], index) => (
-                    <Link
-                      key={key}
-                      href={`/expertise/${key}`}
-                      className={`flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 transform ${
-                        isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-                      }`}
-                      style={{
-                        transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
-                      }}
-                    >
-                      <span className="mr-2">{expertise.icon}</span>
-                      {expertise.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Sub-services grid below */}
-              <div className="space-y-4">
+              <div className="grid grid-cols-6 gap-6">
                 {Object.entries(expertisesData).map(([key, expertise], index) => (
                   <div
                     key={key}
-                    className={`p-4 rounded-lg bg-gradient-to-br from-slate-800/80 to-slate-700/80 hover:from-slate-700/80 hover:to-slate-600/80 transition-all duration-300 border border-slate-600 hover:border-orange-400/50 shadow-sm transform ${
+                    className={`space-y-4 transform transition-all duration-500 ${
                       isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                     }`}
                     style={{
-                      transitionDelay: isExpertisesOpen ? `${(index + 6) * 100}ms` : "0ms",
+                      transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
                     }}
                   >
-                    <h4 className="text-white font-semibold text-base mb-3 flex items-center">
+                    <div className="flex items-center space-x-2 pb-2 border-b border-slate-600">
                       {expertise.icon}
-                      <span className="ml-2">{expertise.title}</span>
-                      <div className="ml-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
+                      <h3 className="text-white font-semibold text-base">{expertise.title}</h3>
+                    </div>
+
+                    <div className="space-y-2">
                       {expertise.categories.map((category, catIndex) => (
                         <Link
                           key={catIndex}
                           href={`/expertise/${key}/${category.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/à/g, "a").replace(/ç/g, "c")}`}
-                          className="text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm px-3 py-1 rounded-full bg-slate-600/50 hover:bg-orange-500/20 hover:scale-105 relative overflow-hidden group border border-slate-500 hover:border-orange-400/50"
+                          className="block text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm py-1 px-2 rounded hover:bg-orange-500/10 group"
                         >
-                          <span className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-500/20 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></span>
-                          <span className="relative z-10">{category}</span>
+                          <span className="flex items-center">
+                            <span className="w-1 h-1 bg-orange-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            {category}
+                          </span>
                         </Link>
                       ))}
                     </div>
@@ -173,18 +149,18 @@ export function Header() {
               </div>
 
               <div
-                className={`mt-6 pt-4 border-t border-slate-600 text-center transform transition-all duration-700 ${
+                className={`mt-8 pt-6 border-t border-slate-600 text-center transform transition-all duration-700 ${
                   isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
-                style={{ transitionDelay: isExpertisesOpen ? "1200ms" : "0ms" }}
+                style={{ transitionDelay: isExpertisesOpen ? "600ms" : "0ms" }}
               >
                 <QuoteButton
                   serviceName="Expertises"
                   packageName="Consultation expertises"
                   packageDescription="Demande de consultation pour nos expertises"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
                 >
-                  Discuter de votre projet
+                  Discuter avec un spécialiste
                 </QuoteButton>
               </div>
             </div>
