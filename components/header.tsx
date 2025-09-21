@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, Globe, FileText, Search, DollarSign, BarChart3 } from "lucide-react"
 import QuoteButton from "@/components/QuoteButton"
 
 export function Header() {
@@ -27,10 +27,12 @@ export function Header() {
   const expertisesData = {
     web: {
       title: "Web",
+      icon: <Globe size={20} className="text-orange-400" />,
       categories: ["Site vitrine", "E-commerce", "Blog", "Landing page", "Application web", "Refonte de site"],
     },
     content: {
       title: "Content",
+      icon: <FileText size={20} className="text-orange-400" />,
       categories: [
         "Rédaction web",
         "Content marketing",
@@ -42,6 +44,7 @@ export function Header() {
     },
     seo: {
       title: "SEO",
+      icon: <Search size={20} className="text-orange-400" />,
       categories: [
         "Audit SEO",
         "Optimisation technique",
@@ -53,10 +56,12 @@ export function Header() {
     },
     paid: {
       title: "Paid",
+      icon: <DollarSign size={20} className="text-orange-400" />,
       categories: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display", "Retargeting", "Optimisation campagnes"],
     },
     data: {
       title: "Data",
+      icon: <BarChart3 size={20} className="text-orange-400" />,
       categories: [
         "Analytics",
         "Business Intelligence",
@@ -68,6 +73,14 @@ export function Header() {
     },
     hubspot: {
       title: "HubSpot",
+      icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" className="text-orange-400">
+          <path
+            fill="currentColor"
+            d="M18.164 7.931V5.61c0-1.378-1.119-2.497-2.497-2.497s-2.497 1.119-2.497 2.497v2.321c-1.133.434-2.097 1.145-2.815 2.071l-3.738-2.158c.171-.427.264-.895.264-1.386 0-1.933-1.567-3.5-3.5-3.5S0 4.526 0 6.459s1.567 3.5 3.5 3.5c.605 0 1.174-.154 1.671-.425l3.738 2.158c-.171.427-.264.895-.264 1.386 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-.491-.093-.959-.264-1.386l3.738-2.158c.497.271 1.066.425 1.671.425 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5c-.491 0-.959.093-1.386.264l-2.158-3.738c.271-.497.425-1.066.425-1.671 0 1.933 1.567 3.5 3.5 3.5s8.541 4.526 8.541 6.459c0 .605.154 1.174.425 1.671l-2.158 3.738c-.427-.171-.895-.264-1.386-.264-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5c.491 0 .959-.093 1.386-.264l2.158-3.738c.271.497.425 1.066.425 1.671 0 1.933-1.567 3.5-3.5 3.5s-3.5-1.567-3.5-3.5c0-.605-.154-1.174-.425-1.671l-2.158 3.738c.427.171.895.264 1.386.264 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+          />
+        </svg>
+      ),
       categories: [
         "Implémentation CRM",
         "Marketing automation",
@@ -135,7 +148,8 @@ export function Header() {
                   >
                     <div className="p-4 rounded-lg bg-gradient-to-br from-gray-800/20 to-gray-900/20 hover:from-orange-500/10 hover:to-yellow-500/10 transition-all duration-300 border border-transparent hover:border-orange-500/20">
                       <h3 className="text-orange-400 font-semibold text-lg mb-3 flex items-center">
-                        {expertise.title}
+                        {expertise.icon}
+                        <span className="ml-2">{expertise.title}</span>
                         <div className="ml-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
                       </h3>
                       <ul className="space-y-2">
@@ -215,9 +229,10 @@ export function Header() {
                   <Link
                     key={key}
                     href={`/services/${key}`}
-                    className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-1"
+                    className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-1 flex items-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
+                    <span className="mr-2 scale-75">{expertise.icon}</span>
                     {expertise.title}
                   </Link>
                 ))}
