@@ -175,6 +175,21 @@ export default function AnalyticsDataPage() {
                   <li>• Support email</li>
                   <li>• Formation initiale</li>
                 </ul>
+                <div className="text-center">
+                  <Button
+                    className="w-full bg-violet-600 hover:bg-violet-700 text-white py-3 text-lg font-medium"
+                    onClick={() => {
+                      // Send email with pack details
+                      const subject = encodeURIComponent("Commande Pack Analytics Essentiel")
+                      const body = encodeURIComponent(
+                        `Bonjour,\n\nJe souhaite commander le Pack Analytics Essentiel à 800€/mois.\n\nCordialement`,
+                      )
+                      window.location.href = `mailto:contact@nolia.fr?subject=${subject}&body=${body}`
+                    }}
+                  >
+                    Choisir Essentiel
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -195,6 +210,21 @@ export default function AnalyticsDataPage() {
                   <li>• Tests A/B</li>
                   <li>• Support prioritaire</li>
                 </ul>
+                <div className="text-center">
+                  <Button
+                    className="w-full bg-violet-600 hover:bg-violet-700 text-white py-3 text-lg font-medium"
+                    onClick={() => {
+                      // Send email with pack details
+                      const subject = encodeURIComponent("Commande Pack Analytics Avancé")
+                      const body = encodeURIComponent(
+                        `Bonjour,\n\nJe souhaite commander le Pack Analytics Avancé à 1 500€/mois.\n\nCordialement`,
+                      )
+                      window.location.href = `mailto:contact@nolia.fr?subject=${subject}&body=${body}`
+                    }}
+                  >
+                    Choisir Avancé
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -212,6 +242,21 @@ export default function AnalyticsDataPage() {
                   <li>• Consultant dédié</li>
                   <li>• Formations équipe</li>
                 </ul>
+                <div className="text-center">
+                  <Button
+                    className="w-full bg-violet-600 hover:bg-violet-700 text-white py-3 text-lg font-medium"
+                    onClick={() => {
+                      // Send email with pack details
+                      const subject = encodeURIComponent("Commande Pack Analytics Expert")
+                      const body = encodeURIComponent(
+                        `Bonjour,\n\nJe souhaite commander le Pack Analytics Expert à 2 800€/mois.\n\nCordialement`,
+                      )
+                      window.location.href = `mailto:contact@nolia.fr?subject=${subject}&body=${body}`
+                    }}
+                  >
+                    Choisir Expert
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
