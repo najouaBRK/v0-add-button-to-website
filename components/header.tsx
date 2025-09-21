@@ -175,7 +175,7 @@ export function Header() {
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
             Secteurs
           </Link>
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+          <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
             À propos
           </Link>
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
@@ -240,7 +240,7 @@ export function Header() {
               Secteurs
             </Link>
             <Link
-              href="/"
+              href="/about"
               className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
