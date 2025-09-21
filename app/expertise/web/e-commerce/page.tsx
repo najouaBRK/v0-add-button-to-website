@@ -1,0 +1,198 @@
+import Link from "next/link"
+import { ArrowRight, ShoppingCart, CreditCard, Truck, Shield, BarChart3, Users } from "lucide-react"
+
+export default function EcommercePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-green-500/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-orange-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
+            <ShoppingCart className="w-4 h-4 text-green-400" />
+            <span className="text-green-300 text-sm font-medium">Expertise E-commerce</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Lancez votre
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">
+              {" "}
+              Boutique{" "}
+            </span>
+            en Ligne
+          </h1>
+
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Créez une boutique e-commerce performante qui convertit vos visiteurs en clients et maximise vos ventes en
+            ligne.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="group bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              Créer ma boutique
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/portfolio"
+              className="group border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              Voir nos e-commerces
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Solutions E-commerce Complètes</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Tout ce dont vous avez besoin pour réussir dans la vente en ligne
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <ShoppingCart className="w-8 h-8" />,
+                title: "Catalogue Produits",
+                description: "Gestion avancée des produits, variantes, stocks et catégories avec interface intuitive",
+              },
+              {
+                icon: <CreditCard className="w-8 h-8" />,
+                title: "Paiements Sécurisés",
+                description: "Intégration de multiples moyens de paiement (CB, PayPal, Stripe, etc.)",
+              },
+              {
+                icon: <Truck className="w-8 h-8" />,
+                title: "Gestion Livraisons",
+                description: "Calcul automatique des frais de port et suivi des commandes en temps réel",
+              },
+              {
+                icon: <Shield className="w-8 h-8" />,
+                title: "Sécurité SSL",
+                description: "Certificat SSL et conformité RGPD pour protéger vos clients et leurs données",
+              },
+              {
+                icon: <BarChart3 className="w-8 h-8" />,
+                title: "Analytics Ventes",
+                description: "Tableaux de bord détaillés pour suivre vos performances et optimiser vos ventes",
+              },
+              {
+                icon: <Users className="w-8 h-8" />,
+                title: "Espace Client",
+                description: "Comptes clients avec historique des commandes et programme de fidélité",
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="text-green-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Processus de Création E-commerce</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              De l'idée au lancement, nous vous accompagnons à chaque étape
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Audit & Stratégie",
+                description: "Analyse de votre marché, définition de la stratégie e-commerce et choix de la plateforme",
+              },
+              {
+                step: "02",
+                title: "Design & UX",
+                description: "Création d'une expérience d'achat optimisée et d'un design qui convertit",
+              },
+              {
+                step: "03",
+                title: "Développement",
+                description: "Intégration des fonctionnalités, paiements, livraisons et tests complets",
+              },
+              {
+                step: "04",
+                title: "Lancement & Suivi",
+                description: "Mise en ligne, formation et accompagnement pour optimiser vos ventes",
+              },
+            ].map((process, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl font-bold text-white">{process.step}</span>
+                  </div>
+                  {index < 3 && (
+                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-green-500/50 to-transparent"></div>
+                  )}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{process.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{process.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "85+", label: "E-commerces créés" },
+              { number: "+250%", label: "Augmentation CA moyenne" },
+              { number: "3.2%", label: "Taux de conversion moyen" },
+              { number: "99.9%", label: "Uptime garanti" },
+            ].map((stat, index) => (
+              <div key={index} className="group">
+                <div className="text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Prêt à lancer votre e-commerce ?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Obtenez une consultation gratuite pour votre projet de boutique en ligne
+          </p>
+          <Link
+            href="/contact"
+            className="group bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 inline-flex items-center gap-2"
+          >
+            Consultation gratuite
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}
