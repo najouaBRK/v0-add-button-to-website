@@ -77,7 +77,7 @@ export function Header() {
         <svg width="20" height="20" viewBox="0 0 24 24" className="text-orange-400">
           <path
             fill="currentColor"
-            d="M18.164 7.931V5.61c0-1.378-1.119-2.497-2.497-2.497s-2.497 1.119-2.497 2.497v2.321c-1.133.434-2.097 1.145-2.815 2.071l-3.738-2.158c.171-.427.264-.895.264-1.386 0-1.933-1.567-3.5-3.5-3.5S0 4.526 0 6.459s1.567 3.5 3.5 3.5c.605 0 1.174-.154 1.671-.425l3.738 2.158c-.171.427-.264.895-.264 1.386 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-.491-.093-.959-.264-1.386l3.738-2.158c.497.271 1.066.425 1.671.425 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5c-.491 0-.959.093-1.386.264l-2.158-3.738c.271-.497.425-1.066.425-1.671 0 1.933 1.567 3.5 3.5 3.5s8.541 4.526 8.541 6.459c0 .605.154 1.174.425 1.671l-2.158 3.738c-.427-.171-.895-.264-1.386-.264-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5c.491 0 .959-.093 1.386-.264l2.158-3.738c.271.497.425 1.066.425 1.671 0 1.933-1.567 3.5-3.5 3.5s-3.5-1.567-3.5-3.5c0-.605-.154-1.174-.425-1.671l-2.158 3.738c.427.171.895.264 1.386.264 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+            d="M18.164 7.931V5.61c0-1.378-1.119-2.497-2.497-2.497s-2.497 1.119-2.497 2.497v2.321c-1.133.434-2.097 1.145-2.815 2.071l-3.738-2.158c.171-.427.264-.895.264-1.386 0-1.933-1.567-3.5-3.5-3.5S0 4.526 0 6.459s1.567 3.5 3.5 3.5c.605 0 1.174-.154 1.671-.425l3.738 2.158c-.171.427-.264.895-.264 1.386 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-.491-.093-.959-.264-1.386l-2.158-3.738c.497.271 1.066.425 1.671.425 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
           />
         </svg>
       ),
@@ -129,7 +129,7 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-0 mt-2 w-[800px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
+              className={`absolute top-full left-0 mt-2 w-[800px] bg-sky-50 border border-sky-200 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
@@ -146,20 +146,20 @@ export function Header() {
                       transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
                     }}
                   >
-                    <div className="p-4 rounded-lg bg-gradient-to-br from-gray-800/20 to-gray-900/20 hover:from-orange-500/10 hover:to-yellow-500/10 transition-all duration-300 border border-transparent hover:border-orange-500/20">
-                      <h3 className="text-orange-400 font-semibold text-lg mb-3 flex items-center">
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-sky-100/80 to-blue-100/80 hover:from-sky-200/80 hover:to-blue-200/80 transition-all duration-300 border border-sky-200 hover:border-sky-300 shadow-sm">
+                      <h3 className="text-sky-700 font-semibold text-lg mb-3 flex items-center">
                         {expertise.icon}
                         <span className="ml-2">{expertise.title}</span>
-                        <div className="ml-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                        <div className="ml-2 w-2 h-2 bg-sky-500 rounded-full animate-pulse"></div>
                       </h3>
                       <ul className="space-y-2">
                         {expertise.categories.map((category, catIndex) => (
                           <li key={catIndex}>
                             <Link
                               href={`/services/${key}`}
-                              className="text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm block py-1 px-2 rounded hover:bg-orange-500/10 hover:translate-x-1 relative overflow-hidden group"
+                              className="text-slate-600 hover:text-sky-700 transition-all duration-300 text-sm block py-1 px-2 rounded hover:bg-sky-200/50 hover:translate-x-1 relative overflow-hidden group"
                             >
-                              <span className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-500/20 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></span>
+                              <span className="absolute inset-0 bg-gradient-to-r from-sky-500/0 to-sky-500/20 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></span>
                               <span className="relative z-10">{category}</span>
                             </Link>
                           </li>
@@ -170,7 +170,7 @@ export function Header() {
                 ))}
               </div>
               <div
-                className={`mt-6 pt-4 border-t border-gray-700/30 text-center transform transition-all duration-700 ${
+                className={`mt-6 pt-4 border-t border-sky-200 text-center transform transition-all duration-700 ${
                   isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
                 style={{ transitionDelay: isExpertisesOpen ? "600ms" : "0ms" }}
@@ -179,7 +179,7 @@ export function Header() {
                   serviceName="Expertises"
                   packageName="Consultation expertises"
                   packageDescription="Demande de consultation pour nos expertises"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 animate-pulse"
+                  className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25 animate-pulse"
                 >
                   Discuter de votre projet
                 </QuoteButton>
@@ -212,7 +212,7 @@ export function Header() {
             serviceName="Général"
             packageName="Demande de devis général"
             packageDescription="Demande de devis depuis le header du site"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105"
           >
             Nous contacter
           </QuoteButton>
@@ -220,16 +220,16 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-[#0f1729] border-t border-gray-700/30 shadow-lg">
+        <div className="md:hidden bg-sky-50 border-t border-sky-200 shadow-lg">
           <nav className="px-4 py-4 space-y-4">
             <div className="space-y-2">
-              <div className="text-sm font-medium text-orange-400 py-2">Expertises</div>
+              <div className="text-sm font-medium text-sky-700 py-2">Expertises</div>
               <div className="grid grid-cols-2 gap-2 pl-4">
                 {Object.entries(expertisesData).map(([key, expertise]) => (
                   <Link
                     key={key}
                     href={`/services/${key}`}
-                    className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-1 flex items-center"
+                    className="text-xs text-slate-600 hover:text-sky-700 transition-colors py-1 flex items-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="mr-2 scale-75">{expertise.icon}</span>
@@ -281,12 +281,12 @@ export function Header() {
             >
               STUDIO
             </Link>
-            <div className="pt-4 border-t border-gray-700/30">
+            <div className="pt-4 border-t border-sky-200">
               <QuoteButton
                 serviceName="Général"
                 packageName="Demande de devis mobile"
                 packageDescription="Demande de devis depuis le menu mobile"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300"
+                className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300"
               >
                 Nous contacter
               </QuoteButton>
