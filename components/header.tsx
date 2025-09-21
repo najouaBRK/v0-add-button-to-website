@@ -2,26 +2,53 @@
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import QuoteButton from "@/components/QuoteButton"
 
 export function Header() {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isExpertisesOpen, setIsExpertisesOpen] = useState(false)
 
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services-section")
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: "smooth" })
     } else {
-      // If not on homepage, navigate to homepage first then scroll
       router.push("/#services-section")
     }
-    setIsMenuOpen(false) // Close mobile menu after navigation
+    setIsMenuOpen(false)
   }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const expertisesData = {
+    web: {
+      title: "Web",
+      categories: ["Site vitrine", "E-commerce", "Blog", "Landing page", "Application web"],
+    },
+    content: {
+      title: "Content",
+      categories: ["Rédaction web", "Stratégie éditoriale", "Content marketing", "Copywriting", "Storytelling"],
+    },
+    seo: {
+      title: "SEO",
+      categories: ["Audit SEO", "Optimisation technique", "Contenu SEO", "Link building", "SEO local"],
+    },
+    paid: {
+      title: "Paid",
+      categories: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display", "Retargeting"],
+    },
+    data: {
+      title: "Data",
+      categories: ["Analytics", "Tracking", "Reporting", "Data visualization", "Business Intelligence"],
+    },
+    hubspot: {
+      title: "HubSpot",
+      categories: ["CRM Setup", "Marketing automation", "Sales pipeline", "Reporting", "Intégrations"],
+    },
   }
 
   return (
@@ -47,9 +74,51 @@ export function Header() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
-            Expertise
-          </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => setIsExpertisesOpen(true)}
+            onMouseLeave={() => setIsExpertisesOpen(false)}
+          >
+            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+              Expertises
+              <ChevronDown size={16} className="ml-1" />
+            </button>
+
+            {isExpertisesOpen && (
+              <div className="absolute top-full left-0 mt-2 w-[800px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6">
+                <div className="grid grid-cols-3 gap-6">
+                  {Object.entries(expertisesData).map(([key, expertise]) => (
+                    <div key={key} className="space-y-3">
+                      <h3 className="text-orange-400 font-semibold text-lg">{expertise.title}</h3>
+                      <ul className="space-y-2">
+                        {expertise.categories.map((category, index) => (
+                          <li key={index}>
+                            <Link
+                              href={`/services/${key}`}
+                              className="text-gray-300 hover:text-orange-400 transition-colors text-sm block py-1"
+                            >
+                              {category}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 pt-4 border-t border-gray-700/30 text-center">
+                  <QuoteButton
+                    serviceName="Expertises"
+                    packageName="Consultation expertises"
+                    packageDescription="Demande de consultation pour nos expertises"
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105"
+                  >
+                    Discuter de votre projet
+                  </QuoteButton>
+                </div>
+              </div>
+            )}
+          </div>
+
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
             Solutions
           </Link>
@@ -85,13 +154,22 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-[#0f1729] border-t border-gray-700/30 shadow-lg">
           <nav className="px-4 py-4 space-y-4">
-            <Link
-              href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Expertise
-            </Link>
+            <div className="space-y-2">
+              <div className="text-sm font-medium text-orange-400 py-2">Expertises</div>
+              <div className="grid grid-cols-2 gap-2 pl-4">
+                {Object.entries(expertisesData).map(([key, expertise]) => (
+                  <Link
+                    key={key}
+                    href={`/services/${key}`}
+                    className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {expertise.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <Link
               href="/"
               className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
