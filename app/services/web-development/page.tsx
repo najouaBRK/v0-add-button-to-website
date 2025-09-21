@@ -2,12 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
 import { useState, useEffect } from "react"
+import QuoteFormModal from "@/components/quote-form-modal"
 
 export default function WebDevelopmentPage() {
   const [activeButton, setActiveButton] = useState(0)
   const [isHovered, setIsHovered] = useState<number | null>(null)
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -281,11 +282,12 @@ export default function WebDevelopmentPage() {
             <p className="text-gray-600 mb-6">
               Si vous avez besoin d'un devis personnalisé, n'hésitez pas à nous contacter.
             </p>
-            <Link href="/devis">
-              <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-medium">
-                Demander mon devis
-              </Button>
-            </Link>
+            <Button
+              onClick={() => setIsQuoteModalOpen(true)}
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-medium"
+            >
+              Demander mon devis
+            </Button>
           </div>
         </div>
       </section>
@@ -347,6 +349,12 @@ export default function WebDevelopmentPage() {
           </p>
         </div>
       </section>
+
+      <QuoteFormModal
+        isOpen={isQuoteModalOpen}
+        onClose={() => setIsQuoteModalOpen(false)}
+        serviceName="Développement Web"
+      />
     </div>
   )
 }
