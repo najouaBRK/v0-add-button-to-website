@@ -28,36 +28,29 @@ export function Header() {
     web: {
       title: "Web",
       icon: <Globe size={20} className="text-orange-400" />,
-      categories: ["Site vitrine", "E-commerce", "Blog", "Landing page", "Application web", "Refonte de site"],
+      categories: ["Site vitrine", "E-commerce", "Blog", "Landing page", "Application web", "Maintenance"],
     },
     content: {
       title: "Content",
       icon: <FileText size={20} className="text-orange-400" />,
       categories: [
         "Rédaction web",
-        "Content marketing",
         "Stratégie éditoriale",
         "Copywriting",
-        "Storytelling",
-        "Optimisation contenu",
+        "Newsletter",
+        "Réseaux sociaux",
+        "Brand content",
       ],
     },
     seo: {
       title: "SEO",
       icon: <Search size={20} className="text-orange-400" />,
-      categories: [
-        "Audit SEO",
-        "Optimisation technique",
-        "Recherche de mots-clés",
-        "Link building",
-        "SEO local",
-        "Suivi de performance",
-      ],
+      categories: ["Audit SEO", "Mots-clés", "SEO technique", "SEO local", "Netlinking", "Suivi"],
     },
     paid: {
       title: "Paid",
       icon: <DollarSign size={20} className="text-orange-400" />,
-      categories: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display", "Retargeting", "Optimisation campagnes"],
+      categories: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display", "Retargeting", "Analytics"],
     },
     data: {
       title: "Data",
@@ -114,13 +107,39 @@ export function Header() {
               />
             </button>
 
+            {/* Horizontal categories layout */}
             <div
-              className={`absolute top-full left-0 mt-2 w-[800px] bg-slate-900 border border-slate-700 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
+              className={`absolute top-full left-0 mt-2 w-[900px] bg-slate-900 border border-slate-700 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
             >
+              {/* Horizontal categories layout */}
+              <div className="mb-6">
+                <h3 className="text-white font-semibold text-lg mb-4 text-center">
+                  Partez à la découverte de nos univers
+                </h3>
+                <div className="flex justify-center space-x-4">
+                  {Object.entries(expertisesData).map(([key, expertise], index) => (
+                    <Link
+                      key={key}
+                      href={`/expertise/${key}`}
+                      className={`flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 transform ${
+                        isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                      }`}
+                      style={{
+                        transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
+                      }}
+                    >
+                      <span className="mr-2">{expertise.icon}</span>
+                      {expertise.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sub-services grid below */}
               <div className="grid grid-cols-3 gap-6">
                 {Object.entries(expertisesData).map(([key, expertise], index) => (
                   <div
@@ -129,15 +148,15 @@ export function Header() {
                       isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                     }`}
                     style={{
-                      transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
+                      transitionDelay: isExpertisesOpen ? `${(index + 6) * 100}ms` : "0ms",
                     }}
                   >
                     <div className="p-4 rounded-lg bg-gradient-to-br from-slate-800/80 to-slate-700/80 hover:from-slate-700/80 hover:to-slate-600/80 transition-all duration-300 border border-slate-600 hover:border-orange-400/50 shadow-sm">
-                      <h3 className="text-white font-semibold text-lg mb-3 flex items-center">
+                      <h4 className="text-white font-semibold text-base mb-3 flex items-center">
                         {expertise.icon}
                         <span className="ml-2">{expertise.title}</span>
                         <div className="ml-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-                      </h3>
+                      </h4>
                       <ul className="space-y-2">
                         {expertise.categories.map((category, catIndex) => (
                           <li key={catIndex}>
@@ -155,11 +174,12 @@ export function Header() {
                   </div>
                 ))}
               </div>
+
               <div
                 className={`mt-6 pt-4 border-t border-slate-600 text-center transform transition-all duration-700 ${
                   isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
-                style={{ transitionDelay: isExpertisesOpen ? "600ms" : "0ms" }}
+                style={{ transitionDelay: isExpertisesOpen ? "1200ms" : "0ms" }}
               >
                 <QuoteButton
                   serviceName="Expertises"
