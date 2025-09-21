@@ -59,6 +59,40 @@ export default function AboutPage() {
                   clients.
                 </p>
 
+                <div className="bg-gradient-to-br from-accent/10 to-secondary/10 rounded-3xl p-8 mt-12">
+                  <h3 className="text-2xl font-bold text-primary mb-6">NOLIA en quelques mots</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                      <p className="text-muted-foreground">
+                        <strong className="text-primary">Secteur :</strong> Agence digitale spécialisée en
+                        transformation numérique
+                      </p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                      <p className="text-muted-foreground">
+                        <strong className="text-primary">Siège social :</strong> Paris, France avec équipes distribuées
+                        en Europe
+                      </p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                      <p className="text-muted-foreground">
+                        <strong className="text-primary">Spécialités :</strong> Développement web, marketing digital,
+                        data analytics, IA et CRM
+                      </p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                      <p className="text-muted-foreground">
+                        <strong className="text-primary">Clients :</strong> PME, ETI et grandes entreprises de tous
+                        secteurs
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="space-y-8 pt-8">
                   <div className="flex items-center group">
                     <div className="timeline-dot w-6 h-6 bg-accent rounded-full mr-8 group-hover:scale-125 transition-transform duration-300"></div>
@@ -106,6 +140,24 @@ export default function AboutPage() {
                       <div className="text-center p-8 bg-gradient-to-br from-chart-3/10 to-accent/10 rounded-3xl hover-lift">
                         <div className="text-3xl font-bold text-gradient-secondary mb-4">24/7</div>
                         <div className="text-muted-foreground font-medium text-base">Support</div>
+                      </div>
+                    </div>
+
+                    <div className="mt-12 pt-8 border-t border-muted/20">
+                      <h4 className="text-xl font-bold text-primary mb-6 text-center">Certifications & Partenariats</h4>
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-accent/5 to-secondary/5 rounded-2xl">
+                          <span className="text-primary font-medium">🏆 Google Partner Certifié</span>
+                        </div>
+                        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-chart-2/5 to-chart-3/5 rounded-2xl">
+                          <span className="text-primary font-medium">🔧 HubSpot Solutions Partner</span>
+                        </div>
+                        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-secondary/5 to-chart-5/5 rounded-2xl">
+                          <span className="text-primary font-medium">☁️ AWS Advanced Partner</span>
+                        </div>
+                        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-chart-3/5 to-chart-4/5 rounded-2xl">
+                          <span className="text-primary font-medium">📊 Microsoft Gold Partner</span>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -311,106 +363,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32 bg-card/30 particles-bg">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div className="space-y-8 animate-slide-in-left">
-                <div>
-                  <h2 className="text-6xl font-bold text-primary mb-6 text-gradient-primary">Notre équipe</h2>
-                  <div className="w-24 h-1 bg-accent rounded-full mb-8"></div>
-                </div>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  L'équipe NOLIA réunit des experts passionnés par le digital : développeurs full-stack, spécialistes
-                  marketing, designers UX/UI, consultants en transformation digitale et experts en intelligence
-                  artificielle.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Chaque membre de notre équipe apporte son expertise unique pour créer des solutions innovantes et
-                  performantes, adaptées aux besoins spécifiques de chaque client.
-                </p>
-                <div className="space-y-8 pt-8">
-                  <div className="flex items-center group">
-                    <div className="w-6 h-6 bg-gradient-to-r from-accent to-secondary rounded-full mr-8 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span className="text-primary text-lg font-medium">
-                      Développeurs experts en technologies modernes
-                    </span>
-                  </div>
-                  <div className="flex items-center group">
-                    <div className="w-6 h-6 bg-gradient-to-r from-chart-2 to-chart-3 rounded-full mr-8 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span className="text-primary text-lg font-medium">Spécialistes marketing digital certifiés</span>
-                  </div>
-                  <div className="flex items-center group">
-                    <div className="w-6 h-6 bg-gradient-to-r from-secondary to-chart-5 rounded-full mr-8 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span className="text-primary text-lg font-medium">Designers UX/UI créatifs et expérimentés</span>
-                  </div>
-                  <div className="flex items-center group">
-                    <div className="w-6 h-6 bg-gradient-to-r from-chart-3 to-chart-4 rounded-full mr-8 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span className="text-primary text-lg font-medium">Consultants en transformation digitale</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="animate-slide-in-right">
-                <Card className="bg-background/90 backdrop-blur-sm border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift">
-                  <CardContent className="p-12">
-                    <h3 className="text-4xl font-bold text-primary mb-12 text-center text-gradient-primary">
-                      Notre méthodologie
-                    </h3>
-                    <div className="space-y-10">
-                      <div className="flex items-start group">
-                        <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-3xl flex items-center justify-center mr-8 mt-1 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
-                          <span className="text-white font-bold text-xl">1</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-primary mb-4 text-xl">Analyse & Stratégie</h4>
-                          <p className="text-muted-foreground leading-relaxed">
-                            Audit complet de votre situation actuelle et définition d'une stratégie sur mesure.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start group">
-                        <div className="w-16 h-16 bg-gradient-to-br from-chart-2 to-chart-3 rounded-3xl flex items-center justify-center mr-8 mt-1 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
-                          <span className="text-white font-bold text-xl">2</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-primary mb-4 text-xl">Conception & Design</h4>
-                          <p className="text-muted-foreground leading-relaxed">
-                            Création de maquettes et prototypes pour valider l'expérience utilisateur.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start group">
-                        <div className="w-16 h-16 bg-gradient-to-br from-secondary to-chart-5 rounded-3xl flex items-center justify-center mr-8 mt-1 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
-                          <span className="text-white font-bold text-xl">3</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-primary mb-4 text-xl">Développement</h4>
-                          <p className="text-muted-foreground leading-relaxed">
-                            Développement agile avec tests réguliers et validation continue.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start group">
-                        <div className="w-16 h-16 bg-gradient-to-br from-chart-3 to-chart-4 rounded-3xl flex items-center justify-center mr-8 mt-1 group-hover:scale-110 group-hover:animate-pulse-glow transition-all duration-300">
-                          <span className="text-white font-bold text-xl">4</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-primary mb-4 text-xl">Lancement & Suivi</h4>
-                          <p className="text-muted-foreground leading-relaxed">
-                            Mise en ligne, formation et accompagnement pour optimiser les performances.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-32 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-secondary/10"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -422,6 +374,36 @@ export default function AboutPage() {
               créativité, technologie et stratégie pour créer des expériences digitales exceptionnelles qui génèrent des
               résultats concrets et durables.
             </p>
+
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <Card className="bg-gradient-to-br from-accent/10 to-secondary/10 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover-lift">
+                <CardContent className="p-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center mx-auto mb-8">
+                    <span className="text-white text-2xl">🚀</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-6">Notre Vision</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Devenir le partenaire de référence pour la transformation digitale des entreprises européennes, en
+                    démocratisant l'accès aux technologies les plus avancées et en créant des solutions sur mesure qui
+                    génèrent un impact durable.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-chart-2/10 to-chart-3/10 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover-lift">
+                <CardContent className="p-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-chart-2 to-chart-3 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <span className="text-white text-2xl">🌱</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-6">Notre Engagement</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Nous nous engageons à développer des solutions digitales responsables, éco-conçues et accessibles,
+                    tout en accompagnant nos clients dans une démarche de croissance durable et éthique.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
             <Card className="bg-gradient-to-br from-card/80 via-accent/5 to-secondary/10 backdrop-blur-sm border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift">
               <CardContent className="p-16">
                 <p className="text-2xl text-primary italic leading-relaxed font-medium mb-12">
@@ -431,6 +413,34 @@ export default function AboutPage() {
                 <div className="flex justify-center mb-12">
                   <div className="w-20 h-1 bg-accent rounded-full"></div>
                 </div>
+
+                <div className="mb-12">
+                  <h4 className="text-xl font-bold text-primary mb-8">Leadership NOLIA</h4>
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="text-center">
+                      <div className="w-20 h-20 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white text-2xl font-bold">CEO</span>
+                      </div>
+                      <h5 className="font-bold text-primary mb-2">Direction Générale</h5>
+                      <p className="text-sm text-muted-foreground">Vision stratégique et innovation</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-20 h-20 bg-gradient-to-br from-chart-2 to-chart-3 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white text-2xl font-bold">CTO</span>
+                      </div>
+                      <h5 className="font-bold text-primary mb-2">Direction Technique</h5>
+                      <p className="text-sm text-muted-foreground">Architecture et développement</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-20 h-20 bg-gradient-to-br from-secondary to-chart-5 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white text-2xl font-bold">CMO</span>
+                      </div>
+                      <h5 className="font-bold text-primary mb-2">Direction Marketing</h5>
+                      <p className="text-sm text-muted-foreground">Stratégie et croissance</p>
+                    </div>
+                  </div>
+                </div>
+
                 <Link href="/contact">
                   <Button className="bg-accent hover:bg-accent/90 text-white px-16 py-6 text-xl font-medium rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover-glow">
                     Rejoignez-nous
