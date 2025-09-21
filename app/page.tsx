@@ -519,26 +519,6 @@ export default function HomePage() {
                     Notre équipe
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Carrières
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Ressources
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Partenaires
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -554,7 +534,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm text-center md:text-left">© 2024 NOLIA. Tous droits réservés.</p>
+            <p className="text-gray-400 text-sm text-center md:text-left">© 2025 NOLIA. Tous droits réservés.</p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
               <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Mentions légales
