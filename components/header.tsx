@@ -109,7 +109,7 @@ export function Header() {
 
             {/* Horizontal categories layout */}
             <div
-              className={`absolute top-full left-0 mt-2 w-[900px] bg-slate-900 border border-slate-700 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
+              className={`absolute top-full left-0 mt-2 w-[1100px] bg-slate-900 border border-slate-700 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
@@ -140,36 +140,33 @@ export function Header() {
               </div>
 
               {/* Sub-services grid below */}
-              <div className="grid grid-cols-3 gap-6">
+              <div className="space-y-4">
                 {Object.entries(expertisesData).map(([key, expertise], index) => (
                   <div
                     key={key}
-                    className={`space-y-3 transform transition-all duration-500 hover:scale-105 ${
+                    className={`p-4 rounded-lg bg-gradient-to-br from-slate-800/80 to-slate-700/80 hover:from-slate-700/80 hover:to-slate-600/80 transition-all duration-300 border border-slate-600 hover:border-orange-400/50 shadow-sm transform ${
                       isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                     }`}
                     style={{
                       transitionDelay: isExpertisesOpen ? `${(index + 6) * 100}ms` : "0ms",
                     }}
                   >
-                    <div className="p-4 rounded-lg bg-gradient-to-br from-slate-800/80 to-slate-700/80 hover:from-slate-700/80 hover:to-slate-600/80 transition-all duration-300 border border-slate-600 hover:border-orange-400/50 shadow-sm">
-                      <h4 className="text-white font-semibold text-base mb-3 flex items-center">
-                        {expertise.icon}
-                        <span className="ml-2">{expertise.title}</span>
-                        <div className="ml-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-                      </h4>
-                      <ul className="space-y-2">
-                        {expertise.categories.map((category, catIndex) => (
-                          <li key={catIndex}>
-                            <Link
-                              href={`/expertise/${key}/${category.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/à/g, "a").replace(/ç/g, "c")}`}
-                              className="text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm block py-1 px-2 rounded hover:bg-slate-600/50 hover:translate-x-1 relative overflow-hidden group"
-                            >
-                              <span className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-500/20 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></span>
-                              <span className="relative z-10">{category}</span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                    <h4 className="text-white font-semibold text-base mb-3 flex items-center">
+                      {expertise.icon}
+                      <span className="ml-2">{expertise.title}</span>
+                      <div className="ml-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {expertise.categories.map((category, catIndex) => (
+                        <Link
+                          key={catIndex}
+                          href={`/expertise/${key}/${category.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/à/g, "a").replace(/ç/g, "c")}`}
+                          className="text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm px-3 py-1 rounded-full bg-slate-600/50 hover:bg-orange-500/20 hover:scale-105 relative overflow-hidden group border border-slate-500 hover:border-orange-400/50"
+                        >
+                          <span className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-500/20 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></span>
+                          <span className="relative z-10">{category}</span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 ))}
