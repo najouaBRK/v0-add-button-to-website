@@ -234,6 +234,13 @@ export default function SEOSEAPage() {
                   <li>• Rapport mensuel</li>
                   <li>• Support email</li>
                 </ul>
+                <div className="text-center">
+                  <Link href="/devis">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-medium">
+                      Choisir Starter
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -254,6 +261,13 @@ export default function SEOSEAPage() {
                   <li>• Content marketing</li>
                   <li>• Support prioritaire</li>
                 </ul>
+                <div className="text-center">
+                  <Link href="/devis">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-medium">
+                      Choisir Professional
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -271,6 +285,13 @@ export default function SEOSEAPage() {
                   <li>• Account manager dédié</li>
                   <li>• Rapports personnalisés</li>
                 </ul>
+                <div className="text-center">
+                  <Link href="/devis">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-medium">
+                      Choisir Enterprise
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           </div>
