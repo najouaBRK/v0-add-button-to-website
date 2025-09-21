@@ -79,44 +79,70 @@ export function Header() {
             onMouseEnter={() => setIsExpertisesOpen(true)}
             onMouseLeave={() => setIsExpertisesOpen(false)}
           >
-            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors group">
               Expertises
-              <ChevronDown size={16} className="ml-1" />
+              <ChevronDown
+                size={16}
+                className={`ml-1 transition-transform duration-300 ${isExpertisesOpen ? "rotate-180" : ""}`}
+              />
             </button>
 
-            {isExpertisesOpen && (
-              <div className="absolute top-full left-0 mt-2 w-[800px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6">
-                <div className="grid grid-cols-3 gap-6">
-                  {Object.entries(expertisesData).map(([key, expertise]) => (
-                    <div key={key} className="space-y-3">
-                      <h3 className="text-orange-400 font-semibold text-lg">{expertise.title}</h3>
+            <div
+              className={`absolute top-full left-0 mt-2 w-[800px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
+                isExpertisesOpen
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
+              }`}
+            >
+              <div className="grid grid-cols-3 gap-6">
+                {Object.entries(expertisesData).map(([key, expertise], index) => (
+                  <div
+                    key={key}
+                    className={`space-y-3 transform transition-all duration-500 hover:scale-105 ${
+                      isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                    }`}
+                    style={{
+                      transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
+                    }}
+                  >
+                    <div className="p-4 rounded-lg bg-gradient-to-br from-gray-800/20 to-gray-900/20 hover:from-orange-500/10 hover:to-yellow-500/10 transition-all duration-300 border border-transparent hover:border-orange-500/20">
+                      <h3 className="text-orange-400 font-semibold text-lg mb-3 flex items-center">
+                        {expertise.title}
+                        <div className="ml-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                      </h3>
                       <ul className="space-y-2">
-                        {expertise.categories.map((category, index) => (
-                          <li key={index}>
+                        {expertise.categories.map((category, catIndex) => (
+                          <li key={catIndex}>
                             <Link
                               href={`/services/${key}`}
-                              className="text-gray-300 hover:text-orange-400 transition-colors text-sm block py-1"
+                              className="text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm block py-1 px-2 rounded hover:bg-orange-500/10 hover:translate-x-1 relative overflow-hidden group"
                             >
-                              {category}
+                              <span className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-orange-500/20 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></span>
+                              <span className="relative z-10">{category}</span>
                             </Link>
                           </li>
                         ))}
                       </ul>
                     </div>
-                  ))}
-                </div>
-                <div className="mt-6 pt-4 border-t border-gray-700/30 text-center">
-                  <QuoteButton
-                    serviceName="Expertises"
-                    packageName="Consultation expertises"
-                    packageDescription="Demande de consultation pour nos expertises"
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105"
-                  >
-                    Discuter de votre projet
-                  </QuoteButton>
-                </div>
+                  </div>
+                ))}
               </div>
-            )}
+              <div
+                className={`mt-6 pt-4 border-t border-gray-700/30 text-center transform transition-all duration-700 ${
+                  isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                }`}
+                style={{ transitionDelay: isExpertisesOpen ? "600ms" : "0ms" }}
+              >
+                <QuoteButton
+                  serviceName="Expertises"
+                  packageName="Consultation expertises"
+                  packageDescription="Demande de consultation pour nos expertises"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 animate-pulse"
+                >
+                  Discuter de votre projet
+                </QuoteButton>
+              </div>
+            </div>
           </div>
 
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
