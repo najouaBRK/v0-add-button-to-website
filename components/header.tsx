@@ -9,6 +9,7 @@ export function Header() {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isExpertisesOpen, setIsExpertisesOpen] = useState(false)
+  const [isPartnersOpen, setIsPartnersOpen] = useState(false)
 
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services-section")
@@ -70,6 +71,33 @@ export function Header() {
       categories: ["Implémentation CRM", "Migration", "Formation", "Intégrations", "Workflows", "Support"],
     },
   }
+
+  const partnersData = [
+    {
+      name: "AIRCALL",
+      logo: "/aircall-logo-blue.jpg",
+      description: "Solution de téléphonie cloud pour centres d'appels",
+      slug: "aircall",
+    },
+    {
+      name: "HUBSPOT",
+      logo: "/hubspot-logo-orange.png",
+      description: "Plateforme CRM et marketing automation",
+      slug: "hubspot",
+    },
+    {
+      name: "ODOO",
+      logo: "/odoo-logo-purple.jpg",
+      description: "Suite d'applications de gestion d'entreprise",
+      slug: "odoo",
+    },
+    {
+      name: "GOOGLE PARTNER",
+      logo: "/google-partner-logo-multicolor.jpg",
+      description: "Partenaire certifié Google Ads et Analytics",
+      slug: "google-partner",
+    },
+  ]
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#0f1729] border-b border-gray-700/30">
@@ -169,9 +197,63 @@ export function Header() {
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
             Solutions
           </Link>
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
-            Partenaires
-          </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => setIsPartnersOpen(true)}
+            onMouseLeave={() => setIsPartnersOpen(false)}
+          >
+            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors group">
+              Partenaires
+              <ChevronDown
+                size={16}
+                className={`ml-1 transition-transform duration-300 ${isPartnersOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            <div
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl p-6 transition-all duration-300 ${
+                isPartnersOpen
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
+              }`}
+            >
+              <div className="text-center mb-6">
+                <h3 className="text-white font-semibold text-lg mb-2">Nos Partenaires</h3>
+                <p className="text-gray-400 text-sm">Découvrez nos partenaires technologiques</p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {partnersData.map((partner, index) => (
+                  <Link
+                    key={partner.slug}
+                    href={`/partenaires/${partner.slug}`}
+                    className={`group p-4 bg-slate-800/50 rounded-lg border border-slate-600 hover:border-orange-400 transition-all duration-300 hover:bg-slate-800/80 transform ${
+                      isPartnersOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                    }`}
+                    style={{
+                      transitionDelay: isPartnersOpen ? `${index * 100}ms` : "0ms",
+                    }}
+                  >
+                    <div className="flex flex-col items-center text-center space-y-3">
+                      <div className="w-full h-10 flex items-center justify-center bg-white rounded p-2">
+                        <img
+                          src={partner.logo || "/placeholder.svg"}
+                          alt={`${partner.name} logo`}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-medium text-sm group-hover:text-orange-400 transition-colors">
+                          {partner.name}
+                        </h4>
+                        <p className="text-gray-400 text-xs mt-1">{partner.description}</p>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
             Secteurs
           </Link>
@@ -213,6 +295,22 @@ export function Header() {
                   >
                     <span className="mr-2 scale-75">{expertise.icon}</span>
                     {expertise.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div className="text-sm font-medium text-orange-400 py-2">Partenaires</div>
+              <div className="grid grid-cols-2 gap-2 pl-4">
+                {partnersData.map((partner) => (
+                  <Link
+                    key={partner.slug}
+                    href={`/partenaires/${partner.slug}`}
+                    className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {partner.name}
                   </Link>
                 ))}
               </div>
