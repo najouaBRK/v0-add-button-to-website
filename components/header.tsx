@@ -25,59 +25,56 @@ export function Header() {
   }
 
   const expertisesData = {
-    crm: {
-      title: "Univers CRM",
-      categories: [
-        "CRM HubSpot",
-        "Intégration CRM",
-        "Automatisation marketing",
-        "Pipeline de vente",
-        "Reporting CRM",
-        "Formation HubSpot",
-      ],
-    },
     web: {
-      title: "Univers Web",
+      title: "Web",
+      categories: ["Site vitrine", "E-commerce", "Blog", "Landing page", "Application web", "Refonte de site"],
+    },
+    content: {
+      title: "Content",
       categories: [
-        "Site vitrine",
-        "E-commerce",
-        "Application web",
-        "Refonte de site",
-        "Maintenance web",
-        "Optimisation performance",
+        "Rédaction web",
+        "Content marketing",
+        "Stratégie éditoriale",
+        "Copywriting",
+        "Storytelling",
+        "Optimisation contenu",
       ],
     },
-    marketing: {
-      title: "Service Marketing Externalisé",
+    seo: {
+      title: "SEO",
       categories: [
-        "Stratégie marketing",
-        "Campagnes publicitaires",
-        "Content marketing",
-        "Social media",
-        "Email marketing",
-        "Marketing automation",
+        "Audit SEO",
+        "Optimisation technique",
+        "Recherche de mots-clés",
+        "Link building",
+        "SEO local",
+        "Suivi de performance",
       ],
+    },
+    paid: {
+      title: "Paid",
+      categories: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Display", "Retargeting", "Optimisation campagnes"],
     },
     data: {
-      title: "Univers Data & IA",
+      title: "Data",
       categories: [
+        "Analytics",
         "Business Intelligence",
-        "Data Analytics",
-        "Agents IA",
-        "Machine Learning",
-        "Intégration Data",
-        "Tableaux de bord",
+        "Data visualization",
+        "Reporting",
+        "Tracking",
+        "KPI & métriques",
       ],
     },
-    studio: {
-      title: "Univers Studio",
+    hubspot: {
+      title: "HubSpot",
       categories: [
-        "Création vidéo",
-        "Motion design",
-        "Identité visuelle",
-        "Photographie",
-        "Montage vidéo",
-        "Animation 3D",
+        "Implémentation CRM",
+        "Marketing automation",
+        "Sales automation",
+        "Intégrations",
+        "Formation",
+        "Support technique",
       ],
     },
   }
@@ -119,7 +116,7 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-0 mt-2 w-[900px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
+              className={`absolute top-full left-0 mt-2 w-[800px] bg-[#0f1729] border border-gray-700/30 rounded-lg shadow-2xl p-6 transition-all duration-300 transform ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
