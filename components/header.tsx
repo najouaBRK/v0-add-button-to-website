@@ -77,7 +77,7 @@ export function Header() {
         <svg width="20" height="20" viewBox="0 0 24 24" className="text-orange-400">
           <path
             fill="currentColor"
-            d="M18.164 7.931V5.61c0-1.378-1.119-2.497-2.497-2.497s-2.497 1.119-2.497 2.497v2.321c-1.133.434-2.097 1.145-2.815 2.071l-3.738-2.158c.171-.427.264-.895.264-1.386 0-1.933-1.567-3.5-3.5-3.5S0 4.526 0 6.459s1.567 3.5 3.5 3.5c.605 0 1.174-.154 1.671-.425l3.738 2.158c-.171.427-.264.895-.264 1.386 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-.491-.093-.959-.264-1.386l-2.158-3.738c.497.271 1.066.425 1.671.425 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
+            d="M18.164 7.931V5.61c0-1.378-1.119-2.497-2.497-2.497s-2.497 1.119-2.497 2.497v2.321c-1.133.434-2.097 1.145-2.815 2.071l-3.738-2.158c.171-.427.264-.895.264-1.386 0-1.933-1.567-3.5 3.5-3.5S0 4.526 0 6.459s1.567 3.5 3.5 3.5c.605 0 1.174-.154 1.671-.425l3.738 2.158c-.171.427-.264.895-.264 1.386 0 1.933 1.567 3.5 3.5 3.5s3.5-1.567 3.5-3.5c0-.491-.093-.959-.264-1.386l-2.158-3.738c.497.271 1.066.425 1.671.425 1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5z"
           />
         </svg>
       ),
@@ -156,7 +156,7 @@ export function Header() {
                         {expertise.categories.map((category, catIndex) => (
                           <li key={catIndex}>
                             <Link
-                              href={`/services/${key}`}
+                              href={`/expertise/${key}`}
                               className="text-slate-600 hover:text-sky-700 transition-all duration-300 text-sm block py-1 px-2 rounded hover:bg-sky-200/50 hover:translate-x-1 relative overflow-hidden group"
                             >
                               <span className="absolute inset-0 bg-gradient-to-r from-sky-500/0 to-sky-500/20 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></span>
@@ -228,7 +228,7 @@ export function Header() {
                 {Object.entries(expertisesData).map(([key, expertise]) => (
                   <Link
                     key={key}
-                    href={`/services/${key}`}
+                    href={`/expertise/${key}`}
                     className="text-xs text-slate-600 hover:text-sky-700 transition-colors py-1 flex items-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
