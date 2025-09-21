@@ -108,7 +108,7 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-0 mt-2 w-[1200px] bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl p-8 transition-all duration-300 transform ${
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[1200px] bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
