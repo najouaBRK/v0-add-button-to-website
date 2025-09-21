@@ -36,53 +36,500 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <section className="gradient-hero particles-bg text-white py-20 md:py-32 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-
-        <div className="absolute top-20 left-10 w-20 h-20 border-2 border-purple-400/30 rounded-full animate-float"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 border-2 border-pink-400/30 rounded-lg rotate-45 animate-float-reverse"></div>
-        <div className="absolute bottom-32 left-20 w-24 h-24 border-2 border-cyan-400/30 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 border-2 border-purple-400/30 rounded-lg rotate-45 animate-float-reverse"></div>
-
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse-glow"></div>
-        <div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse-glow"
-          style={{ animationDelay: "1.5s" }}
-        ></div>
+      <section className="bg-[#0f1729] text-white py-20 md:py-32 px-4 relative overflow-hidden">
+        {/* Animated background elements inspired by digitalisim space theme */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+          <div
+            className="absolute top-40 right-20 w-1 h-1 bg-yellow-400 rounded-full animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-32 left-20 w-3 h-3 bg-orange-300 rounded-full animate-pulse"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute bottom-20 right-10 w-2 h-2 bg-yellow-300 rounded-full animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          ></div>
+          <div
+            className="absolute top-1/3 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse"
+            style={{ animationDelay: "1.5s" }}
+          ></div>
+          <div
+            className="absolute top-2/3 right-1/3 w-2 h-2 bg-orange-200 rounded-full animate-pulse"
+            style={{ animationDelay: "2.5s" }}
+          ></div>
+        </div>
 
         <div className="container mx-auto text-center relative z-10">
+          {/* Badge similar to digitalisim */}
           <div className={`mb-8 transition-all duration-1000 ${isVisible ? "animate-bounce-in" : "opacity-0"}`}>
-            <span className="inline-block glass-card text-white px-6 py-3 rounded-full text-sm font-medium mb-8 animate-pulse-glow">
-              ⭐ Agence d'acquisition digitale #1
+            <span className="inline-block bg-orange-500/20 border border-orange-500/30 text-orange-300 px-6 py-3 rounded-full text-sm font-medium mb-8">
+              ⭐ Experts en Transformation Digitale
             </span>
           </div>
 
+          {/* Main heading matching digitalisim structure */}
           <h1
             className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight transition-all duration-1000 delay-300 ${isVisible ? "animate-slide-in-left" : "opacity-0"}`}
           >
-            <span className="text-gradient-secondary">+</span> de visiteurs,
+            Experts en Transformation Digitale,
             <br />
-            <span className="text-gradient-secondary">+</span> de prospects,
+            <span className="text-orange-400">Intégration CRM HubSpot, Data et</span>
             <br />
-            <span className="text-gradient-secondary">+</span> de clients
+            <span className="text-orange-400">Agents IA</span>
           </h1>
 
+          {/* Subtitle matching digitalisim */}
           <p
-            className={`text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+            className={`text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
           >
-            Percez à la rencontre de vos prospects et embarquez dans la galaxie de l'agence digitale capable de booster
-            votre croissance sur l'ensemble de votre parcours de vente.
+            Embarquez dans la galaxie de la transformation digitale capable de booster votre croissance sur l'ensemble
+            de votre parcours de vente.
           </p>
 
+          {/* CTA buttons matching digitalisim layout */}
           <div
-            className={`flex justify-center transition-all duration-1000 delay-700 ${isVisible ? "animate-scale-in" : "opacity-0"}`}
+            className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${isVisible ? "animate-scale-in" : "opacity-0"}`}
           >
             <Button
               onClick={() => setIsQuoteModalOpen(true)}
-              className="gradient-secondary hover:scale-105 text-white px-8 py-4 text-lg font-medium animate-pulse-glow transition-all duration-300 hover-lift"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105"
             >
-              Demander mon devis
+              Découvrir nos digitalisim 🚀
             </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 bg-transparent"
+            >
+              En savoir plus sur DIGITALISIM
+            </Button>
+          </div>
+
+          {/* Astronaut illustration placeholder */}
+          <div className="mt-16 flex justify-center">
+            <div className="relative">
+              <div className="w-64 h-64 bg-gradient-to-br from-orange-400/20 to-yellow-400/20 rounded-full flex items-center justify-center animate-float">
+                <div className="text-8xl">🚀</div>
+              </div>
+              {/* Floating elements around the rocket */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-400 rounded-full animate-float-reverse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-400 rounded-full animate-float"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0f1729] py-12 border-t border-gray-700/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <p className="text-gray-400 text-sm font-medium mb-6">Ils nous font confiance</p>
+          </div>
+
+          {/* Scrolling logos container */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll space-x-12 items-center justify-center">
+              {/* First set of logos */}
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <img
+                  src="/hubspot-logo.png"
+                  alt="HubSpot"
+                  className="max-w-full max-h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <img
+                  src="/odoo-logo.png"
+                  alt="Odoo"
+                  className="max-w-full max-h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  Google
+                </span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  Meta
+                </span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  LinkedIn
+                </span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  Zapier
+                </span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  Mailchimp
+                </span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  Salesforce
+                </span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  Shopify
+                </span>
+              </div>
+              <div className="flex items-center justify-center min-w-[120px] h-16 bg-white/10 rounded-lg px-4 backdrop-blur-sm">
+                <span className="text-white font-semibold text-lg opacity-70 hover:opacity-100 transition-opacity">
+                  WordPress
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-[#0f1729] text-white relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+          <div
+            className="absolute top-40 right-20 w-1 h-1 bg-yellow-400 rounded-full animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-32 left-20 w-3 h-3 bg-orange-300 rounded-full animate-pulse"
+            style={{ animationDelay: "2s" }}
+          ></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <span className="text-orange-400 font-semibold">+ DE VISITEURS</span>
+              <span className="text-orange-400 font-semibold">+ DE PROSPECTS</span>
+              <span className="text-orange-400 font-semibold">+ DE CLIENTS</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Partez à la découverte de nos univers CRM, Web, Vidéo, Data & IA
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            {/* Left side - Astronaut illustration */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-80 h-80 bg-gradient-to-br from-orange-400/20 to-yellow-400/20 rounded-full flex items-center justify-center animate-float">
+                  <div className="text-9xl">🚀</div>
+                </div>
+                {/* Floating UI elements around astronaut */}
+                <div className="absolute -top-8 -right-8 w-16 h-12 bg-orange-500 rounded-lg flex items-center justify-center animate-float-reverse">
+                  <span className="text-white text-xs font-bold">CRM</span>
+                </div>
+                <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center animate-float">
+                  <span className="text-white text-xs font-bold">DATA</span>
+                </div>
+                <div className="absolute top-1/2 -left-12 w-16 h-12 bg-green-500 rounded-lg flex items-center justify-center animate-float-reverse">
+                  <span className="text-white text-xs font-bold">WEB</span>
+                </div>
+                <div className="absolute top-1/4 -right-12 w-14 h-14 bg-purple-500 rounded-lg flex items-center justify-center animate-float">
+                  <span className="text-white text-xs font-bold">IA</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Universe cards */}
+            <div className="space-y-6">
+              {/* Univers CRM */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold">CRM</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Univers CRM</h3>
+                    <p className="text-gray-300 text-sm">
+                      DIGITALISIM est une Agence Partenaire HubSpot Elite. Vous serez donc accompagné sur des experts
+                      certifiés qui ont déjà déployé plusieurs centaines de projets.
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-white text-sm">→</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Univers Web */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold">WEB</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Univers Web</h3>
+                    <p className="text-gray-300 text-sm">
+                      Création de sites web performants et optimisés pour la conversion. Design moderne, développement
+                      technique et intégration CRM.
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-white text-sm">→</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Univers Service Marketing Externalisé */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">MKT</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Univers Service Marketing Externalisé</h3>
+                    <p className="text-gray-300 text-sm">
+                      Service marketing complet externalisé pour développer votre présence digitale et générer des leads
+                      qualifiés.
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-white text-sm">→</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Univers Data et IA */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">IA</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Univers Data et IA</h3>
+                    <p className="text-gray-300 text-sm">
+                      Exploitation de vos données et intégration d'agents IA pour automatiser et optimiser vos processus
+                      business.
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-white text-sm">→</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Univers Studio */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">STU</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Univers Studio</h3>
+                    <p className="text-gray-300 text-sm">
+                      Studio créatif pour la production de contenus visuels, vidéos et supports marketing de haute
+                      qualité.
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-white text-sm">→</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105">
+              Découvrir plus →
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-[#0f1729] text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="text-orange-400 font-semibold mb-4 uppercase tracking-wide">
+              NOTRE MODE D'ACCOMPAGNEMENT
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Des Experts en CRM HubSpot, Web, IA et Intégration Data
+            </h2>
+            <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Comme nous, de la conquête de nouveaux clients, nous vous accompagnons notre accompagnement en fonction de
+              vos enjeux et objectifs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Gagnant - Gagnant */}
+            <div className="text-center group">
+              <div className="w-32 h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-float group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl">🤝</div>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Gagnant - Gagnant</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Notre approche collaborative garantit le succès mutuel de nos projets avec des objectifs alignés.
+              </p>
+            </div>
+
+            {/* Votre commercial 3.0 */}
+            <div className="text-center group">
+              <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-float-reverse group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl">🚀</div>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Votre commercial 3.0</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Transformation digitale de vos processus commerciaux avec les dernières technologies et l'IA.
+              </p>
+            </div>
+
+            {/* Réactivité et expérience */}
+            <div className="text-center group">
+              <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-float group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl">⚡</div>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Réactivité et expérience</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Réponse rapide et expertise approfondie pour des solutions adaptées à vos besoins spécifiques.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full">
+              Découvrir plus →
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Apprenez à Exploiter la Puissance de Votre Data avec Digitalisim et nos agents IA
+            </h2>
+            <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Nos experts vous accompagnent dans l'exploitation de vos données et l'intégration d'agents IA pour
+              automatiser et optimiser vos processus business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Content */}
+            <div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-orange-600 text-xl">📊</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">INTELLIGENCE BUSINESS</h3>
+                    <p className="text-gray-600">
+                      Nos experts vous accompagnent dans l'exploitation de vos données et l'intégration d'agents IA pour
+                      automatiser et optimiser vos processus business.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-blue-600 text-xl">🤖</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">AGENTS IA PERSONNALISÉS</h3>
+                    <p className="text-gray-600">
+                      Développement d'agents IA sur mesure pour automatiser vos tâches répétitives et améliorer votre
+                      productivité.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-green-600 text-xl">⚡</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">AUTOMATISATION AVANCÉE</h3>
+                    <p className="text-gray-600">
+                      Mise en place de workflows intelligents qui s'adaptent à votre activité et évoluent avec vos
+                      besoins.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full">
+                  Découvrir nos solutions IA
+                </Button>
+              </div>
+            </div>
+
+            {/* Right side - Illustration */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
+                  <div className="text-8xl">🤖</div>
+                </div>
+                {/* Floating data elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
+                  <span className="text-white text-2xl">📊</span>
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
+                  <span className="text-white text-xl">⚡</span>
+                </div>
+                <div className="absolute top-1/4 -left-8 w-14 h-14 bg-green-400 rounded-full flex items-center justify-center animate-float">
+                  <span className="text-white text-lg">🎯</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-orange-500 font-semibold mb-4 uppercase tracking-wide">NOLIA</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Agence spécialiste de la Transformation Digitale, du CRM HubSpot, de la Data et de l'Intelligence
+                Artificielle
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Nos experts vous accompagnent au quotidien afin de développer pour votre entreprise une stratégie
+                d'acquisition digitale qui transforme vos visiteurs en prospects et vos prospects en clients.
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Nos ingénieurs sont spécialisés passionnés par le Web, la gestion de la relation client (CRM), la Data
+                et l'IA. Ils exploitent les dernières innovations pour créer des solutions sur mesure et vous aident à
+                optimiser les performances de votre activité et à vous démarquer de votre concurrence.
+              </p>
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full">
+                En savoir plus
+              </Button>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-orange-200">
+                  <img
+                    src="/modern-office-team-working-on-digital-transformati.jpg"
+                    alt="Équipe NOLIA"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Decorative elements around the image */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
+                  <span className="text-white text-2xl">⚙️</span>
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
+                  <span className="text-white text-xl">📊</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -444,88 +891,85 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 md:py-16">
+      <footer className="bg-[#0f1729] text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">N</span>
-                </div>
-                <span className="text-xl font-bold">NOLIA</span>
+                <div className="text-orange-400 font-bold text-xl">DIGITALISIM</div>
               </div>
               <p className="text-gray-400 mb-4">
-                Votre partenaire de confiance pour l'acquisition digitale. Nous transformons vos visiteurs en clients
-                fidèles.
+                Experts en Transformation Digitale, Intégration CRM HubSpot, Data et Agents IA. Nous transformons vos
+                visiteurs en clients fidèles.
               </p>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <h4 className="text-lg font-semibold mb-4 text-orange-400">Expertise</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/services/seo-sea" className="hover:text-white transition-colors">
-                    SEO & SEA
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    CRM HubSpot
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/analytics-data" className="hover:text-white transition-colors">
-                    Analytics & Data
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Transformation Digitale
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/email-marketing" className="hover:text-white transition-colors">
-                    Email Marketing
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Data & IA
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/social-media" className="hover:text-white transition-colors">
-                    Social Media
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Développement Web
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/web-development" className="hover:text-white transition-colors">
-                    Web Development
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/crm-automation" className="hover:text-white transition-colors">
-                    CRM & Automation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/formations" className="hover:text-white transition-colors">
-                    Nos Formations
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/paid" className="hover:text-white transition-colors">
-                    Paid
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Marketing Digital
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Entreprise</h4>
+              <h4 className="text-lg font-semibold mb-4 text-orange-400">Solutions</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/about" className="hover:text-white transition-colors">
-                    À propos
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Univers CRM
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Notre équipe
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Univers Web
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Univers Data & IA
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Univers Studio
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                    Service Marketing
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <h4 className="text-lg font-semibold mb-4 text-orange-400">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>contact@nolia.fr</li>
+                <li>contact@digitalisim.fr</li>
                 <li>+33 1 23 45 67 89</li>
                 <li>123 Avenue de l'Innovation</li>
                 <li>75000 Paris, France</li>
@@ -533,16 +977,16 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm text-center md:text-left">© 2025 NOLIA. Tous droits réservés.</p>
+          <div className="border-t border-gray-700/30 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 text-sm text-center md:text-left">© 2025 DIGITALISIM. Tous droits réservés.</p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link href="#" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 Mentions légales
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link href="#" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 Politique de confidentialité
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link href="#" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 CGV
               </Link>
             </div>
