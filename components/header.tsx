@@ -142,7 +142,7 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full mt-2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-6 lg:p-8 transition-all duration-300 ${
+              className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-6 lg:p-8 transition-all duration-300 z-[9999] ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
@@ -150,10 +150,17 @@ export function Header() {
               style={{
                 width: "min(1200px, 90vw)",
                 maxWidth: "90vw",
-                left: "50%",
-                transform: "translateX(-50%)",
+                maxHeight: "80vh",
+                overflowY: "auto",
               }}
             >
+              {isExpertisesOpen && (
+                <div
+                  className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[-1]"
+                  onClick={() => setIsExpertisesOpen(false)}
+                />
+              )}
+
               <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6 w-full">
                 {Object.entries(expertisesData).map(([key, expertise], index) => (
                   <div
