@@ -4,9 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette to match digitalisim.fr - light blue and navy blue theme */
-  --background: #f0f9ff; /* Light blue background like digitalisim.fr */
-  --foreground: #1e3a8a; /* Navy blue text */
+  /* Updated color palette to match digitalisim.fr - navy blue and light blue theme */
+  --background: #1e3a8a; /* Navy blue background like digitalisim.fr */
+  --foreground: #f0f9ff; /* Light blue text */
   --card: #ffffff;
   --card-foreground: #1e3a8a;
   --popover: #ffffff;
@@ -15,13 +15,13 @@
   --primary-foreground: #ffffff;
   --secondary: #3b82f6; /* Blue secondary */
   --secondary-foreground: #ffffff;
-  --muted: #e0f2fe;
-  --muted-foreground: #475569;
+  --muted: #1e40af;
+  --muted-foreground: #94a3b8;
   --accent: #1e40af;
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #cbd5e1;
+  --border: #3b82f6;
   --input: #ffffff;
   --ring: rgba(30, 64, 175, 0.5);
   --chart-1: #1e40af;
@@ -41,7 +41,7 @@
 }
 
 .dark {
-  --background: #1e3a8a;
+  --background: #0f172a;
   --foreground: #f0f9ff;
   --card: #1e40af;
   --card-foreground: #f0f9ff;

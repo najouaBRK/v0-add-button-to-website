@@ -156,21 +156,21 @@ export function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0f1729] border-b border-gray-700/30">
+    <header className="sticky top-0 z-50 w-full bg-[#1e3a8a] border-b border-blue-600/30">
       <div className="container mx-auto px-4 flex h-16 md:h-20 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <div className="text-white font-bold text-xl md:text-2xl">
               <span className="text-orange-400">NOLIA</span>
             </div>
-            <div className="ml-2 text-xs text-gray-400 hidden lg:block">EXPERTS EN DIGITALE</div>
+            <div className="ml-2 text-xs text-blue-200 hidden lg:block">EXPERTS EN DIGITALE</div>
           </Link>
         </div>
 
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="p-3 text-gray-300 hover:text-orange-400 transition-colors touch-manipulation"
+            className="p-3 text-blue-200 hover:text-orange-400 transition-colors touch-manipulation"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -178,7 +178,7 @@ export function Header() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+          <Link href="/" className="text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors">
             Accueil
           </Link>
 
@@ -187,7 +187,7 @@ export function Header() {
             onMouseEnter={() => setIsExpertisesOpen(true)}
             onMouseLeave={() => setIsExpertisesOpen(false)}
           >
-            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors group">
+            <button className="flex items-center text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors group">
               Expertises
               <ChevronDown
                 size={16}
@@ -272,7 +272,7 @@ export function Header() {
             onMouseEnter={() => setIsSolutionsOpen(true)}
             onMouseLeave={() => setIsSolutionsOpen(false)}
           >
-            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors group">
+            <button className="flex items-center text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors group">
               Solutions
               <ChevronDown
                 size={16}
@@ -334,7 +334,7 @@ export function Header() {
             onMouseEnter={() => setIsPartnersOpen(true)}
             onMouseLeave={() => setIsPartnersOpen(false)}
           >
-            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors group">
+            <button className="flex items-center text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors group">
               Partenaires
               <ChevronDown
                 size={16}
@@ -386,16 +386,16 @@ export function Header() {
               </div>
             </div>
           </div>
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+          <Link href="/" className="text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors">
             Secteurs
           </Link>
-          <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+          <Link href="/about" className="text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors">
             À propos
           </Link>
-          <Link href="/blog" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+          <Link href="/blog" className="text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors">
             Blog
           </Link>
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+          <Link href="/" className="text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors">
             STUDIO
           </Link>
         </nav>
@@ -413,11 +413,11 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-700 shadow-lg max-h-[80vh] overflow-y-auto">
+        <div className="md:hidden bg-[#0f172a] border-t border-blue-700 shadow-lg max-h-[80vh] overflow-y-auto">
           <nav className="px-4 py-4 space-y-3">
             <Link
               href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
+              className="block text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               Accueil
@@ -440,7 +440,7 @@ export function Header() {
                     <Link
                       key={key}
                       href={`/expertise/${key}`}
-                      className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-2 flex items-center touch-manipulation"
+                      className="text-xs text-blue-200 hover:text-orange-400 transition-colors py-2 flex items-center touch-manipulation"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <span className="mr-2 scale-75">{expertise.icon}</span>
@@ -468,7 +468,7 @@ export function Header() {
                     <Link
                       key={key}
                       href={`/solutions/${key}`}
-                      className="flex items-center space-x-3 text-xs text-gray-300 hover:text-orange-400 transition-colors py-2 touch-manipulation"
+                      className="flex items-center space-x-3 text-xs text-blue-200 hover:text-orange-400 transition-colors py-2 touch-manipulation"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <span className="scale-75">{solution.icon}</span>
@@ -496,7 +496,7 @@ export function Header() {
                     <Link
                       key={partner.slug}
                       href={`/partenaires/${partner.slug}`}
-                      className="flex items-center space-x-3 text-xs text-gray-300 hover:text-orange-400 transition-colors py-2 touch-manipulation"
+                      className="flex items-center space-x-3 text-xs text-blue-200 hover:text-orange-400 transition-colors py-2 touch-manipulation"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <div className="w-6 h-4 flex items-center justify-center bg-white rounded">
@@ -515,39 +515,39 @@ export function Header() {
 
             <Link
               href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
+              className="block text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               Secteurs
             </Link>
             <Link
               href="/about"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
+              className="block text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               À propos
             </Link>
             <Link
               href="/blog"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
+              className="block text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
             </Link>
             <Link
               href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
+              className="block text-sm font-medium text-blue-200 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               STUDIO
             </Link>
 
-            <div className="pt-4 border-t border-slate-600">
+            <div className="pt-4 border-t border-blue-600">
               <QuoteButton
                 serviceName="Général"
                 packageName="Demande de devis mobile"
                 packageDescription="Demande de devis depuis le menu mobile"
-                className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 touch-manipulation"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 touch-manipulation"
               >
                 Nous contacter
               </QuoteButton>
