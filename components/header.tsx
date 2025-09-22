@@ -146,7 +146,7 @@ export function Header() {
             </button>
 
             <div
-              className={`fixed top-20 left-1/2 transform -translate-x-1/2 bg-blue-50/95 backdrop-blur-sm border border-blue-200 rounded-lg shadow-2xl p-6 lg:p-8 transition-all duration-300 z-[9999] ${
+              className={`fixed top-20 left-1/2 transform -translate-x-1/2 bg-blue-100/95 backdrop-blur-sm border border-blue-300 rounded-lg shadow-2xl p-6 lg:p-8 transition-all duration-300 z-[9999] ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
@@ -176,7 +176,7 @@ export function Header() {
                       transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
                     }}
                   >
-                    <div className="flex items-center space-x-2 pb-2 border-b border-blue-200">
+                    <div className="flex items-center space-x-2 pb-2 border-b border-blue-300">
                       {expertise.icon}
                       <h3 className="text-gray-900 font-semibold text-sm lg:text-base">{expertise.title}</h3>
                     </div>
@@ -186,7 +186,7 @@ export function Header() {
                         <Link
                           key={catIndex}
                           href={`/expertise/${key}/${category.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/à/g, "a").replace(/ç/g, "c")}`}
-                          className="block text-gray-700 hover:text-orange-500 transition-all duration-300 text-xs lg:text-sm py-1 px-2 rounded hover:bg-blue-100/50 group"
+                          className="block text-gray-700 hover:text-orange-500 transition-all duration-300 text-xs lg:text-sm py-1 px-2 rounded hover:bg-blue-200/50 group"
                         >
                           <span className="flex items-center">
                             <span className="w-1 h-1 bg-orange-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -200,7 +200,7 @@ export function Header() {
               </div>
 
               <div
-                className={`mt-6 lg:mt-8 pt-4 lg:pt-6 border-t border-blue-200 text-center transform transition-all duration-700 ${
+                className={`mt-6 lg:mt-8 pt-4 lg:pt-6 border-t border-blue-300 text-center transform transition-all duration-700 ${
                   isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
                 style={{ transitionDelay: isExpertisesOpen ? "600ms" : "0ms" }}
