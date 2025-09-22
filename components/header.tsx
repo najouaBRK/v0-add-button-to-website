@@ -128,6 +128,10 @@ export function Header() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+            Accueil
+          </Link>
+
           <div
             className="relative"
             onMouseEnter={() => setIsExpertisesOpen(true)}
@@ -302,6 +306,14 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-slate-900 border-t border-slate-700 shadow-lg max-h-[80vh] overflow-y-auto">
           <nav className="px-4 py-4 space-y-3">
+            <Link
+              href="/"
+              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Accueil
+            </Link>
+
             <div className="space-y-2">
               <button
                 onClick={() => setIsMobileExpertisesOpen(!isMobileExpertisesOpen)}
