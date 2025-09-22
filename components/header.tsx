@@ -392,7 +392,7 @@ export function Header() {
           <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
             À propos
           </Link>
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
+          <Link href="/blog" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
             Blog
           </Link>
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
@@ -528,7 +528,7 @@ export function Header() {
               À propos
             </Link>
             <Link
-              href="/"
+              href="/blog"
               className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
