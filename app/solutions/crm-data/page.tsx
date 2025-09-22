@@ -1,4 +1,3 @@
-import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -114,8 +113,6 @@ export default function CRMDataPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a2b4a] via-slate-800 to-[#1a2b4a]">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto max-w-6xl text-center">
