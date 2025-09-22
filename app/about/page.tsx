@@ -1,6 +1,3 @@
-export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-sky-50 to-blu```tsx file=\"app/about/page.tsx"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
@@ -51,7 +48,10 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-50 to-transparent"></div>
       </section>
 
-      <section id="company-info" className="py-20 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-sky-100 relative overflow-hidden">
+      <section
+        id="company-info"
+        className="py-20 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-sky-100 relative overflow-hidden"
+      >
         <div className="absolute top-10 right-10 w-24 h-24 md:w-32 md:h-32 opacity-10 animate-float">
           <img src="/digital-transformation-abstract.png" alt="Digital" className="w-full h-full" />
         </div>
@@ -62,7 +62,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 md:mb-20 animate-fade-in-up">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 md:mb-6 px-4 sm:px-0">Qui sommes-nous ?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 md:mb-6 px-4 sm:px-0">
+                Qui sommes-nous ?
+              </h2>
               <div className="w-16 h-1 md:w-24 md:h-1 bg-orange-500 rounded-full mx-auto mb-6 md:mb-8"></div>
               <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
                 NOLIA est une agence digitale française spécialisée dans l'accompagnement des entreprises dans leur
@@ -111,7 +113,11 @@ export default function AboutPage() {
               <Card className="bg-white/90 backdrop-blur-sm shadow-2xl border-0 animate-slide-in-right">
                 <CardContent className="p-8 md:p-12">
                   <div className="text-center mb-6 md:mb-8">
-                    <img src="/company-building-icon.jpg" alt="Company" className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 opacity-80" />
+                    <img
+                      src="/company-building-icon.jpg"
+                      alt="Company"
+                      className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 opacity-80"
+                    />
                     <h4 className="text-2xl md:text-3xl font-bold text-slate-800">Informations société</h4>
                   </div>
                   <div className="space-y-4 md:space-y-6">
@@ -133,7 +139,9 @@ export default function AboutPage() {
                       <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full mt-2 mr-3 md:mr-4 flex-shrink-0"></div>
                       <div>
                         <strong className="text-slate-800 text-sm md:text-base">Secteur d'activité :</strong>
-                        <p className="text-slate-600 text-sm md:text-base">Conseil en systèmes et logiciels informatiques</p>
+                        <p className="text-slate-600 text-sm md:text-base">
+                          Conseil en systèmes et logiciels informatiques
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start">
@@ -175,7 +183,9 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 md:mb-20 animate-fade-in-up">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 md:mb-6 px-4 sm:px-0">Nos domaines d'expertise</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 md:mb-6 px-4 sm:px-0">
+              Nos domaines d'expertise
+            </h2>
             <div className="w-16 h-1 md:w-24 md:h-1 bg-orange-500 rounded-full mx-auto mb-6 md:mb-8"></div>
             <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
               NOLIA maîtrise l'ensemble de l'écosystème digital pour offrir des solutions complètes et performantes.
@@ -270,7 +280,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16 md:mb-20 animate-fade-in-up">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 md:mb-6 px-4 sm:px-0">Notre mission</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 md:mb-6 px-4 sm:px-0">
+                Notre mission
+              </h2>
               <div className="w-16 h-1 md:w-24 md:h-1 bg-orange-500 rounded-full mx-auto mb-6 md:mb-8"></div>
               <p className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed px-4 sm:px-0">
                 Accompagner les entreprises dans leur transformation digitale en créant des solutions innovantes qui
@@ -328,7 +340,9 @@ export default function AboutPage() {
                   <img src="/growth-arrow-icon-white.jpg" alt="Growth" className="w-full h-full" />
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 relative z-10 px-4 sm:px-0">Prêt à transformer votre présence digitale ?</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 relative z-10 px-4 sm:px-0">
+                  Prêt à transformer votre présence digitale ?
+                </h3>
                 <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 md:mb-12 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed relative z-10 px-4 sm:px-0">
                   Découvrez comment NOLIA peut vous accompagner dans votre transformation digitale et propulser votre
                   entreprise vers de nouveaux sommets.
