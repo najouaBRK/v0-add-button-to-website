@@ -75,13 +75,13 @@ export function Header() {
   const partnersData = [
     {
       name: "AIRCALL",
-      logo: "/aircall-logo-blue.jpg",
+      logo: "/aircall-logo-new.png",
       description: "Solution de téléphonie cloud pour centres d'appels",
       slug: "aircall",
     },
     {
       name: "HUBSPOT",
-      logo: "/hubspot-logo-orange.png",
+      logo: "/hubspot-logo-new.png",
       description: "Plateforme CRM et marketing automation",
       slug: "hubspot",
     },
@@ -93,7 +93,7 @@ export function Header() {
     },
     {
       name: "GOOGLE PARTNER",
-      logo: "/google-partner-logo-multicolor.jpg",
+      logo: "/google-partner-logo-new.png",
       description: "Partenaire certifié Google Ads et Analytics",
       slug: "google-partner",
     },
