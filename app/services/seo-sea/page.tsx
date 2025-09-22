@@ -15,24 +15,6 @@ export default function SEOSEAPage() {
               🔍 SEO & SEA Expert
             </span>
           </div>
-          <h1 className="text-3```tsx file=\"app/services/seo-sea/page.tsx"
-"use client"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
-
-export default function SEOSEAPage() {\
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 text-white py-16 md:py-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="mb-4 md:mb-6">
-            <span className="inline-block bg-blue-800 text-white px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium mb-6 md:mb-8">
-              🔍 SEO & SEA Expert
-            </span>
-          </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-tight px-4 sm:px-0">
             Faites décoller votre <span className="text-cyan-200">visibilité</span>
           </h1>
@@ -54,7 +36,9 @@ export default function SEOSEAPage() {\
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8 px-4 sm:px-0">L'investissement qu'il vous manque</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8 px-4 sm:px-0">
+              L'investissement qu'il vous manque
+            </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed px-4 sm:px-0">
               Saviez-vous que 70 à 80% des utilisateurs des moteurs de recherche se concentrent uniquement sur les
               résultats naturels ? Cela signifie que les internautes ne veulent pas cliquer sur les annonces payantes en
@@ -70,7 +54,9 @@ export default function SEOSEAPage() {\
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-4 sm:px-0">Découvrez nos planètes autour de l'univers SEO</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-4 sm:px-0">
+              Découvrez nos planètes autour de l'univers SEO
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -133,7 +119,9 @@ export default function SEOSEAPage() {\
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-4 sm:px-0">Notre méthodologie d'accompagnement</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-4 sm:px-0">
+              Notre méthodologie d'accompagnement
+            </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto px-4 sm:px-0">
               Nos experts ont mis en place une méthode de stratégie SEO efficace et flexible selon les besoins de chaque
               client. Notre objectif est d'améliorer votre visibilité en ligne et d'optimiser vos résultats dans les
@@ -157,7 +145,9 @@ export default function SEOSEAPage() {\
               <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-lg md:text-2xl font-bold">
                 2
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">Audit sémantique et des mots-clés</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">
+                Audit sémantique et des mots-clés
+              </h3>
               <p className="text-gray-600 text-sm md:text-base">
                 Cette étape vise à identifier les requêtes les plus pertinentes à cibler et à concevoir une structure de
                 contenu optimale pour vous positionner sur l'ensemble des mots-clés clés de votre secteur.
@@ -168,7 +158,9 @@ export default function SEOSEAPage() {\
               <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-lg md:text-2xl font-bold">
                 3
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">Audit de la concurrence & benchmark</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">
+                Audit de la concurrence & benchmark
+              </h3>
               <p className="text-gray-600 text-sm md:text-base">
                 Cet audit permet de faire un état des lieux de la stratégie adoptée par vos concurrents. Grâce à ce
                 dernier, on peut s'inspirer de ce qui a marché chez eux pour l'implémenter sur votre site.
@@ -203,7 +195,9 @@ export default function SEOSEAPage() {\
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4 sm:px-0">Une équipe réactive et à vos côtés</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4 sm:px-0">
+            Une équipe réactive et à vos côtés
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 md:mb-8 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto px-4 sm:px-0">
             Dialogue, coopération et entente partagée. Que ce soit pour affiner une stratégie SEO déjà en cours,
             explorer des pistes encore inexplorées ou simplement échanger sur les premières ébauches d'un projet de
@@ -231,7 +225,9 @@ export default function SEOSEAPage() {\
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-4 sm:px-0">Nos Tarifs SEO & SEA</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-4 sm:px-0">
+              Nos Tarifs SEO & SEA
+            </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto px-4 sm:px-0">
               Des solutions adaptées à tous les budgets pour booster votre visibilité en ligne
             </p>
@@ -267,7 +263,9 @@ export default function SEOSEAPage() {\
 
             <Card className="p-6 md:p-8 border-2 border-blue-500 bg-blue-50 relative">
               <div className="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-3 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-sm font-medium">Populaire</span>
+                <span className="bg-blue-500 text-white px-3 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-sm font-medium">
+                  Populaire
+                </span>
               </div>
               <CardContent className="pt-0">
                 <div className="text-center mb-6">
@@ -340,4 +338,4 @@ export default function SEOSEAPage() {\
       </section>
     </div>
   )
-}\
+}
