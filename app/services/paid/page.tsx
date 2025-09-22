@@ -42,11 +42,32 @@ export default function PaidPage() {
               AGENCE PAID
             </span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Misez sur une stratégie cross-canal</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              L'art de coordonner la publicité en ligne sur plusieurs canaux de façon efficace et coordonnée. Paid que
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+              L'art de coordonner la publicité en ligne sur plusieurs canaux de façon efficace et coordonnée. Plutôt que
               de se contenter uniquement sur un canal particulier, comme des annonces Google Ads, notre agence saura
               intégrer d'autres canaux tels que les annonces display pour créer une approche globale.
             </p>
+            <div className="bg-red-50 p-6 md:p-8 rounded-lg max-w-4xl mx-auto">
+              <h3 className="text-xl md:text-2xl font-bold text-red-900 mb-4">Avantages de l'approche cross-canal</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">Couverture maximale de votre audience</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">Optimisation des coûts publicitaires</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">Cohérence du message sur tous les canaux</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">Données unifiées pour de meilleures décisions</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -230,17 +251,65 @@ export default function PaidPage() {
             </span>
             <h2 className="text-4xl font-bold mb-4">Notre méthodologie d'accompagnement</h2>
             <p className="text-xl text-red-100 max-w-4xl mx-auto">
-              Forts de nombreuses années d'expérience en publicité en ligne, les spécialistes vous accompagnent afin
-              d'atteindre vos objectifs de croissance. Ils accompagnent des campagnes SEA et Social Ads génératrices de
+              Forts de nombreuses années d'expérience en publicité en ligne, nos spécialistes vous accompagnent afin
+              d'atteindre vos objectifs de croissance. Ils développent des campagnes SEA et Social Ads génératrices de
               clients et de chiffre d'affaires, tout cela sur les bons leviers.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">Brief et objectif</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-4">Brief et objectifs</h3>
               <p className="text-red-100">
-                La phase de nos accompagnements : comprendre votre business et être alignés avec vos objectifs.
+                La première phase de nos accompagnements : comprendre votre business et être alignés avec vos objectifs
+                de croissance et de ROI.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-4">Audit concurrentiel</h3>
+              <p className="text-red-100">
+                Analyse approfondie de vos concurrents et de leur stratégie publicitaire pour identifier les
+                opportunités et définir votre positionnement.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-4">Stratégie & lancement</h3>
+              <p className="text-red-100">
+                Définition de la stratégie cross-canal, création des campagnes et lancement avec un suivi quotidien des
+                performances.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                4
+              </div>
+              <h3 className="text-xl font-bold mb-4">Optimisation continue</h3>
+              <p className="text-red-100">
+                Analyse des données, tests A/B, optimisation des enchères et des audiences pour maximiser votre ROI sur
+                le long terme.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                5
+              </div>
+              <h3 className="text-xl font-bold mb-4">Reporting & insights</h3>
+              <p className="text-red-100">
+                Rapports détaillés avec analyses des performances, insights actionnables et recommandations
+                d'amélioration.
               </p>
             </div>
           </div>

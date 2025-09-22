@@ -90,10 +90,57 @@ export default function WebDevelopmentPage() {
               votre contenu d'une à travers un blog ou en maximisant vos ventes grâce à une plateforme e-commerce
               performante.
             </p>
+            <div className="mt-8">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 text-base md:text-lg font-medium">
+                Voir nos méthodologies
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Video Testimonial Section */}
+      <section className="py-16 md:py-20 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="relative">
+              <div className="bg-blue-900 rounded-lg overflow-hidden shadow-2xl">
+                <div className="aspect-video bg-gradient-to-br from-blue-800 to-blue-900 flex items-center justify-center relative">
+                  <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                  <div className="relative z-10 text-center">
+                    <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                    </div>
+                    <p className="text-white text-sm">Témoignage client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <p className="text-gray-700">Vous avez déjà un site internet</p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <p className="text-gray-700">Vous n'avez pas de site internet</p>
+                </div>
+              </div>
+              <blockquote className="text-lg md:text-xl text-gray-800 font-medium italic mb-6 leading-relaxed">
+                "Le site internet d'une entreprise est devenu aujourd'hui le commercial 3.0 de votre entreprise. Il
+                porte l'image de votre entreprise et vous permet de vendre mieux et plus vite."
+              </blockquote>
+              <div className="text-sm text-gray-600">
+                <p className="font-semibold">Jean-Baptiste MARTIN, CEO</p>
+                <p>Nolia Digital Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
       <section className="py-16 md:py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
@@ -294,6 +341,65 @@ export default function WebDevelopmentPage() {
             >
               Demander mon devis
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section */}
+      <section className="py-16 md:py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 md:mb-16">
+            <span className="text-orange-500 font-semibold text-xs md:text-sm uppercase tracking-wide">ROADMAP</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 mt-2 px-4 sm:px-0">
+              Notre méthodologie d'accompagnement
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto px-4 sm:px-0">
+              Fort de notre expérience dans la création et la refonte de site internet, nos spécialistes ont développé
+              une méthodologie précise et innovante qui s'appuie sur les outils les plus performants du marché. Notre
+              approche est axée sur la performance et certifiée par nos clients, vous êtes accompagné pas à pas dans
+              votre investissement.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-16 bottom-16 w-0.5 bg-blue-600 hidden md:block"></div>
+
+              <div className="space-y-12">
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      UX/UI
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-bold mb-3">Conception UX/UI</h3>
+                    <p className="text-blue-100 text-sm md:text-base leading-relaxed">
+                      Nous étudions et définissons l'architecture qui accompagne dans la conception et définition de
+                      votre nouveau site internet. Nous créons des maquettes et wireframes qui optimisent l'expérience
+                      utilisateur et l'interface de votre site web pour maximiser les conversions.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      DEV
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-bold mb-3">Développement</h3>
+                    <p className="text-blue-100 text-sm md:text-base leading-relaxed">
+                      Une fois les maquettes validées, notre équipe de développeurs transforme vos designs en site web
+                      fonctionnel. Nous utilisons les dernières technologies pour garantir performance, sécurité et
+                      évolutivité de votre plateforme digitale.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -39,13 +39,34 @@ export default function SEOSEAPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8 px-4 sm:px-0">
               L'investissement qu'il vous manque
             </h2>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed px-4 sm:px-0">
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed px-4 sm:px-0 mb-8">
               Saviez-vous que 70 à 80% des utilisateurs des moteurs de recherche se concentrent uniquement sur les
               résultats naturels ? Cela signifie que les internautes ne veulent pas cliquer sur les annonces payantes en
               haut des résultats de recherche, ils veulent cliquer sur les résultats organiques qui se trouvent sous ces
               annonces. Ne pas faire de référencement naturel revient donc à vous couper d'une bonne partie des clics
               sur Google, Bing et autres...
             </p>
+            <div className="bg-blue-50 p-6 md:p-8 rounded-lg">
+              <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">Pourquoi choisir le SEO ?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">Trafic qualifié et durable</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">ROI supérieur au long terme</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">Crédibilité et confiance</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                  <p className="text-gray-700">Visibilité 24h/24, 7j/7</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

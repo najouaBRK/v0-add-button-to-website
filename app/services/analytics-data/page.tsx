@@ -25,6 +25,66 @@ export default function AnalyticsDataPage() {
         </div>
       </section>
 
+      {/* Methodology Section */}
+      <section className="py-16 md:py-20 bg-purple-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 md:mb-16">
+            <span className="text-violet-400 font-semibold text-xs md:text-sm uppercase tracking-wide">
+              MÉTHODOLOGIE
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 mt-2 px-4 sm:px-0">
+              Notre approche Data-Driven
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-purple-100 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto px-4 sm:px-0">
+              Nos experts data ont développé une méthodologie éprouvée pour transformer vos données brutes en insights
+              actionnables. De la collecte à l'analyse, nous vous accompagnons dans votre transformation data-driven.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-violet-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-lg md:text-2xl font-bold">
+                1
+              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Audit Data</h3>
+              <p className="text-purple-100 text-sm md:text-base">
+                Analyse complète de vos sources de données existantes et identification des opportunités d'amélioration.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-violet-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-lg md:text-2xl font-bold">
+                2
+              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Configuration</h3>
+              <p className="text-purple-100 text-sm md:text-base">
+                Mise en place des outils d'analytics et configuration des événements de tracking personnalisés.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-violet-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-lg md:text-2xl font-bold">
+                3
+              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Visualisation</h3>
+              <p className="text-purple-100 text-sm md:text-base">
+                Création de dashboards personnalisés pour visualiser vos KPIs les plus importants en temps réel.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-violet-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-lg md:text-2xl font-bold">
+                4
+              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Optimisation</h3>
+              <p className="text-purple-100 text-sm md:text-base">
+                Analyse continue des performances et recommandations d'optimisation basées sur les données.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
