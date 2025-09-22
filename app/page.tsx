@@ -35,43 +35,43 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#1a2b4a]">
-      <section className="bg-[#1a2b4a] text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-blue-50">
+      <section className="bg-blue-50 text-navy-900 py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse animate-float"></div>
+          <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse animate-float"></div>
           <div
-            className="absolute top-40 right-20 w-1 h-1 bg-yellow-400 rounded-full animate-pulse animate-heartbeat"
+            className="absolute top-40 right-20 w-1 h-1 bg-blue-500 rounded-full animate-pulse animate-heartbeat"
             style={{ animationDelay: "1s" }}
           ></div>
           <div
-            className="absolute bottom-32 left-20 w-3 h-3 bg-orange-300 rounded-full animate-pulse animate-wiggle"
+            className="absolute bottom-32 left-20 w-3 h-3 bg-blue-300 rounded-full animate-pulse animate-wiggle"
             style={{ animationDelay: "2s" }}
           ></div>
           <div
-            className="absolute bottom-20 right-10 w-2 h-2 bg-yellow-300 rounded-full animate-pulse animate-bounce-slow"
+            className="absolute bottom-20 right-10 w-2 h-2 bg-blue-600 rounded-full animate-pulse animate-bounce-slow"
             style={{ animationDelay: "0.5s" }}
           ></div>
           <div
-            className="absolute top-1/3 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse animate-float-reverse"
+            className="absolute top-1/3 left-1/3 w-1 h-1 bg-blue-900 rounded-full animate-pulse animate-float-reverse"
             style={{ animationDelay: "1.5s" }}
           ></div>
           <div
-            className="absolute top-2/3 right-1/3 w-2 h-2 bg-orange-200 rounded-full animate-pulse animate-glow"
+            className="absolute top-2/3 right-1/3 w-2 h-2 bg-blue-200 rounded-full animate-pulse animate-glow"
             style={{ animationDelay: "2.5s" }}
           ></div>
           <div
-            className="absolute top-1/4 right-1/4 w-1 h-1 bg-yellow-200 rounded-full animate-pulse animate-float-delayed"
+            className="absolute top-1/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse animate-float-delayed"
             style={{ animationDelay: "3s" }}
           ></div>
           <div
-            className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-orange-100 rounded-full animate-pulse animate-heartbeat"
+            className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-blue-100 rounded-full animate-pulse animate-heartbeat"
             style={{ animationDelay: "1.8s" }}
           ></div>
         </div>
 
         <div className="container mx-auto text-center relative z-10">
           <div className={`mb-6 md:mb-8 transition-all duration-1000 ${isVisible ? "animate-rotate-in" : "opacity-0"}`}>
-            <span className="inline-block bg-orange-500/20 border border-orange-500/30 text-orange-300 px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-medium hover:animate-wiggle">
+            <span className="inline-block bg-blue-500/20 border border-blue-500/30 text-blue-700 px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-medium hover:animate-wiggle">
               ⭐ Experts en Transformation Digitale
             </span>
           </div>
@@ -82,14 +82,14 @@ export default function HomePage() {
             <span className="block sm:inline animate-float">Experts en Transformation Digitale,</span>
             <br className="hidden sm:block" />
             <span className="block mt-2 sm:mt-0">
-              <span className="text-orange-400 animate-glow">Intégration CRM HubSpot, Data et</span>
+              <span className="text-blue-600 animate-glow">Intégration CRM HubSpot, Data et</span>
             </span>
             <br className="hidden sm:block" />
-            <span className="block mt-2 sm:mt-0 text-orange-400 animate-heartbeat">Agents IA</span>
+            <span className="block mt-2 sm:mt-0 text-blue-600 animate-heartbeat">Agents IA</span>
           </h1>
 
           <p
-            className={`text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-10 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-4 sm:px-0 transition-all duration-1000 delay-500 ${isVisible ? "animate-flip-in" : "opacity-0"}`}
+            className={`text-base sm:text-lg md:text-xl text-blue-700 mb-8 md:mb-10 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-4 sm:px-0 transition-all duration-1000 delay-500 ${isVisible ? "animate-flip-in" : "opacity-0"}`}
           >
             Embarquez dans la galaxie de la transformation digitale capable de booster votre croissance sur l'ensemble
             de votre parcours de vente.
@@ -100,13 +100,13 @@ export default function HomePage() {
           >
             <Button
               onClick={() => setIsQuoteModalOpen(true)}
-              className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 hover:animate-heartbeat touch-manipulation"
+              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 hover:animate-heartbeat touch-manipulation"
             >
               Découvrir nos NOLIA 🚀
             </Button>
             <Button
               variant="outline"
-              className="w-full sm:w-auto border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full transition-all duration-300 bg-transparent hover:animate-wiggle touch-manipulation"
+              className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full transition-all duration-300 bg-transparent hover:animate-wiggle touch-manipulation"
             >
               En savoir plus sur NOLIA
             </Button>
@@ -114,22 +114,22 @@ export default function HomePage() {
 
           <div className="mt-12 md:mt-16 flex justify-center">
             <div className="relative">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 bg-gradient-to-br from-orange-400/20 to-yellow-400/20 rounded-full flex items-center justify-center animate-float animate-glow">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-full flex items-center justify-center animate-float animate-glow">
                 <div className="text-6xl sm:text-7xl md:text-8xl animate-bounce-slow hover:animate-shake">🚀</div>
               </div>
-              <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-orange-400 rounded-full animate-float-reverse animate-heartbeat"></div>
-              <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-4 h-4 sm:w-6 sm:h-6 bg-yellow-400 rounded-full animate-float animate-wiggle"></div>
-              <div className="absolute top-1/2 -left-8 w-3 h-3 bg-orange-300 rounded-full animate-pulse animate-bounce-slow"></div>
-              <div className="absolute top-1/2 -right-8 w-3 h-3 bg-yellow-300 rounded-full animate-pulse animate-float-delayed"></div>
+              <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-blue-500 rounded-full animate-float-reverse animate-heartbeat"></div>
+              <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-full animate-float animate-wiggle"></div>
+              <div className="absolute top-1/2 -left-8 w-3 h-3 bg-blue-400 rounded-full animate-pulse animate-bounce-slow"></div>
+              <div className="absolute top-1/2 -right-8 w-3 h-3 bg-blue-700 rounded-full animate-pulse animate-float-delayed"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#1a2b4a] py-12 border-t border-gray-700/30">
+      <section className="bg-blue-100 py-12 border-t border-blue-200/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <p className="text-gray-400 text-sm font-medium mb-6 animate-fade-in">Ils nous font confiance</p>
+            <p className="text-blue-600 text-sm font-medium mb-6 animate-fade-in">Ils nous font confiance</p>
           </div>
 
           <div className="relative overflow-hidden">
@@ -193,16 +193,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-32 bg-[#1a2b4a] text-white">
+      <section className="py-16 md:py-20 lg:py-32 bg-white text-blue-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16 scroll-reveal">
-            <div className="text-orange-400 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base animate-fade-in">
+            <div className="text-blue-600 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base animate-fade-in">
               NOTRE MODE D'ACCOMPAGNEMENT
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 px-4 sm:px-0 animate-slide-up">
               Des Experts en CRM HubSpot, Web, IA et Intégration Data
             </h2>
-            <p className="text-gray-300 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed text-sm md:text-base px-4 sm:px-0 animate-fade-in-delayed">
+            <p className="text-blue-700 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed text-sm md:text-base px-4 sm:px-0 animate-fade-in-delayed">
               Comme nous, de la conquête de nouveaux clients, nous vous accompagnons notre accompagnement en fonction de
               vos enjeux et objectifs.
             </p>
@@ -210,38 +210,38 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-center group scroll-reveal">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float group-hover:scale-110 group-hover:animate-heartbeat transition-transform duration-300">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float group-hover:scale-110 group-hover:animate-heartbeat transition-transform duration-300">
                 <div className="text-3xl sm:text-4xl md:text-5xl">🤝</div>
               </div>
               <h3 className="text-xl font-bold mb-3 md:mb-4 animate-slide-up-delayed">Gagnant - Gagnant</h3>
-              <p className="text-gray-300 leading-relaxed text-sm md:text-base animate-fade-in-delayed">
+              <p className="text-blue-700 leading-relaxed text-sm md:text-base animate-fade-in-delayed">
                 Notre approche collaborative garantit le succès mutuel de nos projets avec des objectifs alignés.
               </p>
             </div>
 
             <div className="text-center group scroll-reveal">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float-reverse group-hover:scale-110 group-hover:animate-wiggle transition-transform duration-300">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float-reverse group-hover:scale-110 group-hover:animate-wiggle transition-transform duration-300">
                 <div className="text-3xl sm:text-4xl md:text-5xl">🚀</div>
               </div>
               <h3 className="text-xl font-bold mb-3 md:mb-4 animate-slide-up-more-delayed">Votre commercial 3.0</h3>
-              <p className="text-gray-300 leading-relaxed text-sm md:text-base animate-fade-in-delayed">
+              <p className="text-blue-700 leading-relaxed text-sm md:text-base animate-fade-in-delayed">
                 Transformation digitale de vos processus commerciaux avec les dernières technologies et l'IA.
               </p>
             </div>
 
             <div className="text-center group scroll-reveal">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float group-hover:scale-110 group-hover:animate-bounce-slow transition-transform duration-300">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float group-hover:scale-110 group-hover:animate-bounce-slow transition-transform duration-300">
                 <div className="text-3xl sm:text-4xl md:text-5xl">⚡</div>
               </div>
               <h3 className="text-xl font-bold mb-3 md:mb-4 animate-slide-up-more-delayed">Réactivité et expérience</h3>
-              <p className="text-gray-300 leading-relaxed text-sm md:text-base animate-fade-in-delayed">
+              <p className="text-blue-700 leading-relaxed text-sm md:text-base animate-fade-in-delayed">
                 Réponse rapide et expertise approfondie pour des solutions adaptées à vos besoins spécifiques.
               </p>
             </div>
           </div>
 
           <div className="text-center mt-8 md:mt-12 scroll-reveal">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full hover:animate-heartbeat transition-all duration-300">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-full hover:animate-heartbeat transition-all duration-300">
               Découvrir plus →
             </Button>
           </div>
@@ -317,7 +317,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-32 bg-[#1a2b4a] text-white">
+      <section className="py-16 md:py-20 lg:py-32 bg-white text-blue-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <div className="text-orange-400 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
