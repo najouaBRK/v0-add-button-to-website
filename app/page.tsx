@@ -35,8 +35,8 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300">
-      <section className="bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300 text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900">
+      <section className="bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900 text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
           <div
@@ -118,7 +118,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300 py-12 border-t border-gray-700/30">
+      <section className="bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900 py-12 border-t border-gray-700/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <p className="text-gray-400 text-sm font-medium mb-6">Ils nous font confiance</p>
@@ -187,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-32 bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300 text-white">
+      <section className="py-16 md:py-20 lg:py-32 bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <div className="text-orange-400 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
