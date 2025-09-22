@@ -35,9 +35,8 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen">
-      <section className="bg-[#0f1729] text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
-        {/* Animated background elements inspired by NOLIA space theme */}
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300 text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
           <div
@@ -119,7 +118,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#0f1729] py-12 border-t border-gray-700/30">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300 py-12 border-t border-gray-700/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <p className="text-gray-400 text-sm font-medium mb-6">Ils nous font confiance</p>
@@ -188,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-32 bg-[#0f1729] text-white">
+      <section className="py-16 md:py-20 lg:py-32 bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <div className="text-orange-400 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
@@ -241,197 +240,6 @@ export default function HomePage() {
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full">
               Découvrir plus →
             </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 px-4 sm:px-0">
-              Apprenez à Exploiter la Puissance de Votre Data avec NOLIA et nos agents IA
-            </h2>
-            <p className="text-gray-600 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed text-sm md:text-base px-4 sm:px-0">
-              Nos experts vous accompagnent dans l'exploitation de vos données et l'intégration d'agents IA pour
-              automatiser et optimiser vos processus business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
-            {/* Left side - Content */}
-            <div>
-              <div className="space-y-4 md:space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-orange-600 text-xl md:text-2xl">📊</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">INTELLIGENCE BUSINESS</h3>
-                    <p className="text-gray-600 text-sm md:text-base">
-                      Nos experts vous accompagnent dans l'exploitation de vos données et l'intégration d'agents IA pour
-                      automatiser et optimiser vos processus business.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 text-xl md:text-2xl">🤖</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">AGENTS IA PERSONNALISÉS</h3>
-                    <p className="text-gray-600 text-sm md:text-base">
-                      Développement d'agents IA sur mesure pour automatiser vos tâches répétitives et améliorer votre
-                      productivité.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600 text-xl md:text-2xl">⚡</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">AUTOMATISATION AVANCÉE</h3>
-                    <p className="text-gray-600 text-sm md:text-base">
-                      Mise en place de workflows intelligents qui s'adaptent à votre activité et évoluent avec vos
-                      besoins.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-6 md:mt-8">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full">
-                  Découvrir nos solutions IA
-                </Button>
-              </div>
-            </div>
-
-            {/* Right side - Illustration */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-                  <div className="text-7xl sm:text-8xl md:text-9xl">🤖</div>
-                </div>
-                {/* Floating data elements */}
-                <div className="absolute -top-4 sm:-top-6 md:-top-8 -right-4 sm:-right-6 md:-right-8 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
-                  <span className="text-white text-2xl sm:text-3xl">📊</span>
-                </div>
-                <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -left-4 sm:-left-6 md:-left-8 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
-                  <span className="text-white text-xl sm:text-2xl">⚡</span>
-                </div>
-                <div className="absolute top-1/4 -left-8 sm:-left-10 md:-left-12 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-green-400 rounded-full flex items-center justify-center animate-float">
-                  <span className="text-white text-lg sm:text-xl">🎯</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
-            <div>
-              <div className="text-orange-500 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
-                NOLIA
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 px-4 sm:px-0">
-                Agence spécialiste de la Transformation Digitale, du CRM HubSpot, de la Data et de l'Intelligence
-                Artificielle
-              </h2>
-              <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-sm md:text-base px-4 sm:px-0">
-                Nos experts vous accompagnent au quotidien afin de développer pour votre entreprise une stratégie
-                d'acquisition digitale qui transforme vos visiteurs en prospects et vos prospects en clients.
-              </p>
-              <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-sm md:text-base px-4 sm:px-0">
-                Nos ingénieurs sont spécialisés passionnés par le Web, la gestion de la relation client (CRM), la Data
-                et l'IA. Ils exploitent les dernières innovations pour créer des solutions sur mesure et vous aident à
-                optimiser les performances de votre activité et à vous démarquer de votre concurrence.
-              </p>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full">
-                En savoir plus
-              </Button>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-orange-200">
-                  <img
-                    src="/modern-office-team-working-on-digital-transformati.jpg"
-                    alt="Équipe NOLIA"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Decorative elements around the image */}
-                <div className="absolute -top-4 sm:-top-6 md:-top-8 -right-4 sm:-right-6 md:-right-8 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
-                  <span className="text-white text-2xl sm:text-3xl">⚙️</span>
-                </div>
-                <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -left-4 sm:-left-6 md:-left-8 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
-                  <span className="text-white text-xl sm:text-2xl">📊</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-muted particles-bg">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="scroll-reveal text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6 px-4 sm:px-0">
-            Embarquez dans notre <span className="text-gradient-primary">galaxie digitale</span> !
-          </h2>
-          <p className="scroll-reveal text-base md:text-lg lg:text-xl text-muted-foreground mb-12 md:mb-16 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-            Nos experts vous accompagnent au quotidien afin de développer pour votre entreprise une stratégie
-            d'acquisition digitale qui transforme vos visiteurs en prospects et vos prospects en clients.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {[
-              {
-                icon: "🚀",
-                title: "Innovation",
-                desc: "Nous utilisons les dernières technologies et stratégies pour créer des solutions innovantes.",
-                gradient: "from-primary to-cyan-600",
-                delay: "delay-100",
-              },
-              {
-                icon: "🎯",
-                title: "Précision",
-                desc: "Nos stratégies sont adaptées et focalisées sur votre audience et vos objectifs de croissance.",
-                gradient: "from-secondary to-pink-600",
-                delay: "delay-200",
-              },
-              {
-                icon: "⚡",
-                title: "Expertise",
-                desc: "Notre équipe d'experts maîtrise tous les aspects du marketing digital moderne.",
-                gradient: "from-orange-500 to-red-500",
-                delay: "delay-300",
-              },
-              {
-                icon: "📈",
-                title: "Résultats",
-                desc: "Nous mesurons les performances de nos actions grâce à un suivi de données avancé.",
-                gradient: "from-green-500 to-emerald-600",
-                delay: "delay-400",
-              },
-            ].map((item, index) => (
-              <Card
-                key={index}
-                className={`scroll-reveal ${item.delay} glass-card border-0 shadow-xl hover-lift hover-glow transition-all duration-500`}
-              >
-                <CardContent className="pt-6 md:pt-8 pb-6 md:pb-8">
-                  <div
-                    className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 animate-pulse-glow hover:scale-110 transition-transform duration-300`}
-                  >
-                    <span className="text-white text-2xl sm:text-3xl md:text-3xl">{item.icon}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 md:mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm md:text-base">{item.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
