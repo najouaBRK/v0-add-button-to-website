@@ -142,7 +142,7 @@ export function Header() {
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
             >
-              <div className="grid grid-cols-6 gap-6">
+              <div className="grid grid-cols-6 gap-6 justify-items-center">
                 {Object.entries(expertisesData).map(([key, expertise], index) => (
                   <div
                     key={key}
