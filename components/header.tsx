@@ -10,6 +10,8 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isExpertisesOpen, setIsExpertisesOpen] = useState(false)
   const [isPartnersOpen, setIsPartnersOpen] = useState(false)
+  const [isMobileExpertisesOpen, setIsMobileExpertisesOpen] = useState(false)
+  const [isMobilePartnersOpen, setIsMobilePartnersOpen] = useState(false)
 
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services-section")
@@ -23,6 +25,10 @@ export function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+    if (isMenuOpen) {
+      setIsMobileExpertisesOpen(false)
+      setIsMobilePartnersOpen(false)
+    }
   }
 
   const expertisesData = {
@@ -107,21 +113,21 @@ export function Header() {
             <div className="text-white font-bold text-xl md:text-2xl">
               <span className="text-orange-400">NOLIA</span>
             </div>
-            <div className="ml-2 text-xs text-gray-400 hidden md:block">EXPERTS EN DIGITALE</div>
+            <div className="ml-2 text-xs text-gray-400 hidden lg:block">EXPERTS EN DIGITALE</div>
           </Link>
         </div>
 
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="p-2 text-gray-300 hover:text-orange-400 transition-colors"
+            className="p-3 text-gray-300 hover:text-orange-400 transition-colors touch-manipulation"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
           <div
             className="relative"
             onMouseEnter={() => setIsExpertisesOpen(true)}
@@ -136,21 +142,23 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-0 mt-2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
+              className={`absolute top-full left-0 mt-2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-6 lg:p-8 transition-all duration-300 ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
               style={{
-                width: "min(1400px, 95vw)",
-                maxWidth: "95vw",
+                width: "min(1200px, 90vw)",
+                maxWidth: "90vw",
+                left: "50%",
+                transform: "translateX(-50%)",
               }}
             >
-              <div className="grid grid-cols-6 gap-6 w-full">
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6 w-full">
                 {Object.entries(expertisesData).map(([key, expertise], index) => (
                   <div
                     key={key}
-                    className={`space-y-4 transform transition-all duration-500 ${
+                    className={`space-y-3 lg:space-y-4 transform transition-all duration-500 ${
                       isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                     }`}
                     style={{
@@ -159,15 +167,15 @@ export function Header() {
                   >
                     <div className="flex items-center space-x-2 pb-2 border-b border-gray-300">
                       {expertise.icon}
-                      <h3 className="text-gray-900 font-semibold text-base">{expertise.title}</h3>
+                      <h3 className="text-gray-900 font-semibold text-sm lg:text-base">{expertise.title}</h3>
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-1 lg:space-y-2">
                       {expertise.categories.map((category, catIndex) => (
                         <Link
                           key={catIndex}
                           href={`/expertise/${key}/${category.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/à/g, "a").replace(/ç/g, "c")}`}
-                          className="block text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm py-1 px-2 rounded hover:bg-orange-100/50 group"
+                          className="block text-gray-700 hover:text-orange-500 transition-all duration-300 text-xs lg:text-sm py-1 px-2 rounded hover:bg-orange-100/50 group"
                         >
                           <span className="flex items-center">
                             <span className="w-1 h-1 bg-orange-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -181,7 +189,7 @@ export function Header() {
               </div>
 
               <div
-                className={`mt-8 pt-6 border-t border-gray-300 text-center transform transition-all duration-700 ${
+                className={`mt-6 lg:mt-8 pt-4 lg:pt-6 border-t border-gray-300 text-center transform transition-all duration-700 ${
                   isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
                 style={{ transitionDelay: isExpertisesOpen ? "600ms" : "0ms" }}
@@ -190,7 +198,7 @@ export function Header() {
                   serviceName="Expertises"
                   packageName="Consultation expertises"
                   packageDescription="Demande de consultation pour nos expertises"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-6 lg:px-8 py-2 lg:py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 text-sm lg:text-base"
                 >
                   Discuter avec un spécialiste
                 </QuoteButton>
@@ -215,31 +223,31 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-6 transition-all duration-300 ${
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[min(600px,90vw)] bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-4 lg:p-6 transition-all duration-300 ${
                 isPartnersOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
             >
-              <div className="text-center mb-6">
-                <h3 className="text-gray-900 font-semibold text-lg mb-2">Nos Partenaires</h3>
-                <p className="text-gray-600 text-sm">Découvrez nos partenaires technologiques</p>
+              <div className="text-center mb-4 lg:mb-6">
+                <h3 className="text-gray-900 font-semibold text-base lg:text-lg mb-2">Nos Partenaires</h3>
+                <p className="text-gray-600 text-xs lg:text-sm">Découvrez nos partenaires technologiques</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
                 {partnersData.map((partner, index) => (
                   <Link
                     key={partner.slug}
                     href={`/partenaires/${partner.slug}`}
-                    className={`group p-4 bg-gray-50/50 rounded-lg border border-gray-300 hover:border-orange-400 transition-all duration-300 hover:bg-gray-50/80 transform ${
+                    className={`group p-3 lg:p-4 bg-gray-50/50 rounded-lg border border-gray-300 hover:border-orange-400 transition-all duration-300 hover:bg-gray-50/80 transform ${
                       isPartnersOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                     }`}
                     style={{
                       transitionDelay: isPartnersOpen ? `${index * 100}ms` : "0ms",
                     }}
                   >
-                    <div className="flex flex-col items-center text-center space-y-3">
-                      <div className="w-full h-10 flex items-center justify-center bg-white rounded p-2">
+                    <div className="flex flex-col items-center text-center space-y-2 lg:space-y-3">
+                      <div className="w-full h-8 lg:h-10 flex items-center justify-center bg-white rounded p-2">
                         <img
                           src={partner.logo || "/placeholder.svg"}
                           alt={`${partner.name} logo`}
@@ -247,10 +255,10 @@ export function Header() {
                         />
                       </div>
                       <div>
-                        <h4 className="text-gray-900 font-medium text-sm group-hover:text-orange-500 transition-colors">
+                        <h4 className="text-gray-900 font-medium text-xs lg:text-sm group-hover:text-orange-500 transition-colors">
                           {partner.name}
                         </h4>
-                        <p className="text-gray-600 text-xs mt-1">{partner.description}</p>
+                        <p className="text-gray-600 text-xs mt-1 hidden sm:block">{partner.description}</p>
                       </div>
                     </div>
                   </Link>
@@ -277,7 +285,7 @@ export function Header() {
             serviceName="Général"
             packageName="Demande de devis général"
             packageDescription="Demande de devis depuis le header du site"
-            className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm lg:text-base"
           >
             Nous contacter
           </QuoteButton>
@@ -285,89 +293,112 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-700 shadow-lg">
-          <nav className="px-4 py-4 space-y-4">
+        <div className="md:hidden bg-slate-900 border-t border-slate-700 shadow-lg max-h-[80vh] overflow-y-auto">
+          <nav className="px-4 py-4 space-y-3">
             <div className="space-y-2">
-              <div className="text-sm font-medium text-orange-400 py-2">Expertises</div>
-              <div className="grid grid-cols-2 gap-2 pl-4">
-                {Object.entries(expertisesData).map(([key, expertise]) => (
-                  <Link
-                    key={key}
-                    href={`/expertise/${key}`}
-                    className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-1 flex items-center"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <span className="mr-2 scale-75">{expertise.icon}</span>
-                    {expertise.title}
-                  </Link>
-                ))}
-              </div>
+              <button
+                onClick={() => setIsMobileExpertisesOpen(!isMobileExpertisesOpen)}
+                className="flex items-center justify-between w-full text-sm font-medium text-orange-400 py-2 touch-manipulation"
+              >
+                <span>Expertises</span>
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-300 ${isMobileExpertisesOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {isMobileExpertisesOpen && (
+                <div className="grid grid-cols-2 gap-2 pl-4 animate-slideUp">
+                  {Object.entries(expertisesData).map(([key, expertise]) => (
+                    <Link
+                      key={key}
+                      href={`/expertise/${key}`}
+                      className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-2 flex items-center touch-manipulation"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <span className="mr-2 scale-75">{expertise.icon}</span>
+                      <span className="truncate">{expertise.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="space-y-2">
-              <div className="text-sm font-medium text-orange-400 py-2">Partenaires</div>
-              <div className="grid grid-cols-2 gap-2 pl-4">
-                {partnersData.map((partner) => (
-                  <Link
-                    key={partner.slug}
-                    href={`/partenaires/${partner.slug}`}
-                    className="text-xs text-gray-300 hover:text-orange-400 transition-colors py-1"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {partner.name}
-                  </Link>
-                ))}
-              </div>
+              <button
+                onClick={() => setIsMobilePartnersOpen(!isMobilePartnersOpen)}
+                className="flex items-center justify-between w-full text-sm font-medium text-orange-400 py-2 touch-manipulation"
+              >
+                <span>Partenaires</span>
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-300 ${isMobilePartnersOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {isMobilePartnersOpen && (
+                <div className="grid grid-cols-1 gap-2 pl-4 animate-slideUp">
+                  {partnersData.map((partner) => (
+                    <Link
+                      key={partner.slug}
+                      href={`/partenaires/${partner.slug}`}
+                      className="flex items-center space-x-3 text-xs text-gray-300 hover:text-orange-400 transition-colors py-2 touch-manipulation"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <div className="w-6 h-4 flex items-center justify-center bg-white rounded">
+                        <img
+                          src={partner.logo || "/placeholder.svg"}
+                          alt={`${partner.name} logo`}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                      <span className="truncate">{partner.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
             <Link
               href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
+              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               Solutions
             </Link>
             <Link
               href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Partenaires
-            </Link>
-            <Link
-              href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
+              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               Secteurs
             </Link>
             <Link
               href="/about"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
+              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               À propos
             </Link>
             <Link
               href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
+              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
             </Link>
             <Link
               href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-2"
+              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
               onClick={() => setIsMenuOpen(false)}
             >
               STUDIO
             </Link>
+
             <div className="pt-4 border-t border-slate-600">
               <QuoteButton
                 serviceName="Général"
                 packageName="Demande de devis mobile"
                 packageDescription="Demande de devis depuis le menu mobile"
-                className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300"
+                className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 touch-manipulation"
               >
                 Nous contacter
               </QuoteButton>

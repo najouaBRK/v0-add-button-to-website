@@ -36,7 +36,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <section className="bg-[#0f1729] text-white py-20 md:py-32 px-4 relative overflow-hidden">
+      <section className="bg-[#0f1729] text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
         {/* Animated background elements inspired by NOLIA space theme */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
@@ -64,58 +64,56 @@ export default function HomePage() {
 
         <div className="container mx-auto text-center relative z-10">
           {/* Badge similar to NOLIA */}
-          <div className={`mb-8 transition-all duration-1000 ${isVisible ? "animate-bounce-in" : "opacity-0"}`}>
-            <span className="inline-block bg-orange-500/20 border border-orange-500/30 text-orange-300 px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className={`mb-6 md:mb-8 transition-all duration-1000 ${isVisible ? "animate-bounce-in" : "opacity-0"}`}>
+            <span className="inline-block bg-orange-500/20 border border-orange-500/30 text-orange-300 px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-medium">
               ⭐ Experts en Transformation Digitale
             </span>
           </div>
 
-          {/* Main heading matching NOLIA structure */}
           <h1
-            className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight transition-all duration-1000 delay-300 ${isVisible ? "animate-slide-in-left" : "opacity-0"}`}
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 leading-tight transition-all duration-1000 delay-300 ${isVisible ? "animate-slide-in-left" : "opacity-0"}`}
           >
-            Experts en Transformation Digitale,
-            <br />
-            <span className="text-orange-400">Intégration CRM HubSpot, Data et</span>
-            <br />
-            <span className="text-orange-400">Agents IA</span>
+            <span className="block sm:inline">Experts en Transformation Digitale,</span>
+            <br className="hidden sm:block" />
+            <span className="block mt-2 sm:mt-0">
+              <span className="text-orange-400">Intégration CRM HubSpot, Data et</span>
+            </span>
+            <br className="hidden sm:block" />
+            <span className="block mt-2 sm:mt-0 text-orange-400">Agents IA</span>
           </h1>
 
-          {/* Subtitle matching NOLIA */}
           <p
-            className={`text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+            className={`text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-10 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-4 sm:px-0 transition-all duration-1000 delay-500 ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
           >
             Embarquez dans la galaxie de la transformation digitale capable de booster votre croissance sur l'ensemble
             de votre parcours de vente.
           </p>
 
-          {/* CTA buttons matching NOLIA layout */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${isVisible ? "animate-scale-in" : "opacity-0"}`}
+            className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0 transition-all duration-1000 delay-700 ${isVisible ? "animate-scale-in" : "opacity-0"}`}
           >
             <Button
               onClick={() => setIsQuoteModalOpen(true)}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105"
+              className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 touch-manipulation"
             >
               Découvrir nos NOLIA 🚀
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 bg-transparent"
+              className="w-full sm:w-auto border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full transition-all duration-300 bg-transparent touch-manipulation"
             >
               En savoir plus sur NOLIA
             </Button>
           </div>
 
-          {/* Astronaut illustration placeholder */}
-          <div className="mt-16 flex justify-center">
+          <div className="mt-12 md:mt-16 flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 bg-gradient-to-br from-orange-400/20 to-yellow-400/20 rounded-full flex items-center justify-center animate-float">
-                <div className="text-8xl">🚀</div>
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 bg-gradient-to-br from-orange-400/20 to-yellow-400/20 rounded-full flex items-center justify-center animate-float">
+                <div className="text-6xl sm:text-7xl md:text-8xl">🚀</div>
               </div>
               {/* Floating elements around the rocket */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-400 rounded-full animate-float-reverse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-400 rounded-full animate-float"></div>
+              <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-orange-400 rounded-full animate-float-reverse"></div>
+              <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-4 h-4 sm:w-6 sm:h-6 bg-yellow-400 rounded-full animate-float"></div>
             </div>
           </div>
         </div>
@@ -190,215 +188,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-32 bg-[#0f1729] text-white relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-          <div
-            className="absolute top-40 right-20 w-1 h-1 bg-yellow-400 rounded-full animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute bottom-32 left-20 w-3 h-3 bg-orange-300 rounded-full animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <span className="text-orange-400 font-semibold">+ DE VISITEURS</span>
-              <span className="text-orange-400 font-semibold">+ DE PROSPECTS</span>
-              <span className="text-orange-400 font-semibold">+ DE CLIENTS</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Partez à la découverte de nos univers CRM, Web, Vidéo, Data & IA
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            {/* Left side - Astronaut illustration */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-80 h-80 bg-gradient-to-br from-orange-400/20 to-yellow-400/20 rounded-full flex items-center justify-center animate-float">
-                  <div className="text-9xl">🚀</div>
-                </div>
-                {/* Floating UI elements around astronaut */}
-                <div className="absolute -top-8 -right-8 w-16 h-12 bg-orange-500 rounded-lg flex items-center justify-center animate-float-reverse">
-                  <span className="text-white text-xs font-bold">CRM</span>
-                </div>
-                <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center animate-float">
-                  <span className="text-white text-xs font-bold">DATA</span>
-                </div>
-                <div className="absolute top-1/2 -left-12 w-16 h-12 bg-green-500 rounded-lg flex items-center justify-center animate-float-reverse">
-                  <span className="text-white text-xs font-bold">WEB</span>
-                </div>
-                <div className="absolute top-1/4 -right-12 w-14 h-14 bg-purple-500 rounded-lg flex items-center justify-center animate-float">
-                  <span className="text-white text-xs font-bold">IA</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right side - Universe cards */}
-            <div className="space-y-6">
-              {/* Univers CRM */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">CRM</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Univers CRM</h3>
-                    <p className="text-gray-300 text-sm">
-                      NOLIA est une Agence Partenaire HubSpot Elite. Vous serez donc accompagné sur des experts
-                      certifiés qui ont déjà déployé plusieurs centaines de projets.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-white text-sm">→</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Univers Web */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">WEB</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Univers Web</h3>
-                    <p className="text-gray-300 text-sm">
-                      Création de sites web performants et optimisés pour la conversion. Design moderne, développement
-                      technique et intégration CRM.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-white text-sm">→</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Univers Service Marketing Externalisé */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">MKT</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Univers Service Marketing Externalisé</h3>
-                    <p className="text-gray-300 text-sm">
-                      Service marketing complet externalisé pour développer votre présence digitale et générer des leads
-                      qualifiés.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-white text-sm">→</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Univers Data et IA */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">IA</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Univers Data et IA</h3>
-                    <p className="text-gray-300 text-sm">
-                      Exploitation de vos données et intégration d'agents IA pour automatiser et optimiser vos processus
-                      business.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-white text-sm">→</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Univers Studio */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">STU</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Univers Studio</h3>
-                    <p className="text-gray-300 text-sm">
-                      Studio créatif pour la production de contenus visuels, vidéos et supports marketing de haute
-                      qualité.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-white text-sm">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="text-center">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105">
-              Découvrir plus →
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-[#0f1729] text-white">
+      <section className="py-16 md:py-20 lg:py-32 bg-[#0f1729] text-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="text-orange-400 font-semibold mb-4 uppercase tracking-wide">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="text-orange-400 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
               NOTRE MODE D'ACCOMPAGNEMENT
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 px-4 sm:px-0">
               Des Experts en CRM HubSpot, Web, IA et Intégration Data
             </h2>
-            <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-300 max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed text-sm md:text-base px-4 sm:px-0">
               Comme nous, de la conquête de nouveaux clients, nous vous accompagnons notre accompagnement en fonction de
               vos enjeux et objectifs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Gagnant - Gagnant */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-center group">
-              <div className="w-32 h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-float group-hover:scale-110 transition-transform duration-300">
-                <div className="text-5xl">🤝</div>
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float group-hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl sm:text-4xl md:text-5xl">🤝</div>
               </div>
-              <h3 className="text-xl font-bold mb-4">Gagnant - Gagnant</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 md:mb-4">Gagnant - Gagnant</h3>
+              <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                 Notre approche collaborative garantit le succès mutuel de nos projets avec des objectifs alignés.
               </p>
             </div>
 
             {/* Votre commercial 3.0 */}
             <div className="text-center group">
-              <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-float-reverse group-hover:scale-110 transition-transform duration-300">
-                <div className="text-5xl">🚀</div>
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float-reverse group-hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl sm:text-4xl md:text-5xl">🚀</div>
               </div>
-              <h3 className="text-xl font-bold mb-4">Votre commercial 3.0</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 md:mb-4">Votre commercial 3.0</h3>
+              <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                 Transformation digitale de vos processus commerciaux avec les dernières technologies et l'IA.
               </p>
             </div>
 
             {/* Réactivité et expérience */}
             <div className="text-center group">
-              <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-float group-hover:scale-110 transition-transform duration-300">
-                <div className="text-5xl">⚡</div>
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 animate-float group-hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl sm:text-4xl md:text-5xl">⚡</div>
               </div>
-              <h3 className="text-xl font-bold mb-4">Réactivité et expérience</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 md:mb-4">Réactivité et expérience</h3>
+              <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                 Réponse rapide et expertise approfondie pour des solutions adaptées à vos besoins spécifiques.
               </p>
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full">
+          <div className="text-center mt-8 md:mt-12">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full">
               Découvrir plus →
             </Button>
           </div>
@@ -408,26 +248,26 @@ export default function HomePage() {
       <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 px-4 sm:px-0">
               Apprenez à Exploiter la Puissance de Votre Data avec NOLIA et nos agents IA
             </h2>
-            <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-gray-600 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed text-sm md:text-base px-4 sm:px-0">
               Nos experts vous accompagnent dans l'exploitation de vos données et l'intégration d'agents IA pour
               automatiser et optimiser vos processus business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
             {/* Left side - Content */}
             <div>
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-orange-600 text-xl">📊</span>
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-orange-600 text-xl md:text-2xl">📊</span>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">INTELLIGENCE BUSINESS</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm md:text-base">
                       Nos experts vous accompagnent dans l'exploitation de vos données et l'intégration d'agents IA pour
                       automatiser et optimiser vos processus business.
                     </p>
@@ -435,12 +275,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 text-xl">🤖</span>
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-blue-600 text-xl md:text-2xl">🤖</span>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">AGENTS IA PERSONNALISÉS</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm md:text-base">
                       Développement d'agents IA sur mesure pour automatiser vos tâches répétitives et améliorer votre
                       productivité.
                     </p>
@@ -448,12 +288,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600 text-xl">⚡</span>
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-green-600 text-xl md:text-2xl">⚡</span>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">AUTOMATISATION AVANCÉE</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm md:text-base">
                       Mise en place de workflows intelligents qui s'adaptent à votre activité et évoluent avec vos
                       besoins.
                     </p>
@@ -461,8 +301,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full">
+              <div className="mt-6 md:mt-8">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full">
                   Découvrir nos solutions IA
                 </Button>
               </div>
@@ -471,18 +311,18 @@ export default function HomePage() {
             {/* Right side - Illustration */}
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-                  <div className="text-8xl">🤖</div>
+                <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
+                  <div className="text-7xl sm:text-8xl md:text-9xl">🤖</div>
                 </div>
                 {/* Floating data elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
-                  <span className="text-white text-2xl">📊</span>
+                <div className="absolute -top-4 sm:-top-6 md:-top-8 -right-4 sm:-right-6 md:-right-8 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
+                  <span className="text-white text-2xl sm:text-3xl">📊</span>
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
-                  <span className="text-white text-xl">⚡</span>
+                <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -left-4 sm:-left-6 md:-left-8 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
+                  <span className="text-white text-xl sm:text-2xl">⚡</span>
                 </div>
-                <div className="absolute top-1/4 -left-8 w-14 h-14 bg-green-400 rounded-full flex items-center justify-center animate-float">
-                  <span className="text-white text-lg">🎯</span>
+                <div className="absolute top-1/4 -left-8 sm:-left-10 md:-left-12 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-green-400 rounded-full flex items-center justify-center animate-float">
+                  <span className="text-white text-lg sm:text-xl">🎯</span>
                 </div>
               </div>
             </div>
@@ -492,29 +332,31 @@ export default function HomePage() {
 
       <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
             <div>
-              <div className="text-orange-500 font-semibold mb-4 uppercase tracking-wide">NOLIA</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <div className="text-orange-500 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
+                NOLIA
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 px-4 sm:px-0">
                 Agence spécialiste de la Transformation Digitale, du CRM HubSpot, de la Data et de l'Intelligence
                 Artificielle
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-sm md:text-base px-4 sm:px-0">
                 Nos experts vous accompagnent au quotidien afin de développer pour votre entreprise une stratégie
                 d'acquisition digitale qui transforme vos visiteurs en prospects et vos prospects en clients.
               </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-sm md:text-base px-4 sm:px-0">
                 Nos ingénieurs sont spécialisés passionnés par le Web, la gestion de la relation client (CRM), la Data
                 et l'IA. Ils exploitent les dernières innovations pour créer des solutions sur mesure et vous aident à
                 optimiser les performances de votre activité et à vous démarquer de votre concurrence.
               </p>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full">
                 En savoir plus
               </Button>
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-orange-200">
+                <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-orange-200">
                   <img
                     src="/modern-office-team-working-on-digital-transformati.jpg"
                     alt="Équipe NOLIA"
@@ -522,11 +364,11 @@ export default function HomePage() {
                   />
                 </div>
                 {/* Decorative elements around the image */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
-                  <span className="text-white text-2xl">⚙️</span>
+                <div className="absolute -top-4 sm:-top-6 md:-top-8 -right-4 sm:-right-6 md:-right-8 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-orange-400 rounded-full flex items-center justify-center animate-float">
+                  <span className="text-white text-2xl sm:text-3xl">⚙️</span>
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
-                  <span className="text-white text-xl">📊</span>
+                <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -left-4 sm:-left-6 md:-left-8 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-blue-400 rounded-full flex items-center justify-center animate-float-reverse">
+                  <span className="text-white text-xl sm:text-2xl">📊</span>
                 </div>
               </div>
             </div>
@@ -536,15 +378,15 @@ export default function HomePage() {
 
       <section className="py-20 md:py-32 bg-muted particles-bg">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="scroll-reveal text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="scroll-reveal text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6 px-4 sm:px-0">
             Embarquez dans notre <span className="text-gradient-primary">galaxie digitale</span> !
           </h2>
-          <p className="scroll-reveal text-lg md:text-xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed">
+          <p className="scroll-reveal text-base md:text-lg lg:text-xl text-muted-foreground mb-12 md:mb-16 max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
             Nos experts vous accompagnent au quotidien afin de développer pour votre entreprise une stratégie
             d'acquisition digitale qui transforme vos visiteurs en prospects et vos prospects en clients.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 icon: "🚀",
@@ -579,14 +421,14 @@ export default function HomePage() {
                 key={index}
                 className={`scroll-reveal ${item.delay} glass-card border-0 shadow-xl hover-lift hover-glow transition-all duration-500`}
               >
-                <CardContent className="pt-8 pb-8">
+                <CardContent className="pt-6 md:pt-8 pb-6 md:pb-8">
                   <div
-                    className={`w-20 h-20 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse-glow hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 animate-pulse-glow hover:scale-110 transition-transform duration-300`}
                   >
-                    <span className="text-white text-3xl">{item.icon}</span>
+                    <span className="text-white text-2xl sm:text-3xl md:text-3xl">{item.icon}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.desc}</p>
+                  <h3 className="text-xl font-bold text-foreground mb-3 md:mb-4">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm md:text-base">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -596,17 +438,17 @@ export default function HomePage() {
 
       <section id="services-section" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6 px-4 sm:px-0">
               Nos <span className="text-primary">Services</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xs sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
               Découvrez notre gamme complète de services d'acquisition digitale conçus pour booster votre croissance et
               transformer votre présence en ligne.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {[
               {
                 icon: "🔍",
@@ -726,14 +568,14 @@ export default function HomePage() {
                 key={index}
                 className="bg-white border-2 border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-blue-200"
               >
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-md">
-                    <span className="text-3xl">{service.icon}</span>
+                <CardContent className="p-6 md:p-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 md:mb-6 shadow-md">
+                    <span className="text-2xl md:text-3xl">{service.icon}</span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
 
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{service.desc}</p>
+                  <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">{service.desc}</p>
 
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-800 mb-3">Inclus dans ce service :</h4>
@@ -749,18 +591,18 @@ export default function HomePage() {
 
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg border-l-4 border-blue-500">
                     <div className="text-sm text-gray-600 mb-1">À partir de</div>
-                    <div className="text-2xl font-bold text-blue-600">{service.price}</div>
+                    <div className="text-xl md:text-2xl font-bold text-blue-600">{service.price}</div>
                   </div>
 
                   {service.external ? (
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200">
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 md:py-3 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200 touch-manipulation">
                         En savoir plus →
                       </Button>
                     </a>
                   ) : (
                     <Link href={service.link}>
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200">
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 md:py-3 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200 touch-manipulation">
                         En savoir plus →
                       </Button>
                     </Link>
@@ -775,8 +617,10 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-12 md:py-20 gradient-animated animate-gradient text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="scroll-reveal text-2xl md:text-4xl font-bold mb-4">Prêt à décoller ?</h2>
-          <p className="scroll-reveal text-base md:text-xl text-gray-200 mb-6 md:mb-8 max-w-2xl mx-auto">
+          <h2 className="scroll-reveal text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-4 px-4 sm:px-0">
+            Prêt à décoller ?
+          </h2>
+          <p className="scroll-reveal text-base md:text-xl text-gray-200 mb-6 md:mb-8 max-w-xs sm:max-w-2xl md:max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
             Contactez nos experts dès aujourd'hui pour découvrir de votre projet et découvrez comment nous pouvons
             booster votre croissance digitale.
           </p>
@@ -787,10 +631,10 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="scroll-reveal text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="scroll-reveal text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-4 px-4 sm:px-0">
               Nos <span className="text-gradient-primary">Partenaires</span>
             </h2>
-            <p className="scroll-reveal text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="scroll-reveal text-lg text-gray-600 max-w-xs sm:max-w-3xl md:max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               Nous travaillons avec les meilleures plateformes du marché pour vous offrir des solutions performantes et
               innovantes.
             </p>
@@ -836,31 +680,43 @@ export default function HomePage() {
                 <input type="hidden" name="_subject" value="Nouveau message depuis la page d'accueil - NOLIA" />
                 <input type="hidden" name="_cc" value="najwaborak2@gmail.com" />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
-                    <Input name="prenom" placeholder="Votre prénom" required />
+                    <Input name="prenom" placeholder="Votre prénom" required className="touch-manipulation" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
-                    <Input name="nom" placeholder="Votre nom" required />
+                    <Input name="nom" placeholder="Votre nom" required className="touch-manipulation" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <Input type="email" name="email" placeholder="votre.email@exemple.com" required />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="votre.email@exemple.com"
+                    required
+                    className="touch-manipulation"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
-                  <Input name="entreprise" placeholder="Nom de votre entreprise" />
+                  <Input name="entreprise" placeholder="Nom de votre entreprise" className="touch-manipulation" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <Textarea name="message" placeholder="Parlez-nous de votre projet..." rows={5} required />
+                  <Textarea
+                    name="message"
+                    placeholder="Parlez-nous de votre projet..."
+                    rows={5}
+                    required
+                    className="touch-manipulation"
+                  />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 md:py-3 text-base md:text-lg font-medium"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 md:py-3 text-base md:text-lg font-medium touch-manipulation"
                 >
                   Envoyer le message
                 </Button>
@@ -891,44 +747,44 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0f1729] text-white py-12 md:py-16">
+      <footer className="bg-[#0f1729] text-white py-10 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="text-orange-400 font-bold text-xl">NOLIA</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <div className="flex items-center space-x-2 mb-4 md:mb-6">
+                <div className="text-orange-400 font-bold text-xl md:text-2xl">NOLIA</div>
               </div>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-400 mb-4 text-sm md:text-base leading-relaxed">
                 Experts en Transformation Digitale, Intégration CRM HubSpot, Data et Agents IA. Nous transformons vos
                 visiteurs en clients fidèles.
               </p>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-orange-400">Expertise</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-orange-400">Expertise</h4>
+              <ul className="space-y-2 text-gray-400 text-sm md:text-base">
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     CRM HubSpot
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Transformation Digitale
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Data & IA
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Développement Web
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Marketing Digital
                   </Link>
                 </li>
@@ -936,30 +792,30 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-orange-400">Solutions</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-orange-400">Solutions</h4>
+              <ul className="space-y-2 text-gray-400 text-sm md:text-base">
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Univers CRM
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Univers Web
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Univers Data & IA
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Univers Studio
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:text-orange-400 transition-colors">
+                  <Link href="/" className="hover:text-orange-400 transition-colors touch-manipulation">
                     Service Marketing
                   </Link>
                 </li>
@@ -967,8 +823,8 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-orange-400">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-orange-400">Contact</h4>
+              <ul className="space-y-2 text-gray-400 text-sm md:text-base">
                 <li>contact@nolia.fr</li>
                 <li>+33 1 23 45 67 89</li>
                 <li>123 Avenue de l'Innovation</li>
@@ -980,13 +836,22 @@ export default function HomePage() {
           <div className="border-t border-gray-700/30 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm text-center md:text-left">© 2025 NOLIA. Tous droits réservés.</p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-              <Link href="#" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-orange-400 transition-colors text-sm touch-manipulation"
+              >
                 Mentions légales
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-orange-400 transition-colors text-sm touch-manipulation"
+              >
                 Politique de confidentialité
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-orange-400 transition-colors text-sm touch-manipulation"
+              >
                 CGV
               </Link>
             </div>
