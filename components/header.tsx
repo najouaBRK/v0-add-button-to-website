@@ -136,17 +136,22 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[1200px] bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[1400px] bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
+              style={{
+                left: "50%",
+                transform: "translateX(-50%)",
+                maxWidth: "95vw",
+              }}
             >
-              <div className="grid grid-cols-6 gap-6 justify-items-center">
+              <div className="grid grid-cols-6 gap-8 justify-items-center max-w-full">
                 {Object.entries(expertisesData).map(([key, expertise], index) => (
                   <div
                     key={key}
-                    className={`space-y-4 transform transition-all duration-500 ${
+                    className={`space-y-4 transform transition-all duration-500 min-w-0 ${
                       isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                     }`}
                     style={{
@@ -155,7 +160,7 @@ export function Header() {
                   >
                     <div className="flex items-center space-x-2 pb-2 border-b border-gray-300">
                       {expertise.icon}
-                      <h3 className="text-gray-900 font-semibold text-base">{expertise.title}</h3>
+                      <h3 className="text-gray-900 font-semibold text-base whitespace-nowrap">{expertise.title}</h3>
                     </div>
 
                     <div className="space-y-2">
@@ -163,7 +168,7 @@ export function Header() {
                         <Link
                           key={catIndex}
                           href={`/expertise/${key}/${category.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/à/g, "a").replace(/ç/g, "c")}`}
-                          className="block text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm py-1 px-2 rounded hover:bg-orange-100/50 group"
+                          className="block text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm py-1 px-2 rounded hover:bg-orange-100/50 group whitespace-nowrap"
                         >
                           <span className="flex items-center">
                             <span className="w-1 h-1 bg-orange-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
