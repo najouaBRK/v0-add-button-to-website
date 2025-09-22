@@ -136,7 +136,7 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[1200px] bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[1200px] bg-blue-100/95 backdrop-blur-sm border border-blue-200 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
@@ -153,9 +153,9 @@ export function Header() {
                       transitionDelay: isExpertisesOpen ? `${index * 100}ms` : "0ms",
                     }}
                   >
-                    <div className="flex items-center space-x-2 pb-2 border-b border-slate-600">
+                    <div className="flex items-center space-x-2 pb-2 border-b border-blue-300">
                       {expertise.icon}
-                      <h3 className="text-white font-semibold text-base">{expertise.title}</h3>
+                      <h3 className="text-blue-900 font-semibold text-base">{expertise.title}</h3>
                     </div>
 
                     <div className="space-y-2">
@@ -163,7 +163,7 @@ export function Header() {
                         <Link
                           key={catIndex}
                           href={`/expertise/${key}/${category.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/à/g, "a").replace(/ç/g, "c")}`}
-                          className="block text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm py-1 px-2 rounded hover:bg-orange-500/10 group"
+                          className="block text-blue-700 hover:text-orange-500 transition-all duration-300 text-sm py-1 px-2 rounded hover:bg-orange-100/50 group"
                         >
                           <span className="flex items-center">
                             <span className="w-1 h-1 bg-orange-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -177,7 +177,7 @@ export function Header() {
               </div>
 
               <div
-                className={`mt-8 pt-6 border-t border-slate-600 text-center transform transition-all duration-700 ${
+                className={`mt-8 pt-6 border-t border-blue-300 text-center transform transition-all duration-700 ${
                   isExpertisesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
                 style={{ transitionDelay: isExpertisesOpen ? "600ms" : "0ms" }}
@@ -211,15 +211,15 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl p-6 transition-all duration-300 ${
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-blue-100/95 backdrop-blur-sm border border-blue-200 rounded-lg shadow-2xl p-6 transition-all duration-300 ${
                 isPartnersOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
             >
               <div className="text-center mb-6">
-                <h3 className="text-white font-semibold text-lg mb-2">Nos Partenaires</h3>
-                <p className="text-gray-400 text-sm">Découvrez nos partenaires technologiques</p>
+                <h3 className="text-blue-900 font-semibold text-lg mb-2">Nos Partenaires</h3>
+                <p className="text-blue-600 text-sm">Découvrez nos partenaires technologiques</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -227,7 +227,7 @@ export function Header() {
                   <Link
                     key={partner.slug}
                     href={`/partenaires/${partner.slug}`}
-                    className={`group p-4 bg-slate-800/50 rounded-lg border border-slate-600 hover:border-orange-400 transition-all duration-300 hover:bg-slate-800/80 transform ${
+                    className={`group p-4 bg-blue-50/50 rounded-lg border border-blue-300 hover:border-orange-400 transition-all duration-300 hover:bg-blue-50/80 transform ${
                       isPartnersOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                     }`}
                     style={{
@@ -243,10 +243,10 @@ export function Header() {
                         />
                       </div>
                       <div>
-                        <h4 className="text-white font-medium text-sm group-hover:text-orange-400 transition-colors">
+                        <h4 className="text-blue-900 font-medium text-sm group-hover:text-orange-500 transition-colors">
                           {partner.name}
                         </h4>
-                        <p className="text-gray-400 text-xs mt-1">{partner.description}</p>
+                        <p className="text-blue-600 text-xs mt-1">{partner.description}</p>
                       </div>
                     </div>
                   </Link>
