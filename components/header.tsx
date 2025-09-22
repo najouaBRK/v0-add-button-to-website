@@ -136,14 +136,12 @@ export function Header() {
             </button>
 
             <div
-              className={`absolute top-full mt-2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
+              className={`absolute top-full right-0 mt-2 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-8 transition-all duration-300 ${
                 isExpertisesOpen
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
               }`}
               style={{
-                left: "50%",
-                transform: "translateX(-50%)",
                 width: "min(1400px, 95vw)",
                 maxWidth: "95vw",
               }}
