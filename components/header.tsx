@@ -2,15 +2,29 @@
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import { Menu, X, ChevronDown, Globe, FileText, Search, DollarSign, BarChart3 } from "lucide-react"
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Globe,
+  FileText,
+  Search,
+  DollarSign,
+  BarChart3,
+  Settings,
+  Database,
+  Bot,
+} from "lucide-react"
 import QuoteButton from "@/components/QuoteButton"
 
 export function Header() {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isExpertisesOpen, setIsExpertisesOpen] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
   const [isPartnersOpen, setIsPartnersOpen] = useState(false)
   const [isMobileExpertisesOpen, setIsMobileExpertisesOpen] = useState(false)
+  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false)
   const [isMobilePartnersOpen, setIsMobilePartnersOpen] = useState(false)
 
   const scrollToServices = () => {
@@ -27,6 +41,7 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen)
     if (isMenuOpen) {
       setIsMobileExpertisesOpen(false)
+      setIsMobileSolutionsOpen(false)
       setIsMobilePartnersOpen(false)
     }
   }
@@ -78,6 +93,41 @@ export function Header() {
     },
   }
 
+  const solutionsData = {
+    "managed-services": {
+      title: "Managed Services",
+      icon: <Settings size={20} className="text-orange-400" />,
+      description: "Services gérés et maintenance technique",
+      features: ["Support 24/7", "Maintenance préventive", "Monitoring", "Sauvegardes", "Sécurité", "Optimisation"],
+    },
+    "crm-data": {
+      title: "Intégration CRM & Data",
+      icon: <Database size={20} className="text-orange-400" />,
+      description: "Solutions CRM et gestion de données",
+      features: [
+        "Implémentation CRM",
+        "Migration de données",
+        "Intégrations API",
+        "Dashboards",
+        "Analytics",
+        "Formation",
+      ],
+    },
+    "ia-automation": {
+      title: "IA & Automatisation",
+      icon: <Bot size={20} className="text-orange-400" />,
+      description: "Intelligence artificielle et automatisation",
+      features: [
+        "Chatbots IA",
+        "Automatisation workflows",
+        "Machine Learning",
+        "Analyse prédictive",
+        "RPA",
+        "Consulting IA",
+      ],
+    },
+  }
+
   const partnersData = [
     {
       name: "AIRCALL",
@@ -87,13 +137,13 @@ export function Header() {
     },
     {
       name: "HUBSPOT",
-      logo: "/hubspot-logo-new.png",
+      logo: "/hubspot-logo.png",
       description: "Plateforme CRM et marketing automation",
       slug: "hubspot",
     },
     {
       name: "ODOO",
-      logo: "/odoo-logo-purple.jpg",
+      logo: "/odoo-logo.png",
       description: "Suite d'applications de gestion d'entreprise",
       slug: "odoo",
     },
@@ -217,9 +267,68 @@ export function Header() {
             </div>
           </div>
 
-          <Link href="/" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors">
-            Solutions
-          </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => setIsSolutionsOpen(true)}
+            onMouseLeave={() => setIsSolutionsOpen(false)}
+          >
+            <button className="flex items-center text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors group">
+              Solutions
+              <ChevronDown
+                size={16}
+                className={`ml-1 transition-transform duration-300 ${isSolutionsOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            <div
+              className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[min(800px,90vw)] bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-2xl p-6 transition-all duration-300 ${
+                isSolutionsOpen
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-[-10px] scale-95 pointer-events-none"
+              }`}
+            >
+              <div className="text-center mb-6">
+                <h3 className="text-gray-900 font-semibold text-lg mb-2">Nos Solutions</h3>
+                <p className="text-gray-600 text-sm">
+                  Découvrez nos solutions complètes pour votre transformation digitale
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {Object.entries(solutionsData).map(([key, solution], index) => (
+                  <Link
+                    key={key}
+                    href={`/solutions/${key}`}
+                    className={`group p-4 bg-gray-50/50 rounded-lg border border-gray-300 hover:border-orange-400 transition-all duration-300 hover:bg-gray-50/80 transform ${
+                      isSolutionsOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                    }`}
+                    style={{
+                      transitionDelay: isSolutionsOpen ? `${index * 100}ms` : "0ms",
+                    }}
+                  >
+                    <div className="flex flex-col space-y-3">
+                      <div className="flex items-center space-x-3">
+                        {solution.icon}
+                        <h4 className="text-gray-900 font-medium text-sm group-hover:text-orange-500 transition-colors">
+                          {solution.title}
+                        </h4>
+                      </div>
+                      <p className="text-gray-600 text-xs">{solution.description}</p>
+                      <div className="space-y-1">
+                        {solution.features.slice(0, 3).map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-xs text-gray-500">
+                            <span className="w-1 h-1 bg-orange-400 rounded-full mr-2"></span>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div
             className="relative"
             onMouseEnter={() => setIsPartnersOpen(true)}
@@ -344,6 +453,34 @@ export function Header() {
 
             <div className="space-y-2">
               <button
+                onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
+                className="flex items-center justify-between w-full text-sm font-medium text-orange-400 py-2 touch-manipulation"
+              >
+                <span>Solutions</span>
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-300 ${isMobileSolutionsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {isMobileSolutionsOpen && (
+                <div className="grid grid-cols-1 gap-2 pl-4 animate-slideUp">
+                  {Object.entries(solutionsData).map(([key, solution]) => (
+                    <Link
+                      key={key}
+                      href={`/solutions/${key}`}
+                      className="flex items-center space-x-3 text-xs text-gray-300 hover:text-orange-400 transition-colors py-2 touch-manipulation"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <span className="scale-75">{solution.icon}</span>
+                      <span className="truncate">{solution.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <button
                 onClick={() => setIsMobilePartnersOpen(!isMobilePartnersOpen)}
                 className="flex items-center justify-between w-full text-sm font-medium text-orange-400 py-2 touch-manipulation"
               >
@@ -376,13 +513,6 @@ export function Header() {
               )}
             </div>
 
-            <Link
-              href="/"
-              className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Solutions
-            </Link>
             <Link
               href="/"
               className="block text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors py-3 touch-manipulation"
