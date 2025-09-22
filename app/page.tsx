@@ -35,8 +35,8 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900">
-      <section className="bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900 text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-[#1a2b4a]">
+      <section className="bg-[#1a2b4a] text-white py-16 md:py-20 lg:py-32 px-4 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
           <div
@@ -118,7 +118,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900 py-12 border-t border-gray-700/30">
+      <section className="bg-[#1a2b4a] py-12 border-t border-gray-700/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <p className="text-gray-400 text-sm font-medium mb-6">Ils nous font confiance</p>
@@ -187,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-32 bg-gradient-to-br from-gray-100 via-slate-400 to-blue-900 text-white">
+      <section className="py-16 md:py-20 lg:py-32 bg-[#1a2b4a] text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <div className="text-orange-400 font-semibold mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
@@ -244,7 +244,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="services-section" className="py-20 md:py-32 bg-background">
+      <section id="services-section" className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6 px-4 sm:px-0">
@@ -422,8 +422,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 md:py-20 gradient-animated animate-gradient text-white">
+      <section className="py-12 md:py-20 bg-[#1a2b4a] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="scroll-reveal text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-4 px-4 sm:px-0">
             Prêt à décoller ?
@@ -435,7 +434,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Partners Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -476,7 +474,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact-section" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
@@ -554,7 +551,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-[#0f1729] text-white py-10 md:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -667,7 +663,6 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {/* Quote Form Modal */}
       <QuoteFormModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   )
